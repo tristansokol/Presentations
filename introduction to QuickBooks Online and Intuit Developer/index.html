@@ -1,50 +1,266 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<title> Introduction to QuickBooks Online and the Intuit Developer platform</title>
+	<meta name="description" content="My first Revel JS presentation">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>reveal.js</title>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<!-- some CSS to override the default styles I don't like-->
+	<style>
+		img {
+			border: none !important;
+			box-shadow: none !important;
+		}
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		@-webkit-keyframes blur-animation {
+			0% {
+				-webkit-filter: blur(0px);
+				-moz-filter: blur(0px);
+				-o-filter: blur(0px);
+				-ms-filter: blur(0px);
+				filter: blur(0px);
+			}
+			100% {
+				-webkit-filter: blur(4px) saturate(.5) brightness(.7);
+				-moz-filter: blur(5px) saturate(.7) brightness(.7);
+				-o-filter: blur(5px) saturate(.7) brightness(.7);
+				-ms-filter: blur(5px)saturate(.7) brightness(.7);
+				filter: blur(5px) saturate(.7) brightness(.7);
+			}
+		}
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		html.background-blur-animation .backgrounds {
+			-webkit-animation-name: blur-animation;
+			-webkit-animation-duration: .5s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-direction: alternate;
+			-webkit-animation-timing-function: ease-out;
+			-webkit-animation-fill-mode: forwards;
+			-webkit-animation-delay: 0s;
+		}
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+		.background-blur-animation h1 {
+			color: white
+		}
+
+		.credits {
+			display: block;
+			width: auto;
+			height: auto;
+			position: absolute;
+			top: 34.5%;
+			right: 1%;
+			z-index: 9999 !important;
+		}
+
+		span.attribution {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			font-size: 0.5em;
+			color: #CCC;
+		}
+
+		@font-face {
+			font-family: DinNext;
+			src: url(./fonts/DINNextLTPro-Regular.woff) format("woff"), url(../fonts/DINNextLTPro-Regular.ttf) format("truetype");
+			font-style: normal
+		}
+
+		@font-face {
+			font-family: DinNextMedium;
+			src: url(./fonts/DINNextLTPro-Medium.woff) format("woff"), url(../fonts/DINNextLTPro-Medium.ttf) format("truetype");
+			font-style: normal
+		}
+
+		@font-face {
+			font-family: DinNextLight;
+			src: url(./fonts/DINNextLTPro-Light.woff) format("woff"), url(../fonts/DINNextLTPro-Light.ttf) format("truetype");
+			font-style: normal
+		}
+
+		@font-face {
+			font-family: HelveticaNeueBold;
+			src: url(./fonts/HelveticaNeueLTW1G-Bd.woff) format("woff"), url(../fonts/HelveticaNeueLTW1G-Bd.ttf) format("truetype");
+			font-style: normal
+		}
+
+		@font-face {
+			font-family: HelveticaNeueRoman;
+			src: url(./fonts/HelveticaNeueLTW1G-Roman.woff) format("woff"), url(../fonts/HelveticaNeueLTW1G-Roman.ttf) format("truetype");
+			font-style: normal
+		}
+
+		@font-face {
+			font-family: HelveticaNeueLight;
+			src: url(./fonts/HelveticaNeueLTW1G-Lt.woff) format("woff"), url(../fonts/HelveticaNeueLTW1G-Lt.ttf) format("truetype");
+			font-style: normal
+		}
+
+		@font-face {
+			font-family: HelveticaNeueItalic;
+			src: url(./fonts/HelveticaNeueLTW1G-It.woff) format("woff"), url(../fonts/HelveticaNeueLTW1G-It.ttf) format("truetype");
+			font-style: normal
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<img src="images/Intuit Developer_Vert_RGB.png">
+				<span style="font-family: DinNextLight ">
+					<br> Code Works
+					<br> May 17th 2016
+					<br> Tristan Sokol
+					<br> @tristansokol
+				</span>
+			</section>
+			<section>
+				Schedule for today
+				<ul>
+					<li>
+						Morning presentation
+					</li>
+					<li>
+						Afternoon officeh ours (sign up if you haven't already!)
+					</li>
+					<li>
+						when is lunch?
+					</li>
+					<li>
+						Drinks on us!
+					</li>
+				</ul>
+			</section>
+			<section>
+				<img src="images/QB_intuitlogo.png">
+			</section>
+			<section data-background="images/QBOScreenshot.png">
+			</section>
+			<section>
+				<section data-background="images/QBOScreenshot.png" data-state="background-blur-animation">
+					<a href="https://qbo.intuit.com/redir/testdrive">
+						<h1>QuickBooks Online Test Drive</h1>
+					</a>
+				</section>
+				<section data-background="images/QBOScreenshotCustomers.png">
+				</section>
+				<section data-background="images/QBOScreenshotVendors.png">
+				</section>
+				<section data-background="images/QBOScreenshotEmployees.png">
+				</section>
+				<section data-background="images/QBOScreenshotTransactionsBanking.png">
+				</section>
+				<section data-background="images/QBOScreenshotTransactionsSales.png">
+				</section>
+				<section data-background="images/QBOScreenshotTransactionsExpenses.png">
+				</section>
+				<section data-background="images/QBOScreenshotTransactionChart.png">
+				</section>
+				<section data-background="images/QBOScreenshotReports.png">
+				</section>
+				<section data-background="images/QBOScreenshotReportsCompanyOverview.png">
+				</section>
+			</section>
+			<section data-background="images/SadComputer.gif" style="height:100%;width:100%;">
+				<span class="attribution">© Disney/The Incredibles</span>
+			</section>
+			<section data-background="images/bike.gif" style="height:100%;width:100%;">
+				<span class="attribution">© Eric Tollar/https://www.youtube.com/watch?v=XVFjdwhCZJY</span>
+			</section>
+			<section>
+				<img src="images/Intuit Developer_Vert_RGB.png">
+			</section>
+			<section data-background="#f3f5f8">
+				<img src="images/amex.png">
+				<img src="images/paypal.png">
+				<img src="images/square.png">
+			</section>
+			<section data-background="#f3f5f8">
+				<img src="images/Donor.png">
+				<img src="images/HouseCall.png">
+				<img src="images/MRPEasy.png">
+			</section>
+			<section data-background="#f3f5f8">
+				<img src="images/concur.png">
+				<img src="images/expensify.png">
+				<img src="images/method.png">
+			</section>
+			<section data-background="#f3f5f8" data-background-video-loop data-background-video-muted data-background-video="images/appscroll.mp4"></section>
+			<section>
+				<img src="images/wahlbergc.gif">
+			</section>
+			<section>
+				<section>
+					<a href='http://developer.intuit.com'>Building an app from scratch!</a>
+				</section>
+				<section>
+					<img src="images/signup.png">
+				</section>
+				<section>
+					
+				</section>
+				<section>
+					
+				</section>
+				<section>
+					
+				</section>
+				<section>
+					
+				</section>
+				<section>
+					
+				</section>
+				<section>
+					
+				</section>
+				<section>
+					
+				</section>
+			</section>
 		</div>
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+    	history: true,
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [{
+        	src: 'plugin/markdown/marked.js'
+        }, {
+        	src: 'plugin/markdown/markdown.js'
+        }, {
+        	src: 'plugin/notes/notes.js',
+        	async: true
+        }, {
+        	src: 'plugin/highlight/highlight.js',
+        	async: true,
+        	callback: function() {
+        		hljs.initHighlightingOnLoad();
+        	}
+        }]
+    });
+</script>
+</body>
 
-		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				history: true,
-
-				// More info https://github.com/hakimel/reveal.js#dependencies
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
 </html>
