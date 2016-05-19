@@ -1,6 +1,7 @@
 #Introduction to QuickBooks Online and the Intuit Developer platform
 
-Given at the May Codeworks event
+Given at the May 17th 2016 Codeworks event in San Francisco
+Open up index.html in a browser to view slides
 ##Outline
 
 * Intro slide - Code Works! 
