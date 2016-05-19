@@ -29,6 +29,7 @@ Given at the May Codeworks event
 	* Anything a small business might use to save time and money. 
 * How do you do it? 
 * Walk through developer.intuit.com
+ 	* show around site, documentation, etc.
 	* Login/account creation
 	* creating an app
 	* sandboxes 
