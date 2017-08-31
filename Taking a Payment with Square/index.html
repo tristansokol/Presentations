@@ -7,6 +7,9 @@
 	<title>Taking Payments with Square</title>
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/square-custom.css">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
 	<!-- Custom Square Market Font -->
 	<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
 	<!-- Presentation specific stylings -->
@@ -175,10 +178,11 @@
 				<p>e-commerce</p>
 				<pre><code data-trim >
 					<!-- Embed this in your <head> -->
-					< script>
-					type="text/javascript"
-					src="https://js.squareup.com/v2/paymentform">
-				</script></code></pre>
+					<script
+						type="text/javascript"
+						src="https://js.squareup.com/v2/paymentform">
+					</script>
+				</code></pre>
 			</section>
 			<section id="slide5" data-background-color="rgb(63,63,63)">
 				<pre class="fragment"><code data-trim>
@@ -244,31 +248,31 @@
 				<section id="slide7">
 					<p>Charge Endpoint</p>
 					<pre><code data-trim >
-						POST /v2/locations/LOCATION_ID/transactions  {
+POST /v2/locations/LOCATION_ID/transactions  {
 
-						"idempotency_key": "74ae1696-b1e3-4328-af6d-f1e04d947a13",
-						"amount_money": {
-						"amount": 5000,  
-						"currency": "USD"
-					},
-					"card_nonce": "card_nonce_from_square_123",
-				}</code></pre> 
+"idempotency_key": "74ae1696-b1e3-4328-af6d-f1e04d947a13",
+"amount_money": {
+	"amount": 5000,  
+	"currency": "USD"
+},
+"card_nonce": "card_nonce_from_square_123"
+}</code></pre> 
 			</section>
 
 			<section>
 				<pre><code data-trim data-noescape>
-					curl -X POST \
-					https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
-					-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-					-H 'content-type: application/json' \
-					-d '{
-					"idempotency_key": "<span id="idem"></span>",
-					"amount_money": {
-					"amount": 100,
-					"currency": "USD"
-				},
-				"card_nonce": "<span id="7-nonce"></span>",
-			}' | python -m json.tool</code></pre>
+curl -X POST \
+https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
+-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+-H 'content-type: application/json' \
+-d '{
+"idempotency_key": "<span id="idem"></span>",
+"amount_money": {
+"amount": 100,
+"currency": "USD"
+},
+"card_nonce": "<span id="7-nonce"></span>"
+}' | python -m json.tool</code></pre>
 		</section>
 	</section>
 	<section>
@@ -292,16 +296,16 @@
 		</section>
 		<section>
 			<pre><code data-trim data-noescape>
-				curl -X POST \
-				https://connect.squareup.com/v2/customers \
-				-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-				-H 'content-type: application/json' \
-				-d '{
-				"given_name": "Veronica",
-				"family_name": "Slocombe",
-				"email_address": "V.Slocombe@example.com",
-				"note": "an exceptional customer"
-			}' | python -m json.tool
+curl -X POST \
+https://connect.squareup.com/v2/customers \
+-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+-H 'content-type: application/json' \
+-d '{
+"given_name": "Veronica",
+"family_name": "Slocombe",
+"email_address": "V.Slocombe@example.com",
+"note": "an exceptional customer"
+}' | python -m json.tool
 		</code></pre>
 	</section>
 	<section>
@@ -332,52 +336,92 @@
 		<input type="submit" onclick="requestCardNonce8(event)">
 	</section>
 	<section>
-	<span id="8-nonce1"></span>
-		attach to customer
-	</section>
-	<section>
-		<span id="8-idem"></span>
-		Charge
-	</section>
+		<p> 
+			attach to customer: <input type="text" onchange="updateCustomer(this)">
+		</p>
+
+		<pre><code data-trim data-noescape>
+curl -X POST \
+https://connect.squareup.com/v2/customers/<span id="8-customer"></span>/cards \
+-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+-H 'content-type: application/json' \
+-d '{
+"card_nonce": "<span id="8-nonce1"></span>",
+"billing_address": {
+"address_line_1": "500 Electric Ave",
+"address_line_2": "Suite 600",
+"locality": "New York",
+"administrative_district_level_1": "NY",
+"postal_code": "11111",
+"country": "US"
+},
+"cardholder_name": "Amelia Earhart"
+}' | python -m json.tool
+</code></pre>
 </section>
 <section>
-	<img src="img/checkout.png">
-</section>
-<section id="slide9">
-	<p>Square Checkout</p>
+	<p>Charge</p>
+	<input type="text" onchange="updateCard(this)">
 	<pre><code data-trim data-noescape>
 		curl -X POST \
-		https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/checkouts \
+		https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
 		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
 		-H 'content-type: application/json' \
 		-d '{
-		"idempotency_key": "<span id="idem2"></span>",
-		"order": {
-		"line_items": [
-		{
-		"name": "Spikey Succulent",
-		"quantity": "2",
-		"base_price_money": {
-		"amount": 1500,
+		"idempotency_key": "<span id="8-idem"></span>",
+		"amount_money": {
+		"amount": 100,
 		"currency": "USD"
-	},
-	"discounts": [
-	{
-	"name": "15% off mean looking item",
-	"percentage": "7"
-}
-]
-}
-],
-"taxes": [
-{
-	"name": "Sales Tax",
-	"percentage": "8.5"
-}
-]
+		},
+		"customer_id":"<span id="8-customer1"></span>",
+		"customer_card_id":"<span id="8-customer-card"></span>"
+		}' | python -m json.tool
+</code></pre>
+</section>
+<section>
+	<p>List Transactions</p>
+		<pre><code data-trim data-noescape>
+		curl -X GET \
+		https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
+		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+		| python -m json.tool
+		</code></pre>
+</section>
+</section>
+<section>
+	<section>
+		<img src="img/checkout.png">
+	</section>
+<section id="slide9">
+	<p>Square Checkout</p>
+	<pre><code data-trim data-noescape>
+curl -X POST \
+https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/checkouts \
+-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+-H 'content-type: application/json' \
+-d '{
+"idempotency_key": "<span id="idem2"></span>",
+"order": {
+"line_items": [{
+"name": "Spikey Succulent",
+"quantity": "2",
+"base_price_money": {
+"amount": 1500,
+"currency": "USD"
+},
+"discounts": [{
+"name": "15% off mean looking item",
+"percentage": "7"
+}]
+}],
+"taxes": [{
+"name": "Sales Tax",
+"percentage": "8.5"
+}]
 },
 "redirect_url": "https://giphy.com/search/happy"
 }' | python -m json.tool</code></pre>
+</section>
 </section>
 <!-- 		<section>
 			Attaching a customer to a transaction 
@@ -386,11 +430,11 @@
 			*   * Next steps * How to get help.
 		</section> -->
 		<section>
-			<p>square.com/developers</p>
-			<p>squ.re/slack</p>
-			<p>@squareDev</p>
-			<p>corner.squareup.com</p>
-			where to find a copy of this presentation. 
+			<p><a href="https://squareup.com/developers">square.com/developers</a></p>
+			<p><a href="https://squ.re/slack">squ.re/slack</a></p>
+			<p><a href="https://twitter.com/squaredev">@SquareDev</a></p>
+			<p><a href="https://corner.squareup.com/">corner.squareup.com</a></p>
+			<p><a href="http://tristansokol.github.io/Presentations/Taking%20a%20Payment%20with%20Square/">tristansokol.githup.io/Presentations</a></p>
 		</section>
 	</div>
 </div>

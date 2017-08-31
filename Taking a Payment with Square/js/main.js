@@ -1,4 +1,12 @@
 
+function updateCustomer(id){
+  document.getElementById('8-customer').innerHTML = id.value
+  document.getElementById('8-customer1').innerHTML = id.value;
+}
+
+function updateCard(id){
+  document.getElementById('8-customer-card').innerHTML = id.value
+}
 Reveal.addEventListener( 'slidechanged', function( event ) {
   if(event.indexh==6){
     if(window.paymentForm){
