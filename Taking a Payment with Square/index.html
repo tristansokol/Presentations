@@ -423,6 +423,14 @@ https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/checkouts 
 }' | python -m json.tool</code></pre>
 </section>
 </section>
+<section>
+    <p>Point of Sale API</p>
+    <video height="400px" controls autoplay>
+        <source src="img/register-api.mp4" type="video/mp4">
+            Your browser does not support HTML5 video. 
+        </video>
+        <a href="" id="chargeButton"><h5>Click here to checkout</h5></a>
+    </section>
 <!-- 		<section>
 			Attaching a customer to a transaction 
 			* Saving a card on file *
@@ -436,11 +444,28 @@ https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/checkouts 
 			<p><a href="https://corner.squareup.com/">corner.squareup.com</a></p>
 			<p><a href="http://tristansokol.github.io/Presentations/Taking%20a%20Payment%20with%20Square/">tristansokol.githup.io/Presentations</a></p>
 		</section>
+
 	</div>
 </div>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 <script>
+    var callbackUrl = 'https://giphy.com/search/success'
+    var clientId = 'sq0idp-gbQhcOCpmb2X4W1588Ky7A'
+    var iOSparameters = {
+        "amount_money": {
+            "amount": 100,
+            "currency_code": "USD"
+        },
+        "callback_url": callbackUrl,
+        "client_id": clientId,
+        "version": "1.1",
+        "notes": "totall optional note",
+        "options": {
+            "supported_tender_types": ["CREDIT_CARD", "CASH"]
+        }
+    }
+    document.getElementById('chargeButton').href = 'square-commerce-v1://payment/create?data=' + encodeURIComponent(JSON.stringify(iOSparameters))
     // More info about config & dependencies:
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
