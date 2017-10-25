@@ -26,10 +26,7 @@
 		document.getElementsByTagName('head')[0].appendChild(link);
 
 
-    //alrts on https
-    if (window.location.protocol == 'https:') {
-    	document.getElementById("warning").style.display = 'none';
-    }
+
 </script>
 <!-- Square js -->
 <script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script>
@@ -385,6 +382,10 @@
     	{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
     	]
     });
+        //alrts on https
+    if (window.location.protocol == 'https:') {
+    	document.getElementById("warning").style.display = 'none';
+    }
 </script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
