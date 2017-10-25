@@ -8,7 +8,8 @@ function updateCard(id){
   document.getElementById('8-customer-card').innerHTML = id.value
 }
 Reveal.addEventListener( 'slidechanged', function( event ) {
-  if(event.indexh==6){
+  console.log(event.indexh);
+  if(event.indexh==9){
     if(window.paymentForm){
       window.paymentForm.destroy();
       delete window.paymentForm
@@ -17,9 +18,9 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       window.paymentForm8.destroy();
       delete window.paymentForm8
     }
-    console.log('building payment for m6')
+    console.log('building the first real nonce form')
     createForm6()
-  }else if(event.indexh==5){
+  }else if(event.indexh==8){
     if(window.paymentForm2){
       window.paymentForm2.destroy();
       delete window.paymentForm2
@@ -28,11 +29,11 @@ Reveal.addEventListener( 'slidechanged', function( event ) {
       window.paymentForm8.destroy();
       delete window.paymentForm8
     }
-    console.log('building payment for 5')
+    console.log('building the first dummy form')
     createForm5()
-  }else if(event.indexh==9){
+  }else if(event.indexh==12){
     document.getElementById('idem2').innerHTML = guid();
-  }else if(event.indexh==8){
+  }else if(event.indexh==11){
     if(window.paymentForm2){
       window.paymentForm2.destroy();
       delete window.paymentForm2
