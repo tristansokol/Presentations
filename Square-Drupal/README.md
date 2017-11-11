@@ -47,13 +47,17 @@ vagrant up --provider=virtualbox
 
 and wait patentially for everthing to happen. You might have to babysit it to enter your password for networking changes. 
 
+**High Sierra Users**
+
+If you are running MacOS 10.13.0/1 you might need to do all of this in a new blank volume that isn't using `APFS` See [geerlingguy/drupal-vm/issues/1547](https://github.com/geerlingguy/drupal-vm/issues/1547)
+
 ------
 
 After you see some green text, you should have a DrupalVM that you can access at **http://dashboard.drupalvm.test**
 
 ###Square Commerce Drupal Module
 
-nstallation is pretty easy with Composer. Get into the drupal directory of your vm and run `composer require drupal/commerce_square`
+installation is pretty easy with Composer. Get into the drupal directory of your vm and run `composer require drupal/commerce_square`
 
 ### Usage
 

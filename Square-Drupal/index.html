@@ -61,7 +61,10 @@
                     Open up a terminal inside it
                 </section>
                 <section>
-                    Open up a terminal inside it
+                    Generate ssl certificates
+                    <pre><code data-trim>
+						openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout example.key -out example.crt
+					</code></pre>
                 </section>
                 <section>
                     rename drupal configuation
@@ -81,22 +84,42 @@
 						open config.yml
 					</code></pre>
                     <pre><code data-trim>
-						#enable the bcmath PHP extension
-						php_packages_extra:
-						- "php{{ php_version }}-bcmath"
+#enable the bcmath PHP extension
+php_packages_extra:
+  - "php{{ php_version }}-bcmath"
 
-						#get some crappy form of SSL going.
-						apache_vhosts_ssl:
-						- servername: "{{ drupal_domain }}"
-						documentroot: "{{ drupal_core_path }}"
-						certificate_file: "/vagrant/example.crt"
-						certificate_key_file: "/vagrant/example.key"
-						extra_parameters: |
-						ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000{{ drupal_core_path }}"
+#get some crappy form of SSL going.
+apache_vhosts_ssl:
+  - servername: "{{ drupal_domain }}"
+    documentroot: "{{ drupal_core_path }}"
+    certificate_file: "/vagrant/example.crt"
+    certificate_key_file: "/vagrant/example.key"
+    extra_parameters: |
+          ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000{{ drupal_core_path }}"
 					</code></pre>
                     <aside class="notes">
                         There is some indentation issues
                     </aside>
+                </section>
+                <section>
+                    <strike>Start the magic</strike>
+                    <pre><code data-trim data-noescape>
+						<strike>vagrant up</strike>
+					</code></pre>
+                </section>
+                <section data-background-image="img/HighSierra.jpg">
+                    <div style="background-color: rgba(255,255,255,.5)">
+                        <p>...and a work around for High Sierra
+                            <small> see <a>geerlingguy/drupal-vm issue #1547</a></small>
+                        </p>
+                        <ul>
+                            <li>Disc Utility</li>
+                            <li>File->New Image->Blank Image</li>
+                            <li><em> MAC OS Extended</em></li>
+                            <li>Copy files to new volume</li>
+                        </ul>
+                        <small> This is fixed in MacOS 10.13.2</small>
+                    </div>
                 </section>
                 <section>
                     Start the magic
@@ -213,25 +236,25 @@
             </section>
             <section>
                 <pre><code data-trim>
-					var paymentForm = new SqPaymentForm({
+var paymentForm = new SqPaymentForm({
 
-					// Initialize the payment form elements
-					applicationId: applicationId,
-					locationId: locationId,
-					sdfsdf
-					// Initialize the credit card placeholders
-					cardNumber: {
-					elementId: 'sq-card-number',
-					placeholder: '•••• •••• •••• ••••'
-				},
-				cvv: {
-				elementId: 'sq-cvv',
-				placeholder: 'CVV'
-			},
-			expirationDate: {
-			elementId: 'sq-expiration-date',
-			placeholder: 'MM/YY'
-		},
+	// Initialize the payment form elements
+	applicationId: applicationId,
+	locationId: locationId,
+
+	// Initialize the credit card placeholders
+	cardNumber: {
+		elementId: 'sq-card-number',
+		placeholder: '•••• •••• •••• ••••'
+	},
+	cvv: {
+		elementId: 'sq-cvv',
+		placeholder: 'CVV'
+	},
+	expirationDate: {
+		elementId: 'sq-expiration-date',
+		placeholder: 'MM/YY'
+	},
 		postalCode: {
 		elementId: 'sq-postal-code'
 	},
@@ -245,13 +268,11 @@
             <section>
                 <p>e-commerce</p>
                 <pre><code data-trim>
-		inputStyles: [
-		{
+		inputStyles: [{
 			fontSize: '14px',
 			padding: '7px 12px',
 			backgroundColor: "transparent"
-		}
-		],
+		}],
 	</code></pre>
                 <aside class="notes">
                     We aren't really.
@@ -261,8 +282,8 @@
                 <p>Apple Pay</p>
                 <pre><code data-trim>
 		applePay: {
-		elementId: 'sq-apple-pay'
-	},
+			elementId: 'sq-apple-pay'
+		},
 </code></pre>
                 <aside class="notes">
                     We aren't really.
@@ -273,8 +294,8 @@
                 <pre><code data-trim>
 		// Initialize Masterpass placeholder ID
 		masterpass: {
-		elementId: 'sq-masterpass'
-	},
+			elementId: 'sq-masterpass'
+		},
 
 </code></pre>
                 <aside class="notes">
@@ -333,7 +354,7 @@
                     <img height="60px" src="img/applePay.png">
                     <br>
                     <!--   <div id="sq-apple-pay-label" class="wallet-not-enabled">Apple Pay for Web not enabled</div>
--->
+                    -->
                     <!-- Placholder for Apple Pay for Web button -->
                     <button id="sq-apple-pay1" class="button-apple-pay"></button>
                     <div id="sq-masterpass-label" class="wallet-not-enabled">Masterpass not enabled</div>
@@ -374,31 +395,31 @@
                 <section id="slide7">
                     <p>Charge Endpoint</p>
                     <pre><code data-trim >
-					POST /v2/locations/LOCATION_ID/transactions  {
+            			POST /v2/locations/LOCATION_ID/transactions  {
 
-						"idempotency_key": "74ae1696",
-						"amount_money": {
-							"amount": 5000,
-							"currency": "USD"
-						},
-						"card_nonce": "card_nonce_from_square_123"
-					}
-			</code></pre>
+	            			"idempotency_key": "74ae1696",
+	            			"amount_money": {
+		            			"amount": 5000,
+		            			"currency": "USD"
+		            		},
+		            		"card_nonce": "card_nonce_from_square_123"
+		            	}
+            </code></pre>
                 </section>
                 <section>
                     <pre><code data-trim data-noescape>
-			curl -X POST \
-			https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
-			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-			-H 'content-type: application/json' \
-			-d '{
-				"idempotency_key": "<span id="idem"></span>",
-				"amount_money": {
-				"amount": 100,
-				"currency": "USD"
-			},
-				"card_nonce": "<span id="7-nonce"></span>"
-			}' | python -m json.tool</code></pre>
+        		curl -X POST \
+        		https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
+        		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+        		-H 'content-type: application/json' \
+        		-d '{
+        		"idempotency_key": "<span id="idem"></span>",
+        		"amount_money": {
+        		"amount": 100,
+        		"currency": "USD"
+	        	},
+	        	"card_nonce": "<span id="7-nonce"></span>"
+		        }' | python -m json.tool</code></pre>
                 </section>
             </section>
             <section>
@@ -421,17 +442,17 @@
                 </section>
                 <section>
                     <pre><code data-trim data-noescape>
-				curl -X POST \
-				https://connect.squareup.com/v2/customers \
-				-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-				-H 'content-type: application/json' \
-				-d '{
-				"given_name": "Veronica",
-				"family_name": "Slocombe",
-				"email_address": "V.Slocombe@example.com",
-				"note": "an exceptional customer"
-				}' | python -m json.tool
-		</code></pre>
+			curl -X POST \
+			https://connect.squareup.com/v2/customers \
+			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+			-H 'content-type: application/json' \
+			-d '{
+			"given_name": "Veronica",
+			"family_name": "Slocombe",
+			"email_address": "V.Slocombe@example.com",
+			"note": "an exceptional customer"
+			}' | python -m json.tool
+	</code></pre>
                 </section>
                 <section>
                     Create a card Nonce
@@ -466,22 +487,22 @@
                         <input type="text" onchange="updateCustomer(this)">
                     </p>
                     <pre><code data-trim data-noescape>
-			curl -X POST \
-			https://connect.squareup.com/v2/customers/<span id="8-customer"></span>/cards \
-			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-			-H 'content-type: application/json' \
-			-d '{
-			"card_nonce": "<span id="8-nonce1"></span>",
-			"billing_address": {
-			"address_line_1": "500 Electric Ave",
-			"address_line_2": "Suite 600",
-			"locality": "New York",
-			"administrative_district_level_1": "NY",
-			"postal_code": "11111",
-			"country": "US"
-			},
-			"cardholder_name": "Amelia Earhart"
-			}' | python -m json.tool
+		curl -X POST \
+		https://connect.squareup.com/v2/customers/<span id="8-customer"></span>/cards \
+		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
+		-H 'content-type: application/json' \
+		-d '{
+		"card_nonce": "<span id="8-nonce1"></span>",
+		"billing_address": {
+		"address_line_1": "500 Electric Ave",
+		"address_line_2": "Suite 600",
+		"locality": "New York",
+		"administrative_district_level_1": "NY",
+		"postal_code": "11111",
+		"country": "US"
+		},
+		"cardholder_name": "Amelia Earhart"
+		}' | python -m json.tool
 </code></pre>
                 </section>
                 <section>
@@ -549,46 +570,98 @@
                 </section>
             </section>
             <section>
-                <p>e-commerce</p>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
+                <section data-background-image="img/dashboard.png" data-background-position="top" data-background-size="auto">
+                    <aside class="notes">
+                        By this time hopefully our drupal vm is up and running.
+                    </aside>
+                </section>
+                <section data-background-iframe="http://dashboard.drupalvm.test/">
+                    <a href="http://dashboard.drupalvm.test/">http://dashboard.drupalvm.test/</a>
+                    <aside class="notes">
+                    </aside>
+                </section>
             </section>
             <section>
-                <p>e-commerce</p>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
+                <section data-background-image="img/drupal.png" data-background-position="top" data-background-size="auto">
+                    <aside class="notes">
+                        And our drupal instance!
+                    </aside>
+                </section>
+                <section>
+                    <a href="http://drupalvm.test/">http://drupalvm.test/</a>
+                    <aside class="notes">
+                    </aside>
+                </section>
             </section>
             <section>
-                <p>e-commerce</p>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
+                <section data-background-image="img/DrupalModule.png" data-background-position="top" data-background-size="auto">
+                    <aside class="notes">
+                        And our drupal instance!
+                    </aside>
+                </section>
+                <section>
+                    <p>install <a href="https://www.drupal.org/project/commerce_square">Commerce Square Connect</a></p>
+                    <pre><code data-trim>
+			cd drupal
+			composer require drupal/commerce_square
+		</code></pre>
+                    <aside class="notes">
+                        We aren't really.
+                    </aside>
+                </section>
             </section>
             <section>
-                <p>e-commerce</p>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
+                <section>
+                    <p>Setting up the module</p>
+                    <aside class="notes">
+                        So we can log into our drupal instance
+                    </aside>
+                </section>
+                <section data-background-image="img/login.png" data-background-position="top" data-background-size="auto">
+                    <aside class="notes">
+                        So we can log into our drupal instance
+                    </aside>
+                </section>
+                <section>
+                    <p> <a href="http://drupalvm.test/user/login">login</a></p>
+                    <pre><code data-trim>
+			user: admin
+			passsword: admin
+		</code></pre>
+                    <aside class="notes">
+                        We aren't really.
+                    </aside>
+                </section>
+                <section>
+                    <img src="img/puzzlepiece.svg" height="50" style="margin:0px;vertical-align: bottom"> <a href="http://drupalvm.test/admin/modules">Extend</a>
+                    <aside class="notes">
+                        Check all sorts of boxes, like Commerce, Cart, Checkout, Order, Price, Product, and of course Commerce Square
+                    </aside>
+                </section>
+                <section>
+                    <img src="img/drupal-cart.svg" height="50" style="margin:0px;vertical-align: bottom"> <a href="http://drupalvm.test/admin/commerce/config/square">Commerce</a>
+                    <aside class="notes">
+                        Check all sorts of boxes, like Commerce, Cart, Checkout, Order, Price, Product, and of course Commerce Square
+                    </aside>
+                </section>
             </section>
             <section>
-                <p>e-commerce</p>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
-            </section>
-            <section>
-                <p>e-commerce</p>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
-            </section>
-            <section>
-                <p>e-commerce</p>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
+                <ul>
+                    <li class="fragment"><a href="https://squareup.com/developers">square.com/developers</a>
+                    </li>
+                    <li class="fragment">
+                        <a href="https://squ.re/slack">squ.re/slack</a>
+                    </li>
+                    <li class="fragment">
+                        <a href="https://twitter.com/squaredev">@SquareDev</a>
+                    </li>
+                    <li class="fragment">
+                        <a href="https://corner.squareup.com/">corner.squareup.com</a>
+                    </li>
+                    <li class="fragment">
+                        <a href="http://tristansokol.github.io/Presentations/Taking%20a%20Payment%20with%20Square/">tristansokol.github.io/Presentations</a>
+                    </li>
+                </ul>
             </section>
         </div>
     </div>
