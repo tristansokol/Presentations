@@ -138,59 +138,6 @@ Reveal.addEventListener('form1', function() {
        * Triggered when: SqPaymentForm completes a card nonce request
        */
       cardNonceResponseReceived: function(errors, nonce, cardData) {
-        if (errors) {
-          // Log errors from nonce generation to the Javascript console
-          console.log("Encountered errors:");
-          errors.forEach(function(error) {
-            console.log('  ' + error.message);
-          });
-
-          return;
-        }
-
-        alert('Nonce received: ' + nonce); /* FOR TESTING ONLY */
-
-        // Assign the nonce value to the hidden form field
-        document.getElementById('card-nonce').value = nonce;
-
-        // POST the nonce form to the payment processing page
-        document.getElementById('nonce-form').submit();
-
-      },
-
-      /*
-       * callback function: unsupportedBrowserDetected
-       * Triggered when: the page loads and an unsupported browser is detected
-       */
-      unsupportedBrowserDetected: function() {
-        /* PROVIDE FEEDBACK TO SITE VISITORS */
-      },
-
-      /*
-       * callback function: inputEventReceived
-       * Triggered when: visitors interact with SqPaymentForm iframe elements.
-       */
-      inputEventReceived: function(inputEvent) {
-        switch (inputEvent.eventType) {
-          case 'focusClassAdded':
-            /* HANDLE AS DESIRED */
-            break;
-          case 'focusClassRemoved':
-            /* HANDLE AS DESIRED */
-            break;
-          case 'errorClassAdded':
-            /* HANDLE AS DESIRED */
-            break;
-          case 'errorClassRemoved':
-            /* HANDLE AS DESIRED */
-            break;
-          case 'cardBrandChanged':
-            /* HANDLE AS DESIRED */
-            break;
-          case 'postalCodeChanged':
-            /* HANDLE AS DESIRED */
-            break;
-        }
       },
 
       /*
