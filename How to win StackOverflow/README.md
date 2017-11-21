@@ -15,8 +15,8 @@ General design based on stack overflow
   * What is stack overflow
     * A community
     * A company
-    * Tagging, how to tag questions for your product. 
-    * "The rules"
+  * Tagging, how to tag questions for your product. 
+  * "The rules"
   * Stack points breakdown. 
     * [What is reputation? How do I earn (and lose) it?](https://stackoverflow.com/help/whats-reputation)
     * anecdote about not having enough points to comment. 
@@ -25,7 +25,7 @@ General design based on stack overflow
       * linking other acounts
         * shoe my stack exchaing profile with the other questions 
       * link to a meta post about farming questions quickly. 
-    * In summary, stack overflow is a community and if you want something from it, you should also give it back. 
+    * In summary, stack overflow is a community and if you want something from it, you should also give it back.  - **Only one way to get feedback, check other ways as well**
 
 * not often though best practices
 
@@ -47,7 +47,7 @@ General design based on stack overflow
     * Jira integration
     * Google some more. 
   * Not best practice
-    * people asking questions that questions that aren't programming related
+    * people asking questions that aren't programming related
       * pictures of downvoted questions .
 
 * Datascience
@@ -72,6 +72,8 @@ General design based on stack overflow
 
 * Advanced topics 
   * Stack Overflow Japan
+
+  * Add your flair to your experience?
 
   * Stack overflow ads. 
 
