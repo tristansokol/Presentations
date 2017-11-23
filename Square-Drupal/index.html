@@ -17,6 +17,8 @@
     <script type="text/javascript" src="https://js.squareup.com/v2/paymentform"></script>
     <!-- link to the custom styles for SqPaymentForm -->
     <link rel="stylesheet" type="text/css" href="css/sqpaymentform.css">
+    <!-- favicon  -->
+    <link rel="icon" href="https://public-web-production-f.squarecdn.com/assets/public-web-styles/favicon-770e0889aefd823056c7cdbb066a445be0f0754c1b4d4cba877e120fdbcb63e6.ico">
 </head>
 
 <body>
@@ -25,7 +27,7 @@
             <section>
                 <img height="500px" src="img/square%20drupal.png">
                 <aside class="notes">
-                    Hi! I'm tristan and I work at Square.
+                    Hi! I'm Tristan and I work at Square.
                 </aside>
             </section>
             <section>
@@ -256,7 +258,7 @@ var paymentForm = new SqPaymentForm({
                 </aside>
             </section>
             <section>
-                <p>e-commerce</p>
+                <p>Styling</p>
                 <pre><code data-trim>
 		inputStyles: [{
 			fontSize: '14px',
@@ -271,23 +273,21 @@ var paymentForm = new SqPaymentForm({
             <section>
                 <p>Apple Pay</p>
                 <pre><code data-trim>
-		applePay: {
-			elementId: 'sq-apple-pay'
-		},
+// Initialize applePay placeholder ID
+applePay: {
+  elementId: 'sq-apple-pay'
+}
 </code></pre>
-                <aside class="notes">
-                    We aren't really.
-                </aside>
-            </section>
-            <section>
-                <p>Masterpass</p>
-                <pre><code data-trim>
-		// Initialize Masterpass placeholder ID
-		masterpass: {
-			elementId: 'sq-masterpass'
-		},
-
+<p>Masterpass</p>
+<pre><code data-trim>
+// Initialize Masterpass placeholder ID
+masterpass: {
+  elementId: 'sq-masterpass'
+}
 </code></pre>
+<aside class="notes">
+   elements to replace with applepay/masterpass icons
+</aside>
                 <aside class="notes">
                     We aren't really.
                 </aside>

@@ -5,6 +5,7 @@ var locationId = 'BB4PDGY9EX5RA';
 Reveal.addEventListener('form0', function() {
   // slide based events
   console.log('form0');
+  destroyForm();
   window.paymentForm = new SqPaymentForm({
     applicationId: applicationId,
     inputClass: 'sq-inputs',
@@ -36,6 +37,7 @@ Reveal.addEventListener('form0', function() {
   window.paymentForm.build();
 }, false);
 Reveal.addEventListener('form1', function() {
+  destroyForm();
   /*
    * function: requestCardNonce
    *
@@ -154,6 +156,7 @@ Reveal.addEventListener('form1', function() {
 
 Reveal.addEventListener('card-nonce-generation-test', function() {
   // slide based events
+console.log('build form');
   window.paymentForm = new SqPaymentForm({
     applicationId: applicationId,
     inputClass: 'sq-inputs',
@@ -179,17 +182,55 @@ Reveal.addEventListener('card-nonce-generation-test', function() {
       backgroundColor: '#eff0f1'
     }],
     callbacks: {
-      cardNonceResponseReceived: function(errors, nonce, cardData) {}
+      cardNonceResponseReceived: function(errors, nonce, cardData) {
+        if (errors) {
+          console.log("Encountered errors:");
+
+          // This logs all errors encountered during nonce generation to the
+          // Javascript console.
+          errors.forEach(function(error) {
+            console.log('  ' + error.message);
+          });
+
+        // No errors occurred. Extract the card nonce.
+      } else {
+
+          // Delete this line and uncomment the lines below when you're ready
+          // to start submitting nonces to your server.
+          //alert('Nonce received: ' + nonce);
+          document.getElementById("6-nonce").innerHTML = nonce
+          document.cardNonce = nonce;
+          document.getElementById("8-idem").innerHTML = guid()
+          document.getElementById("7-nonce").innerHTML= nonce
+          document.getElementById("8-nonce").innerHTML = nonce
+          document.getElementById("8-nonce1").innerHTML = nonce
+        }
+      }
     }
   });
   window.paymentForm.build();
+
+
+
 }, false);
 
+function requestCardNonce(event) {
+    // This prevents the Submit button from submitting its associated form.
+    // Instead, clicking the Submit button should tell the SqPaymentForm to generate
+    // a card nonce, which the next line does.
+    event.preventDefault();
+
+    window.paymentForm.requestCardNonce();
+  }
 Reveal.addEventListener('slidechanged', function(event) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
   // desroy all payment forms for each slide turn.
+//destroyForm();
+
+});
+function destroyForm() {
+  console.log('destroying form');
   if (window.paymentform) {
     window.paymentForm.destroy();
   }
-
-});
+}
