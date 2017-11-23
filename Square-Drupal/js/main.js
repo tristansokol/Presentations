@@ -1,7 +1,23 @@
 'use strict'
 var applicationId = 'sandbox-sq0idp-gbQhcOCpmb2X4W1588Ky7A';
 var locationId = 'BB4PDGY9EX5RA';
+function guid() {
+  function s4() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+    .toString(16)
+    .substring(1);
+  }
+  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+  s4() + '-' + s4() + s4() + s4();
+}
+function updateCustomer(id){
+  document.getElementById('8-customer').innerHTML = id.value
+  document.getElementById('8-customer1').innerHTML = id.value;
+}
 
+function updateCard(id){
+  document.getElementById('8-customer-card').innerHTML = id.value
+}
 Reveal.addEventListener('form0', function() {
   // slide based events
   console.log('form0');
@@ -213,7 +229,61 @@ console.log('build form');
 
 
 }, false);
+Reveal.addEventListener('card-on-file', function() {
+  // slide based events
+console.log('build form');
+  window.paymentForm = new SqPaymentForm({
+    applicationId: applicationId,
+    inputClass: 'sq-inputs',
+    cardNumber: {
+      elementId: 'sq-card-number-8',
+      placeholder: '•••• •••• •••• ••••'
+    },
+    cvv: {
+      elementId: 'sq-cvv-8',
+      placeholder: 'CVV'
+    },
+    expirationDate: {
+      elementId: 'sq-expiration-date-8',
+      placeholder: 'MM/YY'
+    },
+    postalCode: {
+      elementId: 'sq-postal-code-8'
+    },
+    inputStyles: [{
+      fontSize: '30px',
+      fontWeight: 'bold',
+      lineHeight: '30px',
+      backgroundColor: '#eff0f1'
+    }],
+    callbacks: {
+      cardNonceResponseReceived: function(errors, nonce, cardData) {
+        if (errors) {
+          console.log("Encountered errors:");
 
+          // This logs all errors encountered during nonce generation to the
+          // Javascript console.
+          errors.forEach(function(error) {
+            console.log('  ' + error.message);
+          });
+
+        // No errors occurred. Extract the card nonce.
+      } else {
+          document.getElementById("8-nonce1").innerHTML = nonce
+          document.cardNonce = nonce;
+          document.getElementById("8-idem").innerHTML = guid()
+          document.getElementById("7-nonce").innerHTML= nonce
+          document.getElementById("8-nonce").innerHTML = nonce
+          document.getElementById("8-nonce1").innerHTML = nonce
+        }
+      }
+    }
+  });
+  window.paymentForm.build();
+
+
+
+}, false);
 function requestCardNonce(event) {
     // This prevents the Submit button from submitting its associated form.
     // Instead, clicking the Submit button should tell the SqPaymentForm to generate
