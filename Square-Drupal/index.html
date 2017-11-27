@@ -108,6 +108,9 @@ apache_vhosts_ssl:
                     <pre><code data-trim data-noescape>
 						<strike>vagrant up</strike>
 					</code></pre>
+          <aside class="notes">
+            VBoxManage unregistervm drupalvm.test --delete
+          </aside>
                 </section>
                 <section data-background-image="img/HighSierra.jpg">
                     <div style="background-color: rgba(255,255,255,.5)">
@@ -163,16 +166,9 @@ apache_vhosts_ssl:
                     We aren't really.
                 </aside>
             </section>
-            <section data-background-image="img/payments.png" data-background-size="contain" data-background-color="black">
+            <section data-background-image="img/payments.png" data-background-size="contain">
                 <aside class="notes">
                     Payments are at the center of what we do, but not all we do.
-                </aside>
-            </section>
-
-            <section>
-                <p>Reminder, Building a commerce platform</p>
-                <aside class="notes">
-                    We aren't really.
                 </aside>
             </section>
             <section>
@@ -403,7 +399,7 @@ masterpass: {
         		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
         		-H 'content-type: application/json' \
         		-d '{
-        		"idempotency_key": "<span id="idem"></span>",
+        		"idempotency_key": "<span id="8-idem"></span>",
         		"amount_money": {
         		"amount": 100,
         		"currency": "USD"
@@ -529,6 +525,9 @@ masterpass: {
                     <img src="img/checkout.png">
                 </section>
                 <section id="slide9">
+                  <script>
+                    document.getElementById("idem2").innerHTML = guid()
+                  </script>
                     <p>Square Checkout</p>
                     <pre><code data-trim data-noescape>
 			curl -X POST \
