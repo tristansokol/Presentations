@@ -34,7 +34,7 @@
   <div class="reveal">
     <div class="slides">
       <section data-background-iframe="./backgrounds/dots.html" data-background-interactive>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="400" height="400">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 44 44" width="400" height="400">
                     <path d="M36.65 0h-29.296c-4.061 0-7.354 3.292-7.354 7.354v29.296c0 4.062 3.293 7.354 7.354 7.354h29.296c4.062 0 7.354-3.292 7.354-7.354v-29.296c.001-4.062-3.291-7.354-7.354-7.354zm-.646 33.685c0 1.282-1.039 2.32-2.32 2.32h-23.359c-1.282 0-2.321-1.038-2.321-2.32v-23.36c0-1.282 1.039-2.321 2.321-2.321h23.359c1.281 0 2.32 1.039 2.32 2.321v23.36z"></path>
                     <path d="M17.333 28.003c-.736 0-1.332-.6-1.332-1.339v-9.324c0-.739.596-1.339 1.332-1.339h9.338c.738 0 1.332.6 1.332 1.339v9.324c0 .739-.594 1.339-1.332 1.339h-9.338z"></path>
                 </svg>
@@ -48,11 +48,10 @@
         </aside>
       </section>
       <section>
-        R4
+        <img src="img/r4.jpg" />
         <aside class="notes">
           In the states we are really well known for letting people accept credit card payments on their mobile devices, giving them another way to make a sale. That was 8 years ago though.
         </aside>
-      </section>
       </section>
       <section>
         Collage of merchants Overlay of countries (fragments)
@@ -84,7 +83,11 @@
       <section>
         <img src="img/app_Full.jpg" height="500px">
         <p>
-          <span class="fragment">Card  </span><span class="fragment">Catalog  </span><span class="fragment">Customers  </span><span class="fragment">Devices  </span><span class="fragment">Orders</span>
+          <span class="fragment">Card  </span>
+          <span class="fragment">Catalog  </span>
+          <span class="fragment">Customers  </span>
+          <span class="fragment">Devices  </span>
+          <span class="fragment">Orders</span>
         </p>
         <aside class="notes">
           With our first Point of sale system we started building out services and models around handling things like card payments (of course) but also item catalogs, & customer management. Businesses use all sorts of different devices and platforms to run their
@@ -94,14 +97,35 @@
       <section>
         new ipad image, add more primitives.
         <p>
-          <span class="fragment">Card  </span><span class="fragment">Catalog  </span><span class="fragment">Customers  </span><span class="fragment">Devices  </span><span class="fragment">Orders</span>
+          <span class="fragment">Card  </span>
+          <span class="fragment">Catalog  </span>
+          <span class="fragment">Customers  </span>
+          <span class="fragment">Devices  </span>
+          <span class="fragment">Orders</span>
         </p>
         <aside class="notes">
-          As we expanded, we continued to build
+          As we expanded our first party products, we continued to build more systems and internal representations of new ideas and concepts that our users. Caviar for example gave us primitives like courses and advanced inventory needs. Our functionality for appointment
+          based businesses required a concept of a calendar and bookable services.
         </aside>
       </section>
-      <section id="slide3" data-background-color="rgb(250,250,250)">
-        <img src="img/developer-offerings.png"> Getting Started with Square as a Developer
+      <section>
+
+        <span class="fragment">layer one of primitives  </span>
+        <span class="fragment">layer two  </span>
+        <span class="fragment">etc.  </span>
+        <aside class="notes">
+          We now have collection of hundreds of these concepts and primitives as data models and services available to our products.
+
+          And they can only do merchants so much good inside of our products, but we know that the real value is created when developers are given the opportunity to meet user's needs directly, so we are opening up all of these primitives as APIs, because we know that our first party products will never meet the needs for every business type, size, and owner, but developers can.
+
+
+        </aside>
+      </section>
+      <section data-background-color="rgb(250,250,250)">
+        <img src="img/developer-offerings.png">
+        <aside class="notes">
+          So that is some of the stuff we are doing in building our commerce platform.
+        </aside>
       </section>
       <section data-background-image="img/slash-developers.png" data-background-position="top">
       </section>
@@ -213,7 +237,7 @@
           <img class="fragment" src="img/cardonfile.png">
         </section>
         <section>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="200" height="200">
+          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 80 80" width="200" height="200">
                         <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="21.1" cy="35" r="5" />
                         <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M28.2,46.5C26.6,44.4,24,43,21.1,43s-5.5,1.4-7.1,3.5" />
                         <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38" y1="29" x2="66" y2="29" />
@@ -268,7 +292,7 @@
         </section>
         <section>
           <p>
-          attach to customer:
+            attach to customer:
             <input type="text" onchange="updateCustomer(this)">
           </p>
           <pre><code data-trim data-noescape>
@@ -393,7 +417,7 @@
         <p><a href="https://twitter.com/squaredev">@SquareDev</a></p>
         <p><a href="https://corner.squareup.com/">corner.squareup.com</a></p>
         <p><a href="http://tristansokol.github.io/Presentations/Taking%20a%20Payment%20with%20Square/">tristansokol.github.io/Presentations</a></p>
-        <little style="font-size:.3em"><a href=https://codepen.io/MathiasBerwig/pen/GopGVq?page=5& "">Thanks to Mathias Berwig for intro animation</a></little>
+        <little style="font-size:.3em"><a href="https://codepen.io/MathiasBerwig/pen/GopGVq?page=5& ">Thanks to Mathias Berwig for intro animation</a></little>
       </section>
     </div>
   </div>
