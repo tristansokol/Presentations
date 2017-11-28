@@ -66,7 +66,7 @@ function guid() {
 var applicationId = 'sandbox-sq0idp-jdEW5rWHcW5HeoMDfSPfyg'; // <-- Add your application's ID here
 // Initializes the payment form. See the documentation for descriptions of
 // each of these parameters.
-// 
+//
 function createForm5(){
 
   window.paymentForm = new SqPaymentForm({
