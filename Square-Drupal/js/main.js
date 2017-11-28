@@ -1,22 +1,24 @@
-'use strict'
-var applicationId = 'sandbox-sq0idp-gbQhcOCpmb2X4W1588Ky7A';
+'use strict';
+var applicationId = 'sandbox-sq0idp-jdEW5rWHcW5HeoMDfSPfyg';
 var locationId = 'BB4PDGY9EX5RA';
+
 function guid() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
-    .toString(16)
-    .substring(1);
+      .toString(16)
+      .substring(1);
   }
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-  s4() + '-' + s4() + s4() + s4();
+    s4() + '-' + s4() + s4() + s4();
 }
-function updateCustomer(id){
-  document.getElementById('8-customer').innerHTML = id.value
+
+function updateCustomer(id) {
+  document.getElementById('8-customer').innerHTML = id.value;
   document.getElementById('8-customer1').innerHTML = id.value;
 }
 
-function updateCard(id){
-  document.getElementById('8-customer-card').innerHTML = id.value
+function updateCard(id) {
+  document.getElementById('8-customer-card').innerHTML = id.value;
 }
 Reveal.addEventListener('form0', function() {
   // slide based events
@@ -69,7 +71,7 @@ Reveal.addEventListener('form1', function() {
     event.preventDefault();
 
     // Request a nonce from the SqPaymentForm object
-    paymentForm.requestCardNonce();
+    window.paymentForm.requestCardNonce();
   }
 
   // Create and initialize a payment form object
@@ -155,8 +157,7 @@ Reveal.addEventListener('form1', function() {
        * callback function: cardNonceResponseReceived
        * Triggered when: SqPaymentForm completes a card nonce request
        */
-      cardNonceResponseReceived: function(errors, nonce, cardData) {
-      },
+      cardNonceResponseReceived: function(errors, nonce, cardData) {},
 
       /*
        * callback function: paymentFormLoaded
@@ -168,11 +169,11 @@ Reveal.addEventListener('form1', function() {
     }
   });
   window.paymentForm.build();
-},false);
+}, false);
 
 Reveal.addEventListener('card-nonce-generation-test', function() {
   // slide based events
-console.log('build form');
+  console.log('build form');
   window.paymentForm = new SqPaymentForm({
     applicationId: applicationId,
     inputClass: 'sq-inputs',
@@ -208,17 +209,15 @@ console.log('build form');
             console.log('  ' + error.message);
           });
 
-        // No errors occurred. Extract the card nonce.
-      } else {
+          // No errors occurred. Extract the card nonce.
+        } else {
 
           // Delete this line and uncomment the lines below when you're ready
           // to start submitting nonces to your server.
           //alert('Nonce received: ' + nonce);
-          document.getElementById("6-nonce").innerHTML = nonce
+          document.getElementById("6-nonce").innerHTML = nonce;
           document.cardNonce = nonce;
-          document.getElementById("8-idem").innerHTML = guid()
-          document.getElementById("7-nonce").innerHTML= nonce
-          document.getElementById("8-nonce").innerHTML = nonce
+          document.getElementById("7-nonce").innerHTML = nonce
           document.getElementById("8-nonce1").innerHTML = nonce
         }
       }
@@ -231,7 +230,7 @@ console.log('build form');
 }, false);
 Reveal.addEventListener('card-on-file', function() {
   // slide based events
-console.log('build form');
+  console.log('build form');
   window.paymentForm = new SqPaymentForm({
     applicationId: applicationId,
     inputClass: 'sq-inputs',
@@ -267,12 +266,12 @@ console.log('build form');
             console.log('  ' + error.message);
           });
 
-        // No errors occurred. Extract the card nonce.
-      } else {
+          // No errors occurred. Extract the card nonce.
+        } else {
           document.getElementById("8-nonce1").innerHTML = nonce
           document.cardNonce = nonce;
           document.getElementById("8-idem").innerHTML = guid()
-          document.getElementById("7-nonce").innerHTML= nonce
+          document.getElementById("7-nonce").innerHTML = nonce
           document.getElementById("8-nonce").innerHTML = nonce
           document.getElementById("8-nonce1").innerHTML = nonce
         }
@@ -284,20 +283,24 @@ console.log('build form');
 
 
 }, false);
-function requestCardNonce(event) {
-    // This prevents the Submit button from submitting its associated form.
-    // Instead, clicking the Submit button should tell the SqPaymentForm to generate
-    // a card nonce, which the next line does.
-    event.preventDefault();
 
-    window.paymentForm.requestCardNonce();
-  }
+function requestCardNonce(event) {
+  // This prevents the Submit button from submitting its associated form.
+  // Instead, clicking the Submit button should tell the SqPaymentForm to generate
+  // a card nonce, which the next line does.
+  event.preventDefault();
+
+  window.paymentForm.requestCardNonce();
+}
 Reveal.addEventListener('slidechanged', function(event) {
   // event.previousSlide, event.currentSlide, event.indexh, event.indexv
   // desroy all payment forms for each slide turn.
-//destroyForm();
+  //destroyForm();
 
 });
+document.getElementById("8-idem").innerHTML = guid();
+document.getElementById("idem").innerHTML = guid();
+document.getElementById("idem2").innerHTML = guid();
 function destroyForm() {
   console.log('destroying form');
   if (window.paymentform) {

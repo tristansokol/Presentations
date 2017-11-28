@@ -134,7 +134,7 @@ apache_vhosts_ssl:
                 </section>
             </section>
             <section>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="200" height="200" class="color-change">
+                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 44 44" width="200" height="200" class="color-change">
                     <path d="M36.65 0h-29.296c-4.061 0-7.354 3.292-7.354 7.354v29.296c0 4.062 3.293 7.354 7.354 7.354h29.296c4.062 0 7.354-3.292 7.354-7.354v-29.296c.001-4.062-3.291-7.354-7.354-7.354zm-.646 33.685c0 1.282-1.039 2.32-2.32 2.32h-23.359c-1.282 0-2.321-1.038-2.321-2.32v-23.36c0-1.282 1.039-2.321 2.321-2.321h23.359c1.281 0 2.32 1.039 2.32 2.321v23.36z"></path>
                     <path fill="#2E3B4E" d="M17.333 28.003c-.736 0-1.332-.6-1.332-1.339v-9.324c0-.739.596-1.339 1.332-1.339h9.338c.738 0 1.332.6 1.332 1.339v9.324c0 .739-.594 1.339-1.332 1.339h-9.338z"></path>
                 </svg>
@@ -166,7 +166,7 @@ apache_vhosts_ssl:
                     We aren't really.
                 </aside>
             </section>
-            <section data-background-image="img/payments.png" data-background-size="contain">
+            <section data-background-image="img/payments.png" data-background-size="contain" data-background-color="black">
                 <aside class="notes">
                     Payments are at the center of what we do, but not all we do.
                 </aside>
@@ -414,7 +414,7 @@ masterpass: {
                     <img class="fragment" src="img/cardonfile.png">
                 </section>
                 <section>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="200" height="200">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 80 80" width="200" height="200">
                         <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="21.1" cy="35" r="5" />
                         <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M28.2,46.5C26.6,44.4,24,43,21.1,43s-5.5,1.4-7.1,3.5" />
                         <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38" y1="29" x2="66" y2="29" />
@@ -500,7 +500,7 @@ masterpass: {
 		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
 		-H 'content-type: application/json' \
 		-d '{
-		"idempotency_key": "<span id="8-idem"></span>",
+		"idempotency_key": "<span id="idem"></span>",
 		"amount_money": {
 		"amount": 100,
 		"currency": "USD"
@@ -652,6 +652,13 @@ masterpass: {
                     </li>
                 </ul>
             </section>
+            <section data-background-color="#f97242">
+              <h1 style="color:white">SQUAREDRUPAL</h1>
+              <aside class="notes">
+                It's locked to 35 uses
+                It's $20 off an order, can be used once per person, no order minimum, valid for 3 weeks.
+              </aside>
+            </section>
         </div>
     </div>
     <script src="lib/js/head.min.js"></script>
@@ -663,6 +670,7 @@ masterpass: {
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
       history: true,
+      loop: true,
       dependencies: [
         { src: 'plugin/markdown/marked.js' },
         { src: 'plugin/markdown/markdown.js' },
