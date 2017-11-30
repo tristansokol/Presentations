@@ -97,29 +97,117 @@
         </aside>
       </section>
       <section>
-        new ipad image, add more primitives.
-        <p>
-          <span class="fragment">Card  </span>
-          <span class="fragment">Catalog  </span>
-          <span class="fragment">Customers  </span>
-          <span class="fragment">Devices  </span>
-          <span class="fragment">Orders</span>
-        </p>
+        <div class="fragment" data-fragment-index="3">
+
+
+          <div class="left">
+            Solutions
+          </div>
+          <div class="right">
+            <div class="solution bigger first-party">
+              Square POS
+            </div>
+            <div class="solution bigger first-party">
+              Square for retail
+            </div>
+            <div class="solution bigger third-party">
+              Stadium ticketing app
+            </div>
+            <div class="solution bigger first-party">
+              Square for services
+            </div>
+            <div class="solution bigger third-party">
+              Hotel pms
+            </div>
+            <div class="solution smaller first-party">
+              Loyalty
+            </div>
+            <div class="solution smaller third-party">
+              SAP
+            </div>
+            <div class="solution smaller first-party">
+              invoices
+            </div>
+            <div class="solution smaller first-party">
+              Virtual Terminal
+            </div>
+            <div class="solution smaller third-party">
+              eventbrite
+            </div>
+            <div class="solution smaller first-party">
+              employee management
+            </div>
+            <div class="solution smaller first-party">
+              payroll
+            </div>
+          </div>
+          <br clear="both" />
+          <hr />
+        </div>
+        <div class="fragment" data-fragment-index="2">
+
+
+          <div class="left">
+            APIs
+          </div>
+          <div class="right">
+            <div class="api">
+              Catalog API
+            </div>
+            <div class="api">
+              Customers API
+            </div>
+            <div class="api">
+              Orders API
+            </div>
+            <div class="api">
+              eCommerce API
+            </div>
+          </div>
+          <br clear="both" />
+          <hr />
+        </div>
+        <div class="fragment" data-fragment-index="1">
+
+          <div class="left">
+            primitives
+          </div>
+          <div class="right ">
+            <div class="primitive">Card </div>
+            <div class="primitive">Catalog </div>
+            <div class="primitive">Customers </div>
+            <div class="primitive">Devices </div>
+            <div class="primitive">Orders</div>
+            <div class="primitive">Inventory</div>
+            <div class="primitive">Fee</div>
+            <div class="primitive">Permission</div>
+            <div class="primitive">Employee</div>
+            <div class="primitive">Customer</div>
+            <div class="primitive">Coupon</div>
+            <div class="primitive">Discount</div>
+            <div class="primitive">Identity</div>
+            <div class="primitive">Location</div>
+            <div class="primitive">Bank Account</div>
+            <div class="primitive">Payment</div>
+            <div class="primitive">Refund</div>
+            <div class="primitive">Course</div>
+            <div class="primitive">Delivery</div>
+            <div class="primitive">Address</div>
+            <div class="primitive">Variation</div>
+            <div class="primitive">Modifier</div>
+            <div class="primitive">Tender</div>
+            <div class="primitive">Timecard</div>
+            <div class="primitive">Display</div>
+            <div class="primitive">Store</div>
+            <div class="primitive">Tax</div>
+            <div class="primitive">Campaign</div>
+          </div>
+        </div>
         <aside class="notes">
           As we expanded our first party products, we continued to build more systems and internal representations of new ideas and concepts that our users. Caviar for example gave us primitives like courses and advanced inventory needs. Our functionality for appointment
-          based businesses required a concept of a calendar and bookable services.
-        </aside>
-      </section>
-      <section>
-
-        <span class="fragment">layer one of primitives  </span>
-        <span class="fragment">layer two  </span>
-        <span class="fragment">etc.  </span>
-        <aside class="notes">
-          We now have collection of hundreds of these concepts and primitives as data models and services available to our products.
-
-          And they can only do merchants so much good inside of our products, but we know that the real value is created when developers are given the opportunity to meet user's needs directly, so we are opening up all of these primitives as APIs, because we know that our first party products will never meet the needs for every business type, size, and owner, but developers can.
-
+          based businesses required a concept of a calendar and bookable services. We now have collection of hundreds of these concepts and primitives as data models and services available to our products. And they can only do merchants so much good inside
+          of our products, but we know that the real value is created when developers are given the opportunity to meet user's needs directly, so we are opening up all of these primitives as APIs, because we know that our first party products will never
+          meet the needs for every business type, size, and owner, but developers can.
 
         </aside>
       </section>
@@ -130,10 +218,9 @@
         </aside>
       </section>
       <section data-background-image="img/slash-developers.png" data-background-position="top">
-      </section>
-      <section data-background-image="img/docs.png" data-background-position="top">
-      </section>
-      <section data-background-image="img/portal.png" data-background-position="top">
+        <aside class="notes">
+          All this information is available on our developer site, so if you don't remember any of this, you can find out more at Square.com/developers.
+        </aside>
       </section>
       <section>
         E-Commerce
@@ -142,7 +229,7 @@
       <section id="slide4">
         <img src="img/jsLib.png">
       </section>
-      <section id="slide5" data-background-color="rgb(63,63,63)">
+      <section data-state="form-example" data-background-color="rgb(63,63,63)">
         <pre class="fragment"><code data-trim>
 					<label>Card Number</label>
 					<div id="sq-card-number"></div>
@@ -153,53 +240,106 @@
 					<label>Postal Code</label>
 					<div id="sq-postal-code"></div>
 				</code></pre>
-        <div class="compact-form fragment">
-          <div class="flex-grid" style="border-bottom: solid #D0D3D3 2px;margin-bottom: 15px">
-            <div class="col">
-              <label>Card Number</label>
-              <div id="sq-card-number-5"></div>
+        <div class="fragment">
+          <div class="compact-form" id="payment-form">
+            <div class="flex-grid" style="border-bottom: solid #D0D3D3 2px;margin-bottom: 15px">
+              <div class="col">
+                <label>Card Number</label>
+                <div id="sq-card-number-example"></div>
+              </div>
             </div>
-          </div>
-          <div class="flex-grid">
-            <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-              <label>Expiration Date</label>
-              <div id="sq-expiration-date-5"></div>
-            </div>
-            <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-              <label>Postal Code</label>
-              <div id="sq-postal-code-5"></div>
-            </div>
-            <div class="minigroup">
-              <label>CVV</label>
-              <div id="sq-cvv-5"></div>
+            <div class="flex-grid">
+              <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
+                <label>Expiration Date</label>
+                <div id="sq-expiration-date-example"></div>
+              </div>
+              <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
+                <label>Postal Code</label>
+                <div id="sq-postal-code-example"></div>
+              </div>
+              <div class="minigroup">
+                <label>CVV</label>
+                <div id="sq-cvv-example"></div>
+              </div>
             </div>
           </div>
         </div>
+        <aside class="notes">
+          And basically what it does is transform some html we provide you into a payment form. But there is a lot more going on under the hood. Each of these form fields is actually an iframe hosted on Square's servers. At first that might seem kind of strange, but there are actually some very important reasons we do that.
+        </aside>
       </section>
-      <section id="slide6">
-        <div class="compact-form">
-          <div class="flex-grid" style="border-bottom: solid #D0D3D3 2px;margin-bottom: 15px">
-            <div class="col">
-              <label>Card Number</label>
-              <div id="sq-card-number-6">ssdf</div>
-            </div>
-          </div>
-          <div class="flex-grid">
-            <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-              <label>Expiration Date</label>
-              <div id="sq-expiration-date-6">ss</div>
-            </div>
-            <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-              <label>Postal Code</label>
-              <div id="sq-postal-code-6">sss</div>
-            </div>
-            <div class="minigroup">
-              <label>CVV</label>
-              <div id="sq-cvv-6">sss</div>
-            </div>
-          </div>
+      <section>
+        <ul>
+          <li class="fragment">
+            Security
+          </li>
+          <li  class="fragment">
+            Ease of use
+          </li>
+          <li  class="fragment">
+            Compliance
+          </li>
+
+        </ul>
+<aside class="notes">
+With the way we have architected our payment form when a buyer enters their card details to your website, those credit card details are actually being entered directly to Square. That creates an entire layer of security that prevents malicious javascript on a webpage from being able to access the card details.
+
+As a developer you might find this nice because it is an easy solution that allows you to start accepting payments online without having to worry about how you are going to keep that information safe, and because you never have access to those personal details, you don't have to worry about the regulations that come along with it, like the double encryption, regular security audits, etc. We handle payments, so you can focus on your application.
+</aside>
+      </section>
+      <section>
+        Recurring payments?
+        <img class="fragment" src="img/cardonfile.png">
+        <aside class="notes">
+          We support recurring payments or subscription billing through our existing functionality that we call card on file in the Point of Sale world. One of the nice things there is that you can actually do switch between in person and online sales. so if you have someone who has visited your store, and wanted to keep their card on file with you in person, you can charge them a subscription online as well. Or if you have someone who saves their card to your site, you will have all that payment information and customer details if you see them in person as well.
+        </aside>
+      </section>
+      <section>
+        Transaction based fees
+        <img src="img/mps.png" class="fragment" />
+        <aside class="notes">
+          Another common use case that you might encounter is wanting to charge transaction based fees, a specific amount on each transaction or
+        </aside>
+      </section>
+      <section>
+        <img src="img/checkout.png">
+        <aside class="notes">
+
+        </aside>
+      </section>
+      <section>
+        <aside class="notes">
+
+        </aside>
+      </section>
+      <section data-state="card-nonce-generation-test">
+        <div id="card-nonce-generation-test-form">
+
+
         </div>
-        <div style="color:#AAA">Card Nonce: <span style="color:black" id="6-nonce"></span></div>
+        <!-- <div class="compact-form" >
+              <div class="flex-grid" style="border-bottom: solid #D0D3D3 2px;margin-bottom: 15px">
+                  <div class="col">
+                      <label>Card Number</label>
+                      <div id="sq-card-number-card-nonce-generation-test">|</div>
+                  </div>
+              </div>
+              <div class="flex-grid">
+                  <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
+                      <label>Expiration Date</label>
+                      <div id="sq-expiration-date-card-nonce-generation-test">|</div>
+                  </div>
+                  <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
+                      <label>Postal Code</label>
+                      <div id="sq-postal-code-card-nonce-generation-test">|</div>
+                  </div>
+                  <div class="minigroup">
+                      <label>CVV</label>
+                      <div id="sq-cvv-card-nonce-generation-test">|</div>
+                  </div>
+              </div>
+          </div> -->
+        <div style="color:#AAA">Card Nonce: <span style="color:black" id="card-nonce-generation-test-nonce"></span></div>
         <input type="submit" onclick="requestCardNonce(event)">
       </section>
       <section>
@@ -224,12 +364,12 @@
 			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
 			-H 'content-type: application/json' \
 			-d '{
-				"idempotency_key": "<span id="idem"></span>",
+				"idempotency_key": "<span id="charge-idem"></span>",
 				"amount_money": {
 				"amount": 100,
 				"currency": "USD"
 			},
-				"card_nonce": "<span id="7-nonce"></span>"
+				"card_nonce": "<span id="charge-nonce"></span>"
 			}' | python -m json.tool</code></pre>
         </section>
       </section>
@@ -265,9 +405,12 @@
 				}' | python -m json.tool
 		</code></pre>
         </section>
-        <section>
+        <section data-state="recurring-card">
           Create a card Nonce
-          <div class="compact-form">
+          <div id="recurring-card-form">
+
+          </div>
+          <!-- <div class="compact-form">
             <div class="flex-grid" style="border-bottom: solid #D0D3D3 2px;margin-bottom: 15px">
               <div class="col">
                 <label>Card Number</label>
@@ -288,9 +431,9 @@
                 <div id="sq-cvv-8">sss</div>
               </div>
             </div>
-          </div>
+          </div> -->
           <div style="color:#AAA">Card Nonce:<span style="color:black" id="8-nonce"></span></div>
-          <input type="submit" onclick="requestCardNonce8(event)">
+          <input type="submit" onclick="requestCardNonce(event)">
         </section>
         <section>
           <p>
@@ -303,7 +446,7 @@
 			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
 			-H 'content-type: application/json' \
 			-d '{
-			"card_nonce": "<span id="8-nonce1"></span>",
+			"card_nonce": "<span id="recurring-nonce"></span>",
 			"billing_address": {
 			"address_line_1": "500 Electric Ave",
 			"address_line_2": "Suite 600",
@@ -325,7 +468,7 @@
 		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
 		-H 'content-type: application/json' \
 		-d '{
-		"idempotency_key": "<span id="8-idem"></span>",
+		"idempotency_key": "<span id="recurring-idem"></span>",
 		"amount_money": {
 		"amount": 100,
 		"currency": "USD"
