@@ -70,7 +70,7 @@
         </aside>
       </section>
       <section>
-        <img src="img/products.png">
+        <img src="img/products2.png">
         <aside class="notes">
           As we observing how buyers were using our products to accept payments, we started build other things that we knew could deliver value to our merchants in making their lives easier and growing their business. Our payments and point of sale have had a big
           head start, but we are just beginning to see some of the value created by the network effects of some of our first party services. But we aren't aren't a software company either.
@@ -304,264 +304,48 @@ As a developer you might find this nice because it is an easy solution that allo
       <section>
         <img src="img/checkout.png">
         <aside class="notes">
+          If the iframes sound like a bit too complicated for your use case, we also have a product called Square Checkout that allows you to redirect customers to a page that Square hosts, you can specify all sorts of different fields for items that are shown, fees, taxes, discounts, shipping and billing addresses and more.
 
+          When a buyer is done, they get redirected to your site for an order confirmation page
         </aside>
       </section>
+      <section data-background-color="rgb(252,252,254)">
+        Point of Sale API <br />
+        <img  height="500px" src="img/register-api.gif">
+      </section>
+      <section >
+        <a href="" id="chargeButton">
+        <img  height="500px" src="img/boba-demo.gif">
+      </a>
+      </section>
+      <section data-background-image="img/your-app-here.png" data-background-size="contain">
+      </section>
       <section>
+        <img src="img/rest.png" />
         <aside class="notes">
-
+          We have all these rest APIs
         </aside>
       </section>
-      <section data-state="card-nonce-generation-test">
-        <div id="card-nonce-generation-test-form">
+      <section>
+        <img src="img/so-logo.png" />
+        square-connect
+        <aside class="notes">
+          Developer support options:
+        </aside>
+      </section>
+      <section data-background-iframe="./backgrounds/stars.html">
+        <h2 style="color:white;"> Square is the commerce platform of the future</h2>
+        <aside class="notes">
+          We are building a commerce platform. This is a bold claim, and we aren't there yet, but let me tell you more about what I mean.
+        </aside>
+      </section>
 
-
-        </div>
-        <!-- <div class="compact-form" >
-              <div class="flex-grid" style="border-bottom: solid #D0D3D3 2px;margin-bottom: 15px">
-                  <div class="col">
-                      <label>Card Number</label>
-                      <div id="sq-card-number-card-nonce-generation-test">|</div>
-                  </div>
-              </div>
-              <div class="flex-grid">
-                  <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-                      <label>Expiration Date</label>
-                      <div id="sq-expiration-date-card-nonce-generation-test">|</div>
-                  </div>
-                  <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-                      <label>Postal Code</label>
-                      <div id="sq-postal-code-card-nonce-generation-test">|</div>
-                  </div>
-                  <div class="minigroup">
-                      <label>CVV</label>
-                      <div id="sq-cvv-card-nonce-generation-test">|</div>
-                  </div>
-              </div>
-          </div> -->
-        <div style="color:#AAA">Card Nonce: <span style="color:black" id="card-nonce-generation-test-nonce"></span></div>
-        <input type="submit" onclick="requestCardNonce(event)">
-      </section>
-      <section>
-        <section id="slide7">
-          <p>Charge Endpoint</p>
-          <pre><code data-trim >
-					POST /v2/locations/LOCATION_ID/transactions  {
-
-						"idempotency_key": "74ae1696",
-						"amount_money": {
-							"amount": 5000,
-							"currency": "USD"
-						},
-						"card_nonce": "card_nonce_from_square_123"
-					}
-			</code></pre>
-        </section>
-        <section>
-          <pre><code data-trim data-noescape>
-			curl -X POST \
-			https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
-			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-			-H 'content-type: application/json' \
-			-d '{
-				"idempotency_key": "<span id="charge-idem"></span>",
-				"amount_money": {
-				"amount": 100,
-				"currency": "USD"
-			},
-				"card_nonce": "<span id="charge-nonce"></span>"
-			}' | python -m json.tool</code></pre>
-        </section>
-      </section>
-      <section>
-        <section id="slide8">
-          Recurring payments?
-          <img class="fragment" src="img/cardonfile.png">
-        </section>
-        <section>
-          <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 80 80" width="200" height="200">
-                        <circle fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="21.1" cy="35" r="5" />
-                        <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M28.2,46.5C26.6,44.4,24,43,21.1,43s-5.5,1.4-7.1,3.5" />
-                        <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38" y1="29" x2="66" y2="29" />
-                        <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38" y1="35" x2="51" y2="35" />
-                        <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38" y1="41" x2="66" y2="41" />
-                        <line fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38" y1="47" x2="61" y2="47" />
-                        <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M4,16H2c-0.5,0-1,0.5-1,1v51c0,0.6,0.5,1,1,1h16c0.5,0,1-0.4,1-1v-0.6c0-0.5-0.3-1.3-0.7-1.7c0,0-1.3-1.3-1.3-2.7c0-2.2,1.8-4,4-4 s4,1.8,4,4c0,1.5-1.3,2.7-1.3,2.7c-0.4,0.4-0.7,1.2-0.7,1.7V68c0,0.6,0.5,1,1,1h32c0.5,0,1-0.4,1-1v-0.6c0-0.5-0.3-1.3-0.7-1.7 c0,0-1.3-1.3-1.3-2.7c0-2.2,1.8-4,4-4s4,1.8,4,4c0,1.5-1.3,2.7-1.3,2.7c-0.4,0.4-0.7,1.2-0.7,1.7V68c0,0.6,0.5,1,1,1h16 c0.6,0,1-0.4,1-1V17c0-0.5-0.4-1-1-1H38" />
-                        <path fill="none" stroke="#2E3B4E" stroke-width="2" stroke-miterlimit="10" d="M4,16c0,0,0-1.1,0-2.5S5.8,11,8,11h26 c2.2,0,4,1.1,4,2.5s0,2.5,0,2.5" />
-                    </svg>
-          <p> Create a customer</p>
-        </section>
-        <section>
-          <pre><code data-trim data-noescape>
-				curl -X POST \
-				https://connect.squareup.com/v2/customers \
-				-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-				-H 'content-type: application/json' \
-				-d '{
-				"given_name": "Veronica",
-				"family_name": "Slocombe",
-				"email_address": "V.Slocombe@example.com",
-				"note": "an exceptional customer"
-				}' | python -m json.tool
-		</code></pre>
-        </section>
-        <section data-state="recurring-card">
-          Create a card Nonce
-          <div id="recurring-card-form">
-
-          </div>
-          <!-- <div class="compact-form">
-            <div class="flex-grid" style="border-bottom: solid #D0D3D3 2px;margin-bottom: 15px">
-              <div class="col">
-                <label>Card Number</label>
-                <div id="sq-card-number-8">ssdf</div>
-              </div>
-            </div>
-            <div class="flex-grid">
-              <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-                <label>Expiration Date</label>
-                <div id="sq-expiration-date-8">ss</div>
-              </div>
-              <div class="minigroup" style="border-right: solid #D0D3D3 2px;margin-right: 15px">
-                <label>Postal Code</label>
-                <div id="sq-postal-code-8">sss</div>
-              </div>
-              <div class="minigroup">
-                <label>CVV</label>
-                <div id="sq-cvv-8">sss</div>
-              </div>
-            </div>
-          </div> -->
-          <div style="color:#AAA">Card Nonce:<span style="color:black" id="8-nonce"></span></div>
-          <input type="submit" onclick="requestCardNonce(event)">
-        </section>
-        <section>
-          <p>
-            attach to customer:
-            <input type="text" onchange="updateCustomer(this)">
-          </p>
-          <pre><code data-trim data-noescape>
-			curl -X POST \
-			https://connect.squareup.com/v2/customers/<span id="8-customer"></span>/cards \
-			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-			-H 'content-type: application/json' \
-			-d '{
-			"card_nonce": "<span id="recurring-nonce"></span>",
-			"billing_address": {
-			"address_line_1": "500 Electric Ave",
-			"address_line_2": "Suite 600",
-			"locality": "New York",
-			"administrative_district_level_1": "NY",
-			"postal_code": "11111",
-			"country": "US"
-			},
-			"cardholder_name": "Amelia Earhart"
-			}' | python -m json.tool
-</code></pre>
-        </section>
-        <section>
-          <p>Charge</p>
-          <input type="text" onchange="updateCard(this)">
-          <pre><code data-trim data-noescape>
-		curl -X POST \
-		https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
-		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-		-H 'content-type: application/json' \
-		-d '{
-		"idempotency_key": "<span id="recurring-idem"></span>",
-		"amount_money": {
-		"amount": 100,
-		"currency": "USD"
-		},
-		"customer_id":"<span id="8-customer1"></span>",
-		"customer_card_id":"<span id="8-customer-card"></span>"
-		}' | python -m json.tool
-</code></pre>
-        </section>
-        <section>
-          <p>List Transactions</p>
-          <pre><code data-trim data-noescape>
-		curl -X GET \
-		https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/transactions \
-		-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-		| python -m json.tool
-	</code></pre>
-        </section>
-      </section>
-      <section>
-        <section>
-          <img src="img/checkout.png">
-        </section>
-        <section id="slide9">
-          <p>Square Checkout</p>
-          <pre><code data-trim data-noescape>
-			curl -X POST \
-			https://connect.squareup.com/v2/locations/CBASEM9Ry3uB-6qCeuoZP6wRR7k/checkouts \
-			-H 'authorization: Bearer sq0atb-tsn132D7btUhW3uL_y5I3w' \
-			-H 'content-type: application/json' \
-			-d '{
-			"idempotency_key": "<span id="idem2"></span>",
-			"order": {
-			"line_items": [{
-			"name": "Spikey Succulent",
-			"quantity": "2",
-			"base_price_money": {
-			"amount": 1500,
-			"currency": "USD"
-			},
-			"discounts": [{
-			"name": "15% off mean looking item",
-			"percentage": "7"
-			}]
-			}],
-			"taxes": [{
-			"name": "Sales Tax",
-			"percentage": "8.5"
-			}]
-			},
-			"redirect_url": "https://giphy.com/search/happy"
-			}' | python -m json.tool</code></pre>
-        </section>
-      </section>
-      <section>
-        <h3> Point of Sale API </h3>
-      </section>
-      <section data-background-image="img/your-app-here.png" id="slide-pos-demo" data-background-size="contain">
-      </section>
-      <section>
-        <p>Point of Sale API</p>
-        <a href="" id="chargeButton"><h5>Click here to checkout</h5></a>
-      </section>
-      <section id="recreleses">
-        <h3>Recent releases</h3>
-        <ul>
-          <li class="fragment"> Orders API</li>
-          <li class="fragment"> Apple Pay on the Web</li>
-          <li class="fragment"> Interactive documentation sandbox</li>
-          <li class="fragment"> LocationId's in the developer portal</li>
-          <li class="fragment"> Catalog API, Checkout & More! </li>
-        </ul>
-      </section>
-      <section id="upcoming">
-        <h3>What is coming up</h3>
-        <ul>
-          <li class="fragment">Multi-party settlement</li>
-          <li class="fragment"> Node.js SDK</li>
-          <li class="fragment"> New Transaction/Charge documentation</li>
-        </ul>
-      </section>
-      <!-- 		<section>
-			Attaching a customer to a transaction
-			* Saving a card on file *
-			*  Adding Point of Sale API functionality.
-			*   * Next steps * How to get help.
-		</section> -->
       <section data-background-iframe="./backgrounds/dots.html" data-background-interactive>
         <p><a href="https://squareup.com/developers">square.com/developers</a></p>
-        <p><a href="https://squ.re/slack">squ.re/slack</a></p>
-        <p><a href="https://twitter.com/squaredev">@SquareDev</a></p>
-        <p><a href="https://corner.squareup.com/">corner.squareup.com</a></p>
-        <p><a href="http://tristansokol.github.io/Presentations/Taking%20a%20Payment%20with%20Square/">tristansokol.github.io/Presentations</a></p>
+        <p><a class="fragment" href="https://squ.re/slack">squ.re/slack</a></p>
+        <p><a class="fragment" href="https://twitter.com/squaredev">@SquareDev</a></p>
+        <p><a class="fragment" href="https://corner.squareup.com/">corner.squareup.com</a></p>
+        <p><a class="fragment" href="http://tristansokol.github.io/Presentations/Taking%20a%20Payment%20with%20Square/">tristansokol.github.io/Presentations</a></p>
         <little style="font-size:.3em"><a href="https://codepen.io/MathiasBerwig/pen/GopGVq?page=5& ">Thanks to Mathias Berwig for intro animation</a></little>
       </section>
     </div>
