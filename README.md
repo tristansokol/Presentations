@@ -1,6 +1,7 @@
 # Tristan's Presentations
 [![Build Status](https://travis-ci.org/tristansokol/Presentations.svg?branch=master)](https://travis-ci.org/tristansokol/Presentations)
 
+* [How to win StackOverflow](https://tristansokol.github.io/Presentations/How%20to%20win%20StackOverflow/index.html) _presented at DevRelCon London 2017_
 * [Square's Platform](https://tristansokol.github.io/Presentations/Square%20Platform%20Overview/index.html)
 * [Square - Drupal](https://tristansokol.github.io/Presentations/Square-Drupal/index.html) _November 28th 2017, Boston Drupal Meetup_
 * [Introduction to QuickBooks Online and Intuit Developer](https://github.com/tristansokol/Presentations/tree/master/introduction%20to%20QuickBooks%20Online%20and%20Intuit%20Developer)
