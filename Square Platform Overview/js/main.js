@@ -11,8 +11,6 @@ function guid() {
   return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
     s4() + '-' + s4() + s4() + s4();
 }
-document.getElementById("charge-idem").innerHTML = guid();
-document.getElementById("recurring-idem").innerHTML = guid();
 function updateCustomer(id) {
   document.getElementById('8-customer').innerHTML = id.value;
   document.getElementById('8-customer1').innerHTML = id.value;
