@@ -486,8 +486,13 @@
       </section>
       <section data-background-image="img/appStore.png">
         <aside class="notes">
-
+          There is a mobile app.
         </aside>
+      </section>
+      <section data-background-image="img/taginfo.png" data-background-position="top" data-background-size="100%">
+        <aside class="notes">
+          https://stackoverflow.com/tags/square-connect/topusers
+        </aside>"
       </section>
       <section>Data Science Time!!!
         <img class="fragment" src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAnjAAAAJDUwNGZlODU5LWFiYTctNDJmMy05YzQxLWM1OTVlNDhlODFhNQ.png">
@@ -540,6 +545,7 @@
         <section>
           <img src="img/responseTimeWeek.png" />
           <a href="https://data.stackexchange.com/stackoverflow/query/538484/median-time-to-first-answer-by-tag?tag=square-connect#graph"><small>Median time to first answer by tag/week</small></a>
+          <a href="https://data.stackexchange.com/stackoverflow/query/617413/time-to-first-action-for-each-question?tag=square-connect#resultSets"><small>Time to first Action for each question/tag/week</small></a>
         </section>
         <section>
           <img src="img/TTAjavascript.png" />
@@ -548,8 +554,33 @@
         </section>
 
       </section>
-      <section>Most Viewed Questions of year/ all time/ month/ week
-        <a href="https://data.stackexchange.com/stackoverflow/query/538466/question-views-by-month-and-year-for-a-given-tag?Tag=square-connect#graph">question views by month of asking</a>
+      <section>
+
+        <section>Question Views
+          <div class="quarter">
+            <a href="https://data.stackexchange.com/stackoverflow/query/538469"><small>List all questions for a tag by views</small></a>
+          </div>
+
+          <div class="quarter">
+            <img src="img/TotalViews.png" /><br />
+            <a href="https://data.stackexchange.com/stackoverflow/query/538472/total-number-of-views-for-a-given-tag?tagname=square-connect"><small>Total number of views for a given tag</small></a>
+          </div>
+          <div class="quarter">
+            <img src="img/viewsByMonth.png" />
+            <a href="https://data.stackexchange.com/stackoverflow/query/538466/question-views-by-month-and-year-for-a-given-tag?Tag=square-connect#graph"><small>Question views by month and year for a given tag</small></a>
+          </div>
+
+        </section>
+        <section>
+          [javascript]
+          <img src="img/javascriptWeeklyViews.png" />
+        </section>
+
+      </section>
+      <section>
+        <h3>Most common words in your questions</h3>
+        <img src="img/popularWords.png" />
+        <a href="https://data.stackexchange.com/stackoverflow/query/766585/most-popular-words-in-posts-with-a-specific-tag"><small>Most popular words in posts for a specific tag</small></a>
       </section>
       <section>Top answerers
         <aside class="notes">
@@ -600,26 +631,9 @@
   <!-- Stack Overflow
 
 Views
-All-Time
-By question
-https://data.stackexchange.com/stackoverflow/query/538469
-Total
-https://data.stackexchange.com/stackoverflow/query/538472/total-number-of-views-for-a-given-tag?tagname=square-connect
-By Month
-https://data.stackexchange.com/stackoverflow/query/538466/question-views-by-month-and-year-for-a-given-tag?Tag=square-connect#graph
-By Week
+y Week
 https://data.stackexchange.com/stackoverflow/query/538468/views-by-week-for-a-given-tag-name?Tag=square-connect#graph
-Non-square answers
-Unanswered rate
-Highlight contributors
-Comparision
-Monthly
-Compare monthly questions between two tags
-Time to first Answer
-All-time
-https://data.stackexchange.com/stackoverflow/query/538486?tag=square-connect
-By week
-https://data.stackexchange.com/stackoverflow/query/538484/median-time-to-first-answer-by-tag?tag=square-connect
+
 
 
 best one https://data.stackexchange.com/stackoverflow/query/617413/time-to-first-action-for-each-question?tag=square-connect#graph
@@ -643,13 +657,7 @@ Highlight contributors
 Comparision
 Monthly
 Compare monthly questions between two tags
-Time to first Answer
-All-time
-https://data.stackexchange.com/stackoverflow/query/538486?tag=square-connect
-By week
-https://data.stackexchange.com/stackoverflow/query/538484/median-time-to-first-answer-by-tag?tag=square-connect
-By Month
-https://data.stackexchange.com/stackoverflow/query/538487/median-time-to-first-answer-by-month-for-a-given-tag?tag=square-connect#graph
+
  -->
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
