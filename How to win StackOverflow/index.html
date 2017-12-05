@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>How to Win Stack Overflow</title>
   <link rel="stylesheet" href="css/reveal.css">
-  <link rel="stylesheet" href="css/style.css">
+
   <link rel="stylesheet" href="css/theme/StackOverflow.css">
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
   <!-- Printing and PDF exports -->
+  <link rel="stylesheet" href="css/style.css">
   <script>
     var link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -24,7 +25,7 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <h1>How to Win</h1>
+        <h1>How to Win at</h1>
         <img src="img/so-logo.png">
         <aside class="notes">
           Hi everyone! I"m going to tell you all about Stack Overflow, some cool things that I've figured out to do on it, how I use it professionally to add to our developer experience, and of course how you could do things much better to build a great developer
@@ -556,8 +557,10 @@
       </section>
       <section>
 
-        <section>Question Views
+        <section>
+          <h3>Question Views</h3>
           <div class="quarter">
+            <img src="img/views.png" />
             <a href="https://data.stackexchange.com/stackoverflow/query/538469"><small>List all questions for a tag by views</small></a>
           </div>
 
@@ -582,18 +585,6 @@
         <img src="img/popularWords.png" />
         <a href="https://data.stackexchange.com/stackoverflow/query/766585/most-popular-words-in-posts-with-a-specific-tag"><small>Most popular words in posts for a specific tag</small></a>
       </section>
-      <section>Top answerers
-        <aside class="notes">
-        </aside>
-      </section>
-      <section>Related Tags
-        <aside class="notes">
-        </aside>
-      </section>
-      <section>Top words in your questions, squareup, goshippo?
-        <aside class="notes">
-        </aside>
-      </section>
       <section>Compare question volume to related tags.
         <aside class="notes">
         </aside>
@@ -606,59 +597,56 @@
         <aside class="notes">
         </aside>
       </section>
-      <section>Geographic distribution Stack overflow does'nt have good representation around the world https://teratail.com/
+      <section data-background-image="img/teratail.png" data-background-position="top"> <a href="https://teratail.com/"><small>https://teratail.com/</small></a>
         <aside class="notes">
         </aside>
       </section>
-      <section>Stack Overflow Ads
+      <section data-background-image="img/ads.png" data-background-position="top">
         <aside class="notes">
         </aside>
       </section>
-      <section>Hosting your own network on Stack Exchange
+      <section>
+        <section data-background-image="img/area51.png" data-background-position="top">
+          <aside class="notes">
+            Hosting your own network on Stack Exchange
+          </aside>
+        </section>
+        <section data-background-image="img/magento.png" data-background-position="top">
+          <aside class="notes">
+            Hosting your own network on Stack Exchange
+          </aside>
+        </section>
+      </section>
+      <section>
+        <h3>Bounties</h3>
+        <img height="100" src="img/card-star.svg" />
         <aside class="notes">
         </aside>
       </section>
-      <section>Bounties
-        <aside class="notes">
-        </aside>
-      </section>
-      <section>Thanks for watching!
+      <section>
+        <h3>Thank you!</h3>
+        <ul class="fancy-so">
+          <li>
+            <a class="fragment" href="https://twitter.com/tristansokol">twitter: @tristansokol</a>
+          </li>
+          <li>
+            <a class="fragment" href="https://medium.com/@tristansokol">medium: @tristansokol</a>
+          </li>
+          <li>
+            <a class="fragment" href="https://github.com/tristansokol">github: tristansokol</a>
+          </li>
+          <li>
+            <a class="fragment" href="http://tristansokol.github.io/Presentations/">tristansokol.github.io/Presentations</a>
+          </li>
+          <li>
+            <a class="fragment" href="https://www.meetup.com/DeveloperAdvocates/">SF Developer Advocates</a>
+          </li>
+        </ul>
         <aside class="notes">
         </aside>
       </section>
     </div>
   </div>
-  <!-- Stack Overflow
-
-Views
-y Week
-https://data.stackexchange.com/stackoverflow/query/538468/views-by-week-for-a-given-tag-name?Tag=square-connect#graph
-
-
-
-best one https://data.stackexchange.com/stackoverflow/query/617413/time-to-first-action-for-each-question?tag=square-connect#graph
-Stack Overflow
-Questions
-All-time
-https://data.stackexchange.com/stackoverflow/query/538497/number-of-questions-for-a-given-tag?tagname=square-connect
-Week
-https://data.stackexchange.com/stackoverflow/query/542258/questions-for-a-given-tag-by-week?Tag=square-connect
-Views
-All-Time
-By question
-https://data.stackexchange.com/stackoverflow/query/538469
-Total
-https://data.stackexchange.com/stackoverflow/query/538472/total-number-of-views-for-a-given-tag?tagname=square-connect
-By Week
-https://data.stackexchange.com/stackoverflow/query/538468/views-by-week-for-a-given-tag-name?Tag=square-connect#graph
-Non-square answers
-Unanswered rate
-Highlight contributors
-Comparision
-Monthly
-Compare monthly questions between two tags
-
- -->
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
   <script>
@@ -667,6 +655,7 @@ Compare monthly questions between two tags
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
       history: true,
+      loop: true,
       dependencies: [{
           src: 'plugin/markdown/marked.js'
         },
@@ -685,6 +674,10 @@ Compare monthly questions between two tags
           }
         }
       ]
+    });
+    //set the pacing to the total number of slides/
+    Reveal.configure({
+      defaultTiming: 1500 / Reveal.getTotalSlides()
     });
   </script>
   <script src="js/so.js"></script>

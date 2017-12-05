@@ -6,3 +6,15 @@
   margin: 0px;
   height: 200px;
 }
+.reveal .controls .navigate-left {
+    border-right-color: rgb(244, 128, 36) !important;
+}
+.reveal .controls .navigate-right{
+  border-left-color:rgb(244, 128, 36) !important;
+}
+.reveal .controls .navigate-down{
+  border-top-color:rgb(244, 128, 36) !important;
+}
+.reveal .controls .navigate-up{
+  border-bottom-color:rgb(244, 128, 36) !important;
+}
