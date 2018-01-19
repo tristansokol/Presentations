@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/theme/Square.css">
+	<!-- Square Market Font -->
+	<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
+
+	<!-- Google charts library -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- highlight js theme -->
+	<link rel="stylesheet" title="Atom One Light" href="https://highlightjs.org/static/demo/styles/atom-one-light.css">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<span class="title">
+						Google Charts
+					</span> 30 minutes presentation - 15 for Q/A
+				<aside class="notes">
+					Hi! I'm Tristan, I know I've talked to most of you before, and I'm going to present about the Google Charts.
+				</aside>
+			</section>
+			<section>
+				<img src="img/column.png" />
+				<img src="img/pie.png" />
+				<img src="img/scatter.png" />
+				<aside class="notes">
+					As you can probably guess, Google Charts and the associated Google Visualization API are tools that help you build data visualizations in your websites. You can do things like these simple and most used charts
+				</aside>
+			</section>
+			<section>
+				<img src="img/geo.png" />
+				<img src="img/gauge.png" />
+				<img src="img/org.png" />
+				<aside class="notes">
+					Or you can use the same tool to make more complex or specialized visualizations.
+				</aside>
+			</section>
+			<section>
+				<!-- This uses a weird full width less than -->
+				<pre><code data-trim>＜script type="text/javascript"
+src="https://www.gstatic.com/charts/loader.js">
+＜/script>
+		</code></pre>
+				<aside class="notes">
+					Lets get down to actually using the it. First things first, you'll need to add an external javascript library to the page, generally you'll want to do this in the head, but there are some other options based on the
+				</aside>
+			</section>
+			<section>
+				<section>
+					<!-- This uses a weird full width less than -->
+					<pre><code data-trim>＜script type="text/javascript">
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(yourFunctionToDrawAChart);
+＜/script>
+		</code></pre>
+					<aside class="notes">
+						Next you use the loader to load the charting package you want.
+					</aside>
+				</section>
+				<section>
+					<!-- This uses a weird full width less than -->
+					<pre><code data-trim data-noescape>＜script type="text/javascript">
+google.charts.load('current', {packages: [<strong>
+	'corechart',
+	'geochart',
+	'orgchart']
+});</strong>
+google.charts.setOnLoadCallback(yourFunctionToDrawAChart);
+＜/script>
+		</code></pre>
+					<aside class="notes">
+						Generally corechart is the one you want, but if you want to use some of the more specialized charts, you might need to specificy additional packages in this array. T
+					</aside>
+				</section>
+				<section>
+					<!-- This uses a weird full width less than -->
+					<pre><code data-trim data-noescape>＜script type="text/javascript">
+google.charts.load('current', {
+	packages: ['corechart'],<strong>
+	'language': 'ja',
+	 'mapsApiKey': 'myMapsApiKey'</strong>
+ });
+google.charts.setOnLoadCallback(yourFunctionToDrawAChart);
+＜/script>
+		</code></pre>
+					<aside class="notes">
+						his is also the place where you might include some other advanced options like localization options, or other chart specific details.
+					</aside>
+				</section>
+			</section>
+			<section>
+				<section>
+					<pre><code data-trim data-noescape>
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Flavor');
+      data.addColumn('number', 'Probability it's the best');
+      data.addRows([
+        ['Peach-Pear', 99],
+        ['Coconut', 15],
+        ['Pamplemousse', 84],
+        ['Passionfruit', 68],
+        ['Pure', 2]
+      ]);
+				</code></pre>
+					<aside class="notes">
+						Now that you've got everything ready to go, you can actually get into the data. Let's look at this line by line.
+					</aside>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+      <strong>var data = new google.visualization.DataTable();</strong>
+      data.addColumn('string', 'Flavor');
+      data.addColumn('number', 'Probability it's the best');
+      data.addRows([
+	      ['Peach-Pear', 99],
+	      ['Coconut', 15],
+	      ['Pamplemousse', 84],
+	      ['Passionfruit', 68],
+	      ['Pure', 2]
+      ]);
+				</code></pre>
+					<aside class="notes">
+						In the first line we Instantiate a new DataTable object. You could mentally picture this as an excel sheet or any other kind two dimensional array.
+					</aside>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+			var data = new google.visualization.DataTable();<strong>
+			data.addColumn('string', 'Flavor');
+			data.addColumn('number', 'Probability it's the best');</strong>
+			data.addRows([
+			 ['Peach-Pear', 99],
+			 ['Coconut', 15],
+			 ['Pamplemousse', 84],
+			 ['Passionfruit', 68],
+			 ['Pure', 2]
+			]);
+				</code></pre>
+					<aside class="notes">
+						Next we add some columns to our data table. Generally you want this to be the x and y axiis that you'll be graphing, along with the label of the data.
+					</aside>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Flavor');
+			data.addColumn('number', 'Probability it's the best');
+			<strong>data.addRows([
+			 ['Peach-Pear', 99],
+			 ['Coconut', 15],
+			 ['Pamplemousse', 84],
+			 ['Passionfruit', 68],
+			 ['Pure', 2]
+			]);</strong>
+				</code></pre>
+					<aside class="notes">
+						Then you finally add the data. You can use the addRows method which essentially ingests an array of data in the column format that you specified previously.
+					</aside>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+			var data = new google.visualization.DataTable();
+			data.addColumn('string', 'Flavor');
+			data.addColumn('number', 'Probability it's the best');<strong>
+			for (var i = 0; i < flavors.length; i++) {
+				data.addRow([flavors[i].name,flavors[i].percentage]);
+			}</strong>
+				</code></pre>
+					<aside class="notes">
+						A more useful function in practice is usually the singular addRow method is more useful since you can use it to quickly iterate through data that you have somewhere else in your code.
+					</aside>
+				</section>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape>
+var options = {
+	'title':'Flavor Rankings FINAL',
+	'width':400,
+	'height':300
+};
+			</code></pre>
+				<aside class="notes">
+					Most of the visual effects you want to change for your chart are done here in the options section. this is just an object you can set several properties
+				</aside>
+			</section>
+			<section>
+				<pre><code data-trim data-noescape>
+var element = document.getElementById('chart_div');
+var chart = new google.visualization.ColumnChart(element);
+chart.draw(data, options);
+			</code></pre>
+				<aside class="notes">
+					Finally you draw your chart to an element you specify on the page,
+				</aside>
+			</section>
+			<section data-state="simpleChart"><div style="text-align:center">
+			<div id="chart_div" style="width:600px;height:300px;margin:auto"></div>
+
+			</div>
+				<aside class="notes">
+					And the nice thing is that you get quite a bit of things for free.
+					Although it took us a bit of setup to get everything loaded, and our
+					data inside our chart, we now have not only this visualization, but
+					also some nice freebies like this legend, tooltips on hover, autoscaled
+					axii
+				</aside>
+			</section>
+			<section>
+				<a href="https://glitch.com/edit/#!/flawless-valley?path=index.html:18:7">Let's see it on Glitch!</a>
+				<aside class="notes">
+					* change the chart types
+					* change the chart data
+					* change some of the options for the legend, size, etc
+					* change the bars to different colors
+				</aside>
+			</section>
+			<section>
+				<aside class="notes">
+					lazy loading. other advanced concepts
+				</aside>
+			</section>
+			<section>Problems that get solved
+			</section>
+			<section>Demo
+			</section>
+			<section>Downsides/competitors
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			history: true,
+		  slideNumber: 'c/t',
+			width: '100%',
+			height: '100%',
+			transition: 'fade',
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function() {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+	<script>
+		Reveal.addEventListener('simpleChart', function() {
+			google.charts.load('current', {packages: ['corechart']});
+			google.charts.setOnLoadCallback(drawBasic);
+
+			function drawBasic() {
+
+				var data = google.visualization.arrayToDataTable([
+					['Flavor', 'Probability it is the best'],
+					['Peach-Pear', 99],
+					['Coconut', 15],
+					['Pamplemousse', 84],
+					['Passionfruit', 68],
+					['Pure', 2]
+				]);
+
+				var options = {
+					'title': 'Flavor Rankings FINAL',
+					'width': 600,
+					'height': 300
+				};
+				var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+
+				chart.draw(data, options);
+			}
+		}, false);
+	</script>
+</body>
+
+</html>
