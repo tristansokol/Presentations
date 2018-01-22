@@ -1,60 +1,67 @@
 <html>
-  <head>
-    <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
 
-      // Load the Visualization API and the piechart package.
-      google.charts.load('current', {'packages':['corechart']});
+<head>
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    // Load the Visualization API and the piechart package.
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.charts.setOnLoadCallback(loadData);
+    // Set a callback to run when the Google Visualization API is loaded.
+    google.charts.setOnLoadCallback(loadData);
 
-      function loadData(){
-        var s = document.createElement("script");
-        s.src = "https://api.github.com/repos/square/retrofit/commits?callback=drawChart&per_page=100";
-        document.body.appendChild(s);
+    function loadData() {
+      var s = document.createElement("script");
+      s.src = "https://api.github.com/repos/square/retrofit/commits?callback=drawChart&per_page=100";
+      document.body.appendChild(s);
     }
 
-      // Callback that creates and populates a data table,
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart(gitHubData) {
-        // Create the data table.
+    // Callback that creates and populates a data table,
+    // instantiates the pie chart, passes in the data and
+    // draws it.
+    function drawChart(gitHubData) {
+      // Create the data table.
 
-        var authors = {};
-        for(var i=0;i<gitHubData.data.length;i++){
+      var authors = {};
+      for (var i = 0; i < gitHubData.data.length; i++) {
+        author = gitHubData.data[i].commit.author.name;
+        if (!authors[author]) {
+          authors[author] = 1;
+        } else {
+          authors[author]++;
+        }
+      }
 
-              author = gitHubData.data[i].commit.author.name;
-              if (!authors[author]){
-              authors[author]=1;
-            }else{
-             authors[author]++;
-            }
-        }
-        var authorData = Object.entries(authors);
-  console.log(authorData);
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Name');
-        data.addColumn('number', '#number of commits');
-        for (var i = 0; i < authorData.length; i++) {
-          data.addRow([authorData[i][0],authorData[i][1]]);
-        }
+
+
+
+
+      var authorData = Object.entries(authors);
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Name');
+      data.addColumn('number', '#number of commits');
+      for (var i = 0; i < authorData.length; i++) {
+        data.addRow([authorData[i][0], authorData[i][1]]);
+      }
       // Set chart options
-				var options = {
-					'title': 'Contributors',
-					'width': 600,
-					'height': 300
-				};
+      var options = {
+        'title': 'Contributors',
+        'width': 600,
+        'height': 300
+      };
 
       // Instantiate and draw our chart, passing in some options.
       var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
-    </script>
-  </head>
+  </script>
+</head>
 
-  <body>
-    <div id="chart_div" style="width:400; height:300"></div>
-  </body>
+<body>
+  <div id="chart_div" style="width:400; height:300"></div>
+</body>
+
 </html>

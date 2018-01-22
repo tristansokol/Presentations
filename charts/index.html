@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Google Charts</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -227,10 +227,12 @@ chart.draw(data, options);
 				</aside>
 			</section>
 			<section>
-				<a href="https://glitch.com/edit/#!/flawless-valley?path=index.html:18:7">Let's see it on Glitch!</a>
-				<aside class="notes">
-					* change the chart types * change the chart data * change some of the options for the legend, size, etc * change the bars to different colors
-				</aside>
+				<section>
+					<a href="https://glitch.com/edit/#!/flawless-valley?path=index.html:18:7">Let's see it on Glitch!</a>
+					<aside class="notes">
+						* change the chart types * change the chart data * change some of the options for the legend, size, etc * change the bars to different colors
+					</aside>
+				</section>
 			</section>
 			<section>
 				<section data-state="printed-chart">
@@ -267,7 +269,6 @@ chart.draw(data, options);
 					function selectHandler() {
 					 var selectedItem = chart.getSelection()[0];
 					  if (selectedItem) {
-						 var topping = data.getValue(selectedItem.row, 0);
 						 document.getElementById('interactivty_image').src = waters[selectedItem.row];
 					 }
 				 }</code></pre>
