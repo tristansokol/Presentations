@@ -1,0 +1,22 @@
+.reveal .progress span {
+  background-color: rgb(154, 94, 142);
+}
+.reveal a{
+  color: rgb(154, 94, 142);
+}
+.reveal h1{
+
+  color: rgb(120, 120, 120);
+  font-family: "Square Market";
+  font-weight: 300;
+  font-size: 40px;
+}
+.reveal ul>li {
+  color: rgb(154, 94, 142);
+  font-size: 60px;
+}
+
+.reveal ul>li>p {
+  color: black;
+  font-size: 60px;
+}
