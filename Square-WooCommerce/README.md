@@ -4,6 +4,8 @@
 
 
 ## Setting up the development environment.
+
+Of note, to uninstall woocommerce fully, you'll need to add `define( 'WC_REMOVE_ALL_DATA', true);` to your wp-config.
 ~ takes about ten minutes to vagrant up.  
 ```
 cd ~/Development/vagrant-local && vagrant destroy && rm -rf ~/Development/vagrant-local && cd ~/Development && git clone -b master git://github.com/Varying-Vagrant-Vagrants/VVV.git ~/Development/vagrant-local && cd ~/Development/vagrant-local && time  vagrant up

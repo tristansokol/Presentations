@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>Square-WooCommerce</title>
 
 	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/Square.css">
@@ -29,8 +29,16 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-background-image="img/woocommerce-square.png" data-background-size="contain"></section>
-						<section>HI </section>
+			<section data-background-image="img/woocommerce-square.png" data-background-size="contain">
+				<aside class="notes">
+					Hello there! Today I'll be talking about the Square Plugin for WooCommerce.
+				</aside>
+			</section>
+			<section>Hi
+				<aside class="notes">
+					To give you a little more background about me, I'm Tristan and I work on the Developer platform team at Square, supporting all of our APIs like Point of Sale, business management and e-commerce, including the APIs that power the WooCommerce integration.
+				</aside>
+			</section>
 			<section>
 				<ul>
 					What is going on?
@@ -43,15 +51,17 @@
 						<p>
 							Setting up WooCommerce & Square with Wordpress
 						</p>
-
 					</li>
 					<li class="fragment">
 						<p>
 							Highlighting Item Synchronization & Payment form
 						</p>
-
 					</li>
 				</ul>
+				<aside class="note">
+					First I'll quickly be going over the development environment that I have set up, just to give you some context about my wordpress environment and my Square Account. Next, I'll walk through the process of installing woocommerce and and the Square plugin
+					for WooCommerce. And finally I'll highlight some of the neat features of the integration and Square's offerings for e-commerce merchants.
+				</aside>
 			</section>
 			<section>
 				<h1>My Wordpress Environment</h1>
@@ -61,38 +71,58 @@
 						fresh install of <a href="https://varyingvagrantvagrants.org/">Varying Vagrant Vagrants</a>
 					</p>
 				</div>
+				<aside class="note">
+					I'm using a tool called Varying Vagrant Vagrants that allows me to easily spin up my wordpress environment with out having to set up a local LAMP stack, or whatnot.
+				</aside>'
 			</section>
 			<section>
 				<h1>My Square Account</h1>
 				<img src="img/items.png" />
+				<aside class="note">
+					I also have a Square account. The most pertinent part of it is the Items I have for sale. In my Square account I have a mobile succulent cart that I sell plants out of, and I have two items representing the two different succulents I have for sale.
+				</aside>'
 			</section>
 			<section>
-
 				<p>
 					Installing WooCommerce & WooCommerce Square
 				</p>
-
+				<aside class="note">
+					Let's look at the installation process of WooCommerce and the WooCommerce Square plugin.
+				</aside>'
 			</section>
-			<section data-background-iframe="http://local.wordpress.test/" data-background-interactive></section>
+			<section data-background-iframe="http://local.wordpress.test/" data-background-interactive>
+				<aside class="note">
+					Here is my wordpress instance, Literally an iframe of my actual instance running locally on my computer. As you can see it is pretty basic, with a default theme, and not a single lick of customization. I'm going to log into to my wordpress account The
+					first change I'm going to make is installing the WooCommerce plugin, and I'll just navigate over to the plugins tab and find the WooCommerce plugin. And as soon as it gets downloaded. I'll go through the activation process. **WooCommerce Activation
+					wizard** Here I'll just put in some sample information, and I'm going to be sure to check this box that says I'll be selling in person as well. Next I'll be able to pick out which payment provider I want. I happen to be a little partial to Square,
+					so I'll pick that one. Behind the scenes that will get the WooCommerce Square plugin installed for me. Next I'm going to opt out of some of the extra plugins for shipping, keep the storefront theme, but skip Jetpack since I can't use it on my local
+					environment. Now I'll return to my dashboard.
+
+				</aside>'
+			</section>
 			<section>
 				<p>
 					✓ Installing WooCommerce & WooCommerce Square
 				</p>
+				<aside class="note">
+					We made it! the WooCommerce and WooCommerce Square plugins are in our site.
+				</aside>'
 			</section>
 			<section>
-
 				<p>
 					Item & Inventory Synchronization
 				</p>
-
-			</section>
-			<section>
-				Fill this slide with an iframe of the square page.
+				<aside class="note">
+					Now I'll get into the Item syncing. You can see that WooCommerce isn't very happy because I haven't connected my Square Account. I'll do that now. This button will actually put me through the OAuth process. Here I need to log into my Square Account to
+					approve the application, and then I'll get redirected back to my site. Now I'll need to select my Square location. I'm going to choose the succulent cart location and keep all of the defaults selected. Now that I have the location selected, I'll
+					have the option to create a one time sync. Ideally you would have only one source of truth for all your items. Since I just created my WooCommerce account, I'm going to import my items from Square. Now WooCommerce is using Square's APIs to pull out
+					the items from my account and creating identical products in WooCommerce. Now that the sync is completed. I'm going to navigate into my Products tab, and I see both of the products I had in my Square account, along with the all of the variations.
+					Now, when I create a new item in WooCommerce, it is automatically created in my Square account as well. If I were to create a new item in my Square account, I would need to do another manual sync to get that item into my WooCommerce account. You
+					can see here that I have some options in how my items get synced, including if my categories, inventory, and item images get synced between WooCommerce and Square.
+				</aside>'
 			</section>
 			<section>
 				<ul>
-
-
 					<li class="fragment">
 						<p>
 							Newly created items sync automatically from WooCommerce to Square
@@ -100,22 +130,26 @@
 					</li>
 					<li class="fragment">
 						<p>
-							WooCommerce polls Square for item and Inventory updates.
+							WooCommerce polls Square for Item & Inventory changes.
 						</p>
 					</li>
 				</ul>
 			</section>
 			<section>
+				<p>
+					Payment Form
+				</p>
+				<aside class="note">
 
-
-
-					<p>
-						Payment Form
-					</p>
-
+				</aside>'
 			</section>
 			<section>
-You can see this presentation at http://tristansokol.github.io/Presentations/woocommerce-square
+				<img src="https://media.giphy.com/media/3o6vXURvyF7bmW1HGg/giphy.gif" />
+				<p>
+					You can see this presentation at <a href="http://tristansokol.github.io/Presentations/woocommerce-square">
+http://tristansokol.github.io/Presentations/woocommerce-square
+					</a>
+				</p>
 
 
 
