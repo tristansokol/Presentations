@@ -1,0 +1,35 @@
+<section class="center">
+		<pre style="width:100%"><code data-trim data-noescape class="handlebars">
+ /**
+ * {{classname}} Class Doc Comment
+ *
+ * @category Class
+ * @package  {{invokerPackage}}
+ *
+ */
+{{#operations}}class {{classname}}
+{
+
+    /**
+     * API Client
+     * @var \{{invokerPackage}}\ApiClient instance of the ApiClient
+     */
+    protected $apiClient;
+
+    /**
+     * Constructor
+     * @param \{{invokerPackage}}\ApiClient|null $apiClient The api client to use
+     */
+    function __construct($apiClient = null)
+    {
+        if ($apiClient == null) {
+            $apiClient = new ApiClient();
+            $apiClient->getConfig()->setHost('{{basePath}}');
+        }
+
+        $this->apiClient = $apiClient;
+    }
+						</code></pre>
+	<aside class="notes">
+	</aside>
+</section>

@@ -1,0 +1,48 @@
+<section class="center">
+	api.json
+	<pre style="width:100%"><code data-trim data-noescape class="json">
+			"/v1/me/employees": {
+				"post": {
+					"tags": [
+						"V1Employees"
+					],
+					"summary": "Creates an employee for a business.",
+					"operationId": "CreateEmployee",
+					"description": "Creates an employee for a business.",
+					"parameters": [
+						{
+							"name": "body",
+							"in": "body",
+							"required": true,
+							"schema": {
+								"$ref": "#/definitions/v1Employee"
+							}
+						}
+					],
+					"security": [
+						{
+							"oauth2": ["EMPLOYEES_WRITE"]
+						}
+					],
+					"externalDocs": {
+						"description": "Read the offical documentation here:",
+						"url": "https://docs.connect.squareup.com/api/connect/v1/#post-employees"
+					},
+					"deprecated": false,
+					"responses": {
+						"200": {
+							"description": "Success",
+							"headers": {},
+							"schema": {
+								"$ref": "#/definitions/v1Employee"
+							}
+						}
+					}
+				},
+
+					</code></pre>
+	<aside class="notes"><p>
+You also define all of your endpoints right in the json, you can see the url, a description of what it does
+	</p>
+	</aside>
+</section>

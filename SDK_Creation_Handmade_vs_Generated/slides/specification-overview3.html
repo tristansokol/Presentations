@@ -1,0 +1,73 @@
+<section class="center">
+	api.json
+	<pre style="width:100%"><code data-trim data-noescape class="json">
+			"v1Employee": {
+				"type": "object",
+				"required": [
+				  "first_name",
+				  "last_name"
+				],
+				"externalDocs": {
+				  "description": "Read the offical documentation here:",
+				  "url": "https://docs.connect.squareup.com/api/connect/v1/#datatype-employee"
+				},
+				"description": "Represents one of a business\u0027s employees.",
+				"properties": {
+				  "id": {
+					"type": "string",
+					"description": "The employee\u0027s unique ID."
+				  },
+				  "first_name": {
+					"type": "string",
+					"description": "The employee\u0027s first name."
+				  },
+				  "last_name": {
+					"type": "string",
+					"description": "The employee\u0027s last name."
+				  },
+				  "role_ids": {
+					"type": "array",
+					"items": {
+					  "type": "string"
+					},
+					"description": "The ids of the employee\u0027s associated roles. Currently, you can specify only one or zero roles per employee."
+				  },
+				  "authorized_location_ids": {
+					"type": "array",
+					"items": {
+					  "type": "string"
+					},
+					"description": "The IDs of the locations the employee is allowed to clock in at."
+				  },
+				  "email": {
+					"type": "string",
+					"description": "The employee\u0027s email address."
+				  },
+				  "status": {
+					"type": "string",
+					"enum": [
+					  "ACTIVE",
+					  "INACTIVE"
+					],
+					"description": "CWhether the employee is ACTIVE or INACTIVE. Inactive employees cannot sign in to Square Register.Merchants update this field from the Square Dashboard. "
+				  },
+				  "external_id": {
+					"type": "string",
+					"description": "An ID the merchant can set to associate the employee with an entity in another system."
+				  },
+				  "created_at": {
+					"type": "string",
+					"description": "The time when the employee entity was created, in ISO 8601 format."
+				  },
+				  "updated_at": {
+					"type": "string",
+					"description": "The time when the employee entity was most recently updated, in ISO 8601 format."
+				  }
+				}
+			  },
+					</code></pre>
+	<aside class="notes"><p>
+And this is an exapmle of one of those referenced models. In essence it is an object with a few fields, and each of those fields have a datatype, description, etc.
+	</p>
+	</aside>
+</section>
