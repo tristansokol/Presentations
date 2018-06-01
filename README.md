@@ -6,7 +6,7 @@
 
 * **SDKs: The Bespoke, The Handmade & The Generated** _presented at DevXcon May 2017_ ([video](https://devrel.net/developer-experience/making-sdks-bespoke-hopeful-generated)) ([slides](http://blog.tristansokol.com/Presentations/SDKs%20the%20good%20the%20bad%20the%20ugly/SDKs%2C%20the%20good%20the%20bad%20the%20ugly.key)) _& DevRelCon Tokyo July 2017_ ([video](https://www.youtube.com/watch?v=INuC_FztCBc)) ([slides](http://blog.tristansokol.com/Presentations/SDKs%20the%20good%20the%20bad%20the%20ugly/SDKs%2C%20the%20good%20the%20bad%20the%20ugly%20-%20Japan.key))
 
-* **How to win StackOverflow** _presented at DevRelCon London 2017_ ([slides](https://tristansokol.github.io/Presentations/How%20to%20win%20StackOverflow/index.html))  ([video](https://devrel.net/dev-rel/how-to-win-at-stackoverflow))
+* **How to win StackOverflow** _presented at DevRelCon London 2017_ ([slides](https://tristansokol.github.io/Presentations/How%20to%20win%20StackOverflow/index.html))  ([video](https://www.youtube.com/watch?v=xSvx3L6gSoM))
 
 * Square
   * [Square Developer Night October 26, 2017](https://tristansokol.github.io/Presentations/2017.10.26%20Developer%20Night/)

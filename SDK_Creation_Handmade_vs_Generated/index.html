@@ -42,43 +42,140 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-			<section data-external="slides/intro.html"> </section>
-			<section data-external="slides/bio.html"> </section>
-
-			<section data-state="a1" data-external="slides/a1.html"> </section>
+			<section data-state="intro" data-background-color="#dbb0fb" data-external="slides/intro.html"> </section>
 			<script>
-				Reveal.addEventListener('a1', function () {
-					new Vivus('sdk-svg', { duration: 500 }, function (q) { });
+				Reveal.addEventListener('intro', function () {
+					new Vivus('layer1', { duration: 500, type: 'delayed' }, function (myVivus) {
+						myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
+					});
 				}, false);
 			</script>
-			<section data-external="slides/a.html"> </section>
-			<section data-external="slides/b.html"> </section>
+			<!-- <section data-external="slides/bio.html"> </section> -->
+
+			<section data-state="a1" data-external="slides/a1.html" data-background-color="#dbb0fb"> </section>
+			<script>
+				Reveal.addEventListener('a1', function () {
+					new Vivus('sdk-svg', { duration: 500 }, function (myVivus) {
+						var doc = document.getElementById('sdk-svg').getSVGDocument();
+						var hand = doc.getElementById("path4191");
+						TweenMax.to(hand, 3, { fill: '#FFF', 'fill-opacity':1 });
+					});
+				}, false);
+			</script>
+			<section data-state="many-teams" data-external="slides/a.html"> </section>
+			<script>
+				Reveal.addEventListener('many-teams', function () {
+					TweenMax.to("#star1", 3, { x: -330, repeat: -1, ease: Power0.easeNone });
+					TweenMax.to("#star2", 4.9, { x: -330, repeat: -1, ease: Power0.easeNone });
+					TweenMax.to("#star3", 2, { x: -330, repeat: -1, ease: Power0.easeNone });
+					TweenMax.to("#star4", 7, { x: -330, repeat: -1, ease: Power0.easeNone });
+					TweenMax.to("#star5", 4.6, { x: -330, repeat: -1, ease: Power0.easeNone });
+					TweenMax.to("#gear", 3, { rotation: 180, repeat: -1, transformOrigin: "50% 50%", ease: Power0.easeNone });
+					// TweenMax.to("#json", 5, {bezier:{type:"soft", values:[{x:0, y:0}, {x:100, y:50}, {x:150, y:300}], autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut,repeat:-1});
+
+					// TweenMax.to("#box", 2, {opacity:000,repeat:-1});
+				}, false);
+			</script>
+			<section data-state="people" data-external="slides/b.html" data-background-color="#b0fbcb"> </section>
+			<script>
+				Reveal.addEventListener("people", function () {
+					var can = document.getElementById('canvas1')
+					var ctx = can.getContext('2d');
+					var img = new Image();
+					img.src = "img/person.svg";
+					var clicks = 0
+					can.onclick = function () {
+						for (let j = 0; j < clicks; j++) {
+							ctx.drawImage(img, Math.random() * (can.width - 150), Math.random() * (can.height - 150), 100, 100);
+						}
+						clicks++;
+					};
+				})</script>
 			<section data-external="slides/c.html"> </section>
-			<section data-external="slides/d.html"> </section>
-			<section data-external="slides/generation-overview.html"> </section>
+			<section data-state="generator" data-external="slides/d.html" data-background-color="#fbb0b0"> </section>
+			<script>
+				Reveal.addEventListener('generator', function () {
+
+					TweenMax.to("#gear-small", 5, { rotation: 180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+					TweenMax.to("#gear-big", 5, { rotation: -180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+
+					TweenMax.to("#light11", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light12", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light13", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light21", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light22", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light23", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light31", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light32", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light33", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light41", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light42", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light43", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+				}, false);</script>
+			<section data-external="slides/generation-overview.html" data-background-color="#b0b7fb"> </section>
 			<section data-external="slides/specification-overview.html"> </section>
 			<section data-external="slides/specification-overview2.html"> </section>
 			<section data-external="slides/specification-overview3.html"> </section>
 			<section data-state="specification-generation" data-external="slides/specification-generation.html"> </section>
 			<script>
-					Reveal.addEventListener('specification-generation', function () {
-						TweenMax.to("#one0", 5, {bezier:{type:"soft", values:[ {x:200, y:50}, {x:350, y:220}]}, ease:Power0.easeNone,repeat:-1});
-						TweenMax.to("#zero0", 7, {bezier:{type:"soft", values:[ {x:200, y:50}, {x:350, y:220}]}, ease:Power1.easeInOut,repeat:-1});
-						TweenMax.to("#one1", 8, {bezier:{type:"soft", values:[ {x:200, y:-30}, {x:350, y:80}]}, ease:Power0.easeNone,repeat:-1});
-						TweenMax.to("#zero1", 4, {bezier:{type:"soft", values:[ {x:200, y:-30}, {x:350, y:80}]}, ease:Power1.easeInOut,repeat:-1});
-						TweenMax.to("#one2", 8, {bezier:{type:"soft", values:[ {x:20, y:-50}, {x:200, y:-300}, {x:350, y:-120}]}, ease:Power0.easeNone,repeat:-1});
-						TweenMax.to("#zero2", 6, {bezier:{type:"soft", values:[ {x:20, y:-50},{x:200, y:-300}, {x:350, y:-120}]}, ease:Power1.easeInOut,repeat:-1});
-						TweenMax.to("#json", 12, { y:800,repeat:-1,ease: Power0.easeNone});
-						TweenMax.to("#gear", 5, {rotation:180,repeat:-1,transformOrigin:"50% 50%",ease: Power0.easeNone});
-						// TweenMax.to("#json", 5, {bezier:{type:"soft", values:[{x:0, y:0}, {x:100, y:50}, {x:150, y:300}], autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut,repeat:-1});
+				Reveal.addEventListener('specification-generation', function () {
+					TweenMax.to("#one0", 5, { bezier: { type: "soft", values: [{ x: 200, y: 50 }, { x: 350, y: 220 }] }, ease: Power0.easeNone, repeat: -1 });
+					TweenMax.to("#zero0", 7, { bezier: { type: "soft", values: [{ x: 200, y: 50 }, { x: 350, y: 220 }] }, ease: Power1.easeInOut, repeat: -1 });
+					TweenMax.to("#one1", 8, { bezier: { type: "soft", values: [{ x: 200, y: -30 }, { x: 350, y: 80 }] }, ease: Power0.easeNone, repeat: -1 });
+					TweenMax.to("#zero1", 4, { bezier: { type: "soft", values: [{ x: 200, y: -30 }, { x: 350, y: 80 }] }, ease: Power1.easeInOut, repeat: -1 });
+					TweenMax.to("#one2", 8, { bezier: { type: "soft", values: [{ x: 20, y: -50 }, { x: 200, y: -300 }, { x: 350, y: -120 }] }, ease: Power0.easeNone, repeat: -1 });
+					TweenMax.to("#zero2", 6, { bezier: { type: "soft", values: [{ x: 00, y: -0 }, { x: 20, y: -50 }, { x: 200, y: -300 }, { x: 350, y: -120 }] }, ease: Power1.easeInOut, repeat: -1 });
+					TweenMax.to("#json", 12, { y: 800, repeat: -1, ease: Power0.easeNone });
+					TweenMax.to("#gear", 5, { rotation: 180, repeat: -1, transformOrigin: "50% 50%", ease: Power0.easeNone });
+					// TweenMax.to("#json", 5, {bezier:{type:"soft", values:[{x:0, y:0}, {x:100, y:50}, {x:150, y:300}], autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut,repeat:-1});
 
-						// TweenMax.to("#box", 2, {opacity:000,repeat:-1});
-					}, false);
-				</script>
+					// TweenMax.to("#box", 2, {opacity:000,repeat:-1});
+				}, false);
+			</script>
+			<section data-state="specification-generation" data-external="slides/specification-generation-red.html"> </section>
+			<section data-state="generator2" data-external="slides/generation-overview-2.html"> </section>
+			<script>
+				Reveal.addEventListener('generator2', function () {
 
+					TweenMax.to("#gear-small", 5, { rotation: 180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+					TweenMax.to("#gear-big", 5, { rotation: -180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+				}, false);</script>
 			<section data-external="slides/templates.html"> </section>
+			<section data-external="slides/generation-overview.html" data-background-color="#ffd389"> </section>
+			<section>
+				explanation of config files
+			</section>
+			<section data-external="slides/generation-overview.html" data-background-color="#b0fbcb"> </section>
+			<section data-external="slides/sdks-list.html" data-background-color="#b9b0fb">
+				SDKs in every language
+			</section>
+			<section>
+				The issue was that swagger would break all the time, and it was a super big pain to see if a change in or spec made a change,
+				or if it was the new template, or if it was swagger codegen.
+			</section>
+			<section>
+				So we spiced up our life with some travis ci
+			</section>
+			<section>
+				(repos, but with travis added) We added it to each of our repos,
+			</section>
+			<section>
+				(One travis, walking through stuff) We added it to each of our repos, our spec repo would take the templates and spec, and
+				then build our sdks, push them to a branch on each of the SDK's repos.
+			</section>
+			<section>
+				Then each of those repos would see then run tests on the branch.
+			</section>
+			<section>
+				The best feature wast that we could easily compare master and the new branch, so it was a little bit easier to see when problems
+				weere being intorduced
+			</section>
 			<section data-external="slides/f.html"> </section>
+			<!-- final thoughts -->
 			<section data-external="slides/further-reading.html"> </section>
+			<section>
+				Thank You
+			</section>
 		</div>
 	</div>
 
@@ -99,19 +196,22 @@
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
 				{ src: 'plugin/notes/notes.js', async: true },
-				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-					hljs.configure({tabReplace: '  '})
-					hljs.initHighlightingOnLoad(); } },
+				{
+					src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+						hljs.configure({ tabReplace: '  ' })
+						hljs.initHighlightingOnLoad();
+					}
+				},
 				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); } }
 			],
 		});
-			// Reveal.configure({
-			// 	defaultTiming: 1500 / Reveal.getTotalSlides()
-			// });
+		Reveal.addEventListener('ready', function (event) {
+			Reveal.configure({
+				defaultTiming: 1500 / Reveal.getTotalSlides()
+			});
+		});
+
 	</script>
-
-
-
 </body>
 
 </html>

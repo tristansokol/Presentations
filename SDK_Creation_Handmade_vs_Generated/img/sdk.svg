@@ -5,11 +5,35 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg2"
    viewBox="0 0 430.77725 227.25028"
    height="64.135078mm"
-   width="121.57491mm">
+   width="121.57491mm"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="sdk.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1262"
+     inkscape:window-height="742"
+     id="namedview55"
+     showgrid="false"
+     inkscape:zoom="2.0354195"
+     inkscape:cx="103.73003"
+     inkscape:cy="93.97317"
+     inkscape:window-x="20"
+     inkscape:window-y="20"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="flowRoot4136" />
   <defs
      id="defs4" />
   <metadata
@@ -20,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -31,6 +55,10 @@
        transform="translate(-30.645161,-400)"
        id="flowRoot4136"
        style="font-style:normal;font-weight:normal;font-size:250px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
+      <path
+         id="path4191"
+         d="m 284.51758,405.36914 0,5.25 -5.25,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,16.5 c -2.83333,-0.66667 -5.66667,-1 -8.5,-1 -9,0 -16.66667,1.91667 -23,5.75 -3.83333,2.33333 -9.75,7.5 -17.75,15.5 l -17,17 c -9,11.16667 -13.5,26.5 -13.5,46 0,2.47288 0.021,7.19686 0.0215,7.30078 l -13.89648,-0.42383 c 0,0 0.5,-3.79362 0.5,-5.62695 0,-12.83333 -6.33333,-22.5 -19,-29 l -0.5,-3 6,0 -0.75,-5.5 6,0 -0.75,-5.25 6,0 c -2.33333,-26.83333 -19.33333,-40.25 -51,-40.25 -14.83333,0 -26.666669,3.83333 -35.500002,11.5 -22.5,19.83333 -33.75,36.16667 -33.75,49 0,11 4.166667,19.16667 12.5,24.5 l 0,3.75 -22.5,0 0,98.5 140.628902,-0.0762 -0.004,0.0762 149.90234,0 1.84766,0 137.40234,0 0,-98.5 -20,0 -25.75,-43.25 45,-44.75 -39.5,0 -39.5,39.25 0,-78.75 -31.75,0 0,5.25 -5.5,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,106.5 -4.65234,0 -1.84766,0 -10.40234,0 0,-127.75 -32.75,0 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:250px;font-family:Level;-inkscape-font-specification:Level;fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-opacity:1" />
       <path
          id="path4253"
          d="m 113.64258,558.86939 c -2.66667,0.66667 -5.66667,1 -9,1 -7.500001,0 -13.083335,-1 -16.750002,-3 -4.833333,-2.5 -7.75,-7.16667 -8.75,-14 l -27,0 0,2.25 24.25,0 c 0.666667,7 3.083333,11.75 7.25,14.25 3,1.83333 8.166667,2.75 15.5,2.75 6.500002,0 11.333332,-1.08333 14.500002,-3.25 l 0,0"
@@ -150,10 +178,6 @@
       <path
          id="path4193"
          d="m 314.26758,556.86939 0,-148.75 -26.75,0 0,2.5 24.5,0 0,146.25 2.25,0 0,0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:250px;font-family:Level;-inkscape-font-specification:Level;fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
-      <path
-         id="path4191"
-         d="m 284.51758,405.36914 0,5.25 -5.25,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,16.5 c -2.83333,-0.66667 -5.66667,-1 -8.5,-1 -9,0 -16.66667,1.91667 -23,5.75 -3.83333,2.33333 -9.75,7.5 -17.75,15.5 l -17,17 c -9,11.16667 -13.5,26.5 -13.5,46 0,2.47288 0.021,7.19686 0.0215,7.30078 l -13.89648,-0.42383 c 0,0 0.5,-3.79362 0.5,-5.62695 0,-12.83333 -6.33333,-22.5 -19,-29 l -0.5,-3 6,0 -0.75,-5.5 6,0 -0.75,-5.25 6,0 c -2.33333,-26.83333 -19.33333,-40.25 -51,-40.25 -14.83333,0 -26.666669,3.83333 -35.500002,11.5 -22.5,19.83333 -33.75,36.16667 -33.75,49 0,11 4.166667,19.16667 12.5,24.5 l 0,3.75 -22.5,0 0,98.5 140.628902,-0.0762 -0.004,0.0762 149.90234,0 1.84766,0 137.40234,0 0,-98.5 -20,0 -25.75,-43.25 45,-44.75 -39.5,0 -39.5,39.25 0,-78.75 -31.75,0 0,5.25 -5.5,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,5.25 -5.25,0 0,106.5 -4.65234,0 -1.84766,0 -10.40234,0 0,-127.75 -32.75,0 z"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:250px;font-family:Level;-inkscape-font-specification:Level;fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1" />
       <path
          id="path4189"
