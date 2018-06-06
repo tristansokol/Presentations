@@ -1,0 +1,38 @@
+<section class="center" style="vertical-align: middle">
+	<object data="img/git-branch.svg" type="image/svg+xml" style="height: 100px;vertical-align: middle"></object>
+	<img class="lang-logo" src="img/github.png" style="vertical-align: middle;height: 50px;" />
+	<div style="display: inline-block;font-size: 60px" style="vertical-align: middle">square/connect-api-examples</div>
+	<br>
+	<img src="img/travis.png" style="position:absolute;bottom: 00px;z-index: 1;opacity: .8;right: 0px;"/>
+	<pre style="width:100%"><code data-trim data-noescape >
+			install:
+			- "../travis-ci/install-swagger-codegen.sh"
+			- openssl aes-256-cbc -K $encrypted_b0a304ce21a6_key -iv $encrypted_b0a304ce21a6_iv -in ./travis-ci/deploy_keys.enc -out ./travis-ci/deploy_keys.tar -d
+			- tar xvf ./travis-ci/deploy_keys.tar -C ./travis-ci/
+			<strong style="color: aqua; font-size: 28px;">script:
+			- "/bin/sh ./generate-sdks"</strong>
+			after_success:
+			- git config --global user.name "Travis CI"
+			- git config --global user.email "${TEAM_EMAIL}"
+			- "/bin/sh ./travis-ci/push-csharp-sdk.sh"
+			- "/bin/sh ./travis-ci/push-php-sdk.sh"
+			...
+
+					</code></pre>
+					<div id="overlay" class="fragment" style="z-index: 2;width: 100%;">
+							<pre style="width: 100%;"><code data-trim data-noescape style="font-size: 40px;line-height: 50px" >
+									for lang in $languages
+									do
+										$SWAGGER_CMD generate \
+											--input-spec "./api.json" \
+											--lang "${lang}" \
+											--config "./swagger-config/config-${lang}.json" \
+											--template-dir "./swagger-templates/${lang}" \
+											--output "./swagger-out/${lang}"
+									done
+											</code></pre>
+						</div>
+	<aside class="notes">
+		and then we have the bash script that generates all of the SDKs. You can see it is pretty simple, looping through all of the languanges
+	</aside>
+</section>

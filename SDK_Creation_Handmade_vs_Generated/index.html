@@ -45,7 +45,7 @@
 			<section data-state="intro" data-background-color="#dbb0fb" data-external="slides/intro.html"> </section>
 			<script>
 				Reveal.addEventListener('intro', function () {
-					new Vivus('layer1', { duration: 500, type: 'delayed' }, function (myVivus) {
+					new Vivus('layer1', { duration: 800, type: 'delayed' }, function (myVivus) {
 						myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
 					});
 				}, false);
@@ -142,40 +142,38 @@
 				}, false);</script>
 			<section data-external="slides/templates.html"> </section>
 			<section data-external="slides/generation-overview.html" data-background-color="#ffd389"> </section>
-			<section>
-				explanation of config files
-			</section>
+			<section data-external="slides/configuration-overview.html"> </section>
+			<section data-external="slides/configuration-overview-1.html"> </section>
 			<section data-external="slides/generation-overview.html" data-background-color="#b0fbcb"> </section>
 			<section data-external="slides/sdks-list.html" data-background-color="#b9b0fb">
 				SDKs in every language
 			</section>
-			<section>
-				The issue was that swagger would break all the time, and it was a super big pain to see if a change in or spec made a change,
-				or if it was the new template, or if it was swagger codegen.
+			<section style="text-align: center">
+				<img src="img/commits.png">
+				<small> https://github.com/swagger-api/swagger-codegen/graphs/contributors</small>
+				<aside class="notes">The issue was that swagger would break all the time, and it was a super big pain to see if a change in or spec made a change,
+				or if it was the new template, or if it was swagger codegen.</aside>
 			</section>
 			<section>
-				So we spiced up our life with some travis ci
+					<img src="img/travis.gif">
+					<aside class="notes">So we spiced up our life with some travis ci</aside>
+
 			</section>
-			<section>
-				(repos, but with travis added) We added it to each of our repos,
-			</section>
-			<section>
-				(One travis, walking through stuff) We added it to each of our repos, our spec repo would take the templates and spec, and
-				then build our sdks, push them to a branch on each of the SDK's repos.
-			</section>
-			<section>
-				Then each of those repos would see then run tests on the branch.
-			</section>
-			<section>
-				The best feature wast that we could easily compare master and the new branch, so it was a little bit easier to see when problems
-				weere being intorduced
-			</section>
+			<section data-external="slides/sdks-with-travis.html" data-background-color="#7bffd3"></section>
+			<section data-external="slides/travis-build.html" data-background-color="#a4ffff" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-1.html" data-background-color="#d4ffff" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-2.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-3.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-4.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-5.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-6.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-7.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-8.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-9.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
 			<section data-external="slides/f.html"> </section>
 			<!-- final thoughts -->
 			<section data-external="slides/further-reading.html"> </section>
-			<section>
-				Thank You
-			</section>
+			<section data-external="slides/outro.html"> </section>
 		</div>
 	</div>
 
@@ -192,6 +190,7 @@
 			width: 1280,
 			height: 720,
 			loop: true,
+			//none/fade/slide/convex/concave/zoom
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
 				{ src: 'plugin/markdown/markdown.js' },
@@ -202,12 +201,14 @@
 						hljs.initHighlightingOnLoad();
 					}
 				},
-				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); } }
+				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); },
+				//  async:true
+				  }
 			],
 		});
 		Reveal.addEventListener('ready', function (event) {
 			Reveal.configure({
-				defaultTiming: 1500 / Reveal.getTotalSlides()
+				defaultTiming: 1200 / Reveal.getTotalSlides()
 			});
 		});
 
