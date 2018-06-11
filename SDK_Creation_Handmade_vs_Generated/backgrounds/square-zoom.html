@@ -154,15 +154,16 @@
    * This method could be made more efficient by just blipping each star,
    * and not redrawing the whole frame
    */
+   img = new Image();
+    img.src = "../img/sqlogo.svg";
   StarField.prototype._renderStarField = function () {
     var i,
       star;
     // Background
     this.canvas.fillStyle = "rgba(255, 255, 255, .5)";
     this.canvas.fillRect(0, 0, this.width, this.height);
-    img = new Image();
-    img.src = "../img/sqlogo.svg";
 
+  // debugger
     this.canvas.globalAlpha = 0.4
 
     // Stars
