@@ -115,10 +115,10 @@
 			<section data-external="slides/generation-overview.html" data-background-color="#b0b7fb" data-transition="none-out"> </section>
 			<section data-external="slides/generation-overview-specification.html" data-background-color="#b0b7fb" data-transition="none-in"> </section>
 
-			<section data-external="slides/specification-overview.html"> </section>
-			<section data-external="slides/specification-overview2.html"> </section>
-			<section data-external="slides/specification-overview3.html"> </section>
-			<section data-state="specification-generation" data-external="slides/specification-generation.html"> </section>
+			<section data-external="slides/specification-overview.html" data-background-color="#ffd4f9"> </section>
+			<section data-external="slides/specification-overview2.html"data-background-color="#f8d4ff"> </section>
+			<section data-external="slides/specification-overview3.html"data-background-color="#e4d4ff"> </section>
+			<section data-state="specification-generation" data-external="slides/specification-generation.html" > </section>
 			<script>
 				Reveal.addEventListener('specification-generation', function () {
 					TweenMax.to("#one0", 5, { bezier: { type: "soft", values: [{ x: 200, y: 50 }, { x: 350, y: 220 }] }, ease: Power0.easeNone, repeat: -1 });
@@ -135,17 +135,17 @@
 				}, false);
 			</script>
 			<section data-state="specification-generation" data-external="slides/specification-generation-red.html"> </section>
-			<section data-state="generator2" data-external="slides/generation-overview-templates.html"> </section>
+			<section data-state="generator2" data-external="slides/generation-overview-templates.html" data-background-color="#d4ffda"> </section>
 			<script>
 				Reveal.addEventListener('generator2', function () {
 
 					TweenMax.to("#gear-small", 5, { rotation: 180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
 					TweenMax.to("#gear-big", 5, { rotation: -180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
 				}, false);</script>
-			<section data-external="slides/templates.html"> </section>
+			<section data-external="slides/templates.html" data-background-color="#d4dfff"> </section>
 			<section data-external="slides/generation-overview-configuration.html" data-background-color="#ffd389"> </section>
-			<section data-external="slides/configuration-overview.html"> </section>
-			<section data-external="slides/configuration-overview-1.html"> </section>
+			<section data-external="slides/configuration-overview.html" data-background-color="#fbe2bc"> </section>
+			<section data-external="slides/configuration-overview-1.html" data-background-color="#d4ffda"> </section>
 			<section data-external="slides/generation-overview.html" data-background-color="#b0fbcb"> </section>
 			<section data-external="slides/sdks-list.html" data-background-color="#b9b0fb">
 				SDKs in every language
@@ -156,7 +156,7 @@
 				<aside class="notes">There was only one problem. Swagger codegen is a super active project. The issue was that swagger would break all the time, and it was a super big pain to see if a change in or spec made a change,
 				or if it was the new template, or if it was swagger codegen.</aside>
 			</section>
-			<section>
+			<section data-background-color="#c241fe">
 					<img src="img/travis.gif">
 					<aside class="notes">So we spiced up our life with some travis ci</aside>
 
@@ -172,15 +172,15 @@
 			<section data-external="slides/travis-build-7.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
 			<section data-external="slides/travis-build-8.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
 			<section data-external="slides/travis-build-9.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
-			<section data-external="slides/f.html"> </section>
+			<section data-external="slides/f.html" data-background-color="#f8d4ff"> </section>
 			<!-- final thoughts -->
-			<section data-external="slides/further-reading.html"> </section>
+			<section data-external="slides/further-reading.html" data-background-color="#d4d7ff"> </section>
 			<section data-background-image="img/open-api-generator.png">
 					<aside class="notes">
 
 					</aside>
 			</section>
-			<section data-external="slides/outro.html"> </section>
+			<section data-external="slides/outro.html" data-background-color="#e5d4ff"> </section>
 		</div>
 	</div>
 

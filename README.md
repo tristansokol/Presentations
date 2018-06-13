@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/tristansokol/Presentations.svg?branch=master)](https://travis-ci.org/tristansokol/Presentations)
 
-* [SDK Creation: Handmade vs Generated](http://blog.tristansokol.com/Presentations/SDK_Creation_Handmade_vs_Generated/index.html) _presented at the Nordic APIs Austin API Summit, June 2018_
+* **SDK Creation: Handmade vs Generated** _presented at the Nordic APIs Austin API Summit, June 2018_ ([slides](http://blog.tristansokol.com/Presentations/SDK_Creation_Handmade_vs_Generated/index.html))
 
 * **SDKs: The Bespoke, The Handmade & The Generated** _presented at DevXcon May 2017_ ([video](https://devrel.net/developer-experience/making-sdks-bespoke-hopeful-generated)) ([slides](http://blog.tristansokol.com/Presentations/SDKs%20the%20good%20the%20bad%20the%20ugly/SDKs%2C%20the%20good%20the%20bad%20the%20ugly.key)) _& DevRelCon Tokyo July 2017_ ([video](https://www.youtube.com/watch?v=INuC_FztCBc)) ([slides](http://blog.tristansokol.com/Presentations/SDKs%20the%20good%20the%20bad%20the%20ugly/SDKs%2C%20the%20good%20the%20bad%20the%20ugly%20-%20Japan.key))
 
@@ -18,7 +18,6 @@
 * Intuit
   * [Introduction to QuickBooks Online and Intuit Developer](https://github.com/tristansokol/Presentations/tree/master/introduction%20to%20QuickBooks%20Online%20and%20Intuit%20Developer)
         _May 17th 2016, [San Francisco CodeWorks event with Intuit Developer](https://www.eventbrite.com/e/intuit-developer-code-works-san-francisco-edition-tickets-24935867852)_
-
 
 * Other
   * [Introduction to Google Visualization API](https://tristansokol.github.io/Presentations/charts/index.html)
