@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>A Presentation by Tristan! </title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/Square.css">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Square Market Font -->
+	<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<!-- abstract: There are a plethora of different tags you can add to your site to help search engines and social media sites find your content. Do you have a massive pile of <meta> boilerplate that you paste into every site? What happens if accidentally forget a tag? I was working on a few small sites, and would only find out when I saw a tweet or a share on facebook that I had messed up a tag on the page. After investing in the testing, it is has been much better. In this talk I'll cover how to use headless Chrome and Puppeteer to build a suite of automated tests that you can include with your projects to make sure that your sites are following some basic best practices. Specifically we will dig into various media tag presence, checking title and page descriptions, broken links and page timing. The audience should walk away with a good understanding of getting started with puppeteer, how you can leverage headless Chrome in Node and inspiration for testing things they might not have thought about testing before. -->
+	<div class="reveal">
+		<div class="slides">
+			<section data-external="slides/intro.html"> intro</section>
+			<section data-external="slides/bio.html"> bio</section>
+			<section data-external="slides/overview.html"> overview</section>
+			<!-- Headless Chrome -->
+			<section data-external="slides/hc/intro.html"> background</section>
+			<section data-external="slides/hc/overview.html"> overview</section>
+			<section data-external="slides/hc/getting-started.html"> Getting Started</section>
+			<section data-external="slides/hc/aside.html"> Aside, screen shot diffing</section>
+			<section data-external="slides/hc/limitations.html"> Limitations</section>
+			<!-- puppeteer -->
+			<section data-external="slides/puppeteer/intro.html"> background</section>
+			<section data-external="slides/puppeteer/getting-started.html">  Getting Started</section>
+			<section data-external="slides/puppeteer/example1.html"> How to</section>
+			<section data-external="slides/puppeteer/example2.html"> How to</section>
+			<section data-external="slides/puppeteer/example3.html"> How to</section>
+			<!-- Testing frameworks -->
+			<section data-external="slides/testing.html"> There are a bunch, Which is the best one? The one you know how to use! I am using x</section>
+			<!-- SEO -->
+			<section data-external="slides/seo/intro.html"> overview</section>
+			<section data-external="slides/seo/page-structure.html"></section>
+			<section data-external="slides/seo/page-speed.html"> Lots of SEO Tools</section>
+			<section data-external="slides/seo/links.html"></section>
+			<section data-external="slides/seo/meta.html"></section>
+			<section data-external="slides/seo/analytics.html"></section>
+			<section data-external="slides/seo/urls.html"></section>
+			<section data-external="slides/seo/images.html"></section>
+			<section data-external="slides/seo/keywords.html"></section>
+			<!-- Tests -->
+			<section data-external="slides/intro.html"> Test 1 -- 100</section>
+			<section data-external="slides/intro.html"> page timing</section>
+			<section data-external="slides/intro.html"> tag presence</section>
+			<section data-external="slides/intro.html"> keyword analysis</section>
+			<section data-external="slides/intro.html"> broken links</section>
+			<section data-external="slides/intro.html"> back links, off site links</section>
+			<section data-external="slides/intro.html"> Accessibility</section>
+			<section data-external="slides/intro.html"> sitemaps/robots.txt</section>
+			<section data-external="slides/intro.html"> Auto buying ads</section>
+			<section data-external="slides/intro.html"> </section>
+
+			<section data-external="slides/intro.html"> CI, obviously do it</section>
+			<!-- Future -->
+
+			<section data-external="slides/intro.html"> other things you can test with headless chrome </section>
+			<section data-external="slides/intro.html"> measure user input with page timings and a real user using headless chrome? Usability testing?</section>
+			<section data-external="slides/intro.html"> Filling out your jira tickets</section>
+			<section data-external="slides/intro.html"> more stuff </section>
+			<section data-external="slides/outro.html"> outro </section>
+			<section data-external="slides/outro.html"> Please lord sign up for this link!  </section>
+
+
+
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+
+
+		Reveal.initialize({
+			history: true,
+			width: 1280,
+			height: 720,
+			// loop:true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); } }
+			]
+		});
+		Reveal.configure({
+			defaultTiming: 1500 / Reveal.getTotalSlides()
+		});
+	</script>
+</body>
+
+</html>

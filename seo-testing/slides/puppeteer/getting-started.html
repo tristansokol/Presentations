@@ -1,0 +1,19 @@
+<section>
+	<pre>
+			<code>
+					(async () => {
+						const browser = await puppeteer.launch();
+						const page = await browser.newPage();
+						await page.goto('https://example.com');
+						await page.screenshot({path: 'example.png'});
+
+						await browser.close();
+					  })();
+			</code>
+		</pre>
+
+	<aside class="notes">
+		It is pretty easy to get started, but one of the core things you should have some understanding in beforehand in async/await.
+		TODO: brief explanation of async/await.
+	</aside>
+	<section>

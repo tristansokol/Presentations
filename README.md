@@ -6,6 +6,8 @@
 
 * **Internet of Tums, A DIY IoT case study** _presented at UtahJS, September 2018_ ([slides](http://blog.tristansokol.com/Presentations/Internet_of_Tums/index.html))
 
+* **Testing Your SEO with headless Chrome and puppeteer** _presented at MidwestJS, August 2018_ ([slides](http://blog.tristansokol.com/Presentations/seo-testing/index.html))
+
 * **SDK Creation: Handmade vs Generated** _presented at the Nordic APIs Austin API Summit, June 2018_ ([slides](http://blog.tristansokol.com/Presentations/SDK_Creation_Handmade_vs_Generated/index.html))
 
 * **SDKs: The Bespoke, The Handmade & The Generated** _presented at DevXcon May 2017_ ([video](https://devrel.net/developer-experience/making-sdks-bespoke-hopeful-generated)) ([slides](http://blog.tristansokol.com/Presentations/SDKs%20the%20good%20the%20bad%20the%20ugly/SDKs%2C%20the%20good%20the%20bad%20the%20ugly.key)) _& DevRelCon Tokyo July 2017_ ([video](https://www.youtube.com/watch?v=INuC_FztCBc)) ([slides](http://blog.tristansokol.com/Presentations/SDKs%20the%20good%20the%20bad%20the%20ugly/SDKs%2C%20the%20good%20the%20bad%20the%20ugly%20-%20Japan.key))

@@ -1,0 +1,36 @@
+<section>
+ Backgroud of terminal windows, each fragment is a new command in the terminal.
+	<pre class="fragment"><code data-trim>
+	alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+</code></pre>
+	<pre class="fragment"><code data-trim>
+  chrome \
+  --headless \
+  --disable-gpu \
+  https://www.google.com
+	</code></pre>
+
+	<pre class="fragment"><code data-trim class="shell">
+			chrome --headless --disable-gpu --print-to-pdf https://www.chromestatus.com/
+
+			  </code></pre>
+
+			  <pre class="fragment"><code data-trim>
+					chrome --headless --disable-gpu --remote-debugging-port=9222 https://www.google.com/
+					  </code></pre>
+	<pre class="fragment"><code data-trim>
+					chrome --headless --disable-gpu --dump-dom https://www.google.com/
+					  </code></pre>
+	<pre class="fragment"><code data-trim class="php">
+			chrome --headless --disable-gpu --repl --crash-dumps-dir=./tmp https://www.chromestatus.com/
+
+							  </code></pre>
+							  <pre class="fragment"><code data-trim>
+									chrome --headless --disable-gpu 						  --user-data-dir TODO https://www.google.com/
+									  </code></pre>
+
+	<aside class="notes">
+		To get started with headless chrome, the first thing you'll notice is that you are going to start it from the command line instead of double clicking on something on your desktop. You probably don't want to dig into your computer to find your chrome executable, so the first thing you should think about is adding a handy alias. Then all you have to do is use the --headless command to get things started. --disable-gpu can fix some problems if you are on windows, in fact it might be required.
+
+	There are actually quite a few things that you can do straight from the command line. TODO: remote debugging, dump dom, --crash-dumps-dir ,repl,						  --user-data-dir</aside>
+	<section>
