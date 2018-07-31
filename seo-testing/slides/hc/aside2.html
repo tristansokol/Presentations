@@ -1,0 +1,26 @@
+<section>
+	<h2>Send a website as a PDF</h2>
+	<div class="terminal_window">
+		<header>
+			<div class="red_btn button"></div>
+			<div class="green_btn button"></div>
+			<div class="yellow_btn button"></div>
+		</header>
+		<div class="terminal_window">
+			<div id="typed-strings" class="terminal_text">
+				<pre class="termterm fragment"><code data-trim class="termterm shell">
+					$ chrome --headless --print-to-pdf=report.pdf \
+					--user-data-dir=./ https://www.google.com/</code></pre>
+					<pre class="termterm fragment"><code data-trim class="termterm shell">
+					$ uuencode report.pdf report.pdf | mail -s \
+					"Just finished compiling the report" manager@compa.ny
+
+									</code></pre>
+			</div>
+			<!-- <span id="typed">ouaoeuoe</span> -->
+		</div>
+	</div>
+	<aside class="notes">
+Another pretty easy thing that comes to mind to automate is sending out reports. Have some analytics that you need to send your boss every Monday? Use a cron job to get headless chrome to save the website as a PDF, using the user data directory to save your authenticated cookies. Then use whatever program you'd like to mail that pdf, an take start taking Monday's off.
+	</aside>
+</section>

@@ -1,0 +1,101 @@
+<section>
+	<h2> PDF Printing</h2>
+	<div class="terminal_window">
+		<header>
+			<div class="red_btn button"></div>
+			<div class="green_btn button"></div>
+			<div class="yellow_btn button"></div>
+		</header>
+		<div class="terminal_window">
+			<div id="typed-strings" class="terminal_text">
+				<pre class="termterm fragment"><code data-trim class="termterm">
+						$ chrome --headless \
+						--disable-gpu --print-to-pdf \
+						https://www.chromestatus.com/
+						</code></pre>
+			</div>
+			<!-- <span id="typed">ouaoeuoe</span> -->
+		</div>
+
+	</div>
+
+
+
+	<aside class="notes">
+		To get started with headless chrome, the first thing you'll notice is that you are going to start it from the command line
+		instead of double clicking on something on your desktop. You probably don't want to dig into your computer to find your
+		chrome executable, so the first thing you should think about is adding a handy alias. Then all you have to do is use the
+		--headless command to get things started. --disable-gpu can fix some problems if you are on windows, in fact it might be
+		required. There are actually quite a few things that you can do straight from the command line. TODO: remote debugging,
+		dump dom, --crash-dumps-dir ,repl, --user-data-dir</aside>
+	</section>
+		<style>
+			.reveal .terminal_window {
+				margin: 0 auto;
+				min-width: 600px;
+				min-height: 400px;
+				text-align: left;
+				margin-top: 15px;
+				position: relative;
+				border-radius: 10px;
+				font-family: FiraCode
+			}
+
+			.terminal_window header {
+				background-color: #E0E8F0;
+				height: 30px;
+				border-radius: 8px 8px 0 0;
+				padding-left: 10px;
+				font-size: 12px;
+			}
+
+			.terminal_window .button {
+				width: 12px;
+				height: 12px;
+				margin: 10px 4px 0 0;
+				display: inline-block;
+				border-radius: 8px;
+			}
+
+			.red_btn {
+				background-color: #E75448;
+			}
+
+			.green_btn {
+				background-color: #3BB662;
+			}
+
+			.yellow_btn {
+				background-color: #E5C30F;
+			}
+
+			.terminal_window {
+				background-color: #0D1F2D;
+				color: #F4FAFF;
+				font-size: 11pt;
+			}
+
+			.terminal_text {
+				margin-left: 20px;
+				font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+			}
+
+			#typed-strings {
+				display: inline-block;
+				postiion: relative;
+			}
+
+			#typed {
+				font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+				margin-left: 15px;
+			}
+			.reveal .termterm,  pre.termterm {
+				background-color:transparent;
+				font-size:42px;
+				width:100%;
+				margin: 5px;
+				border: none;
+				outline:none;
+				box-shadow: none;
+			}
+		</style>

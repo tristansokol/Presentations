@@ -1,19 +1,97 @@
 <section>
-	<pre>
-			<code>
-					(async () => {
-						const browser = await puppeteer.launch();
-						const page = await browser.newPage();
-						await page.goto('https://example.com');
-						await page.screenshot({path: 'example.png'});
+ <h2>Getting started</h2>
+	<div class="terminal_window">
 
-						await browser.close();
-					  })();
-			</code>
-		</pre>
+		<div class="terminal_window">
+			<div id="typed-strings" class="terminal_text">
+				<pre class="termterm"><code data-trim class="termterm">
+								(async () => {
+									const browser = await puppeteer.launch();
+									const page = await browser.newPage();
+
+									await page.goto('https://example.com');
+									await page.screenshot({path: 'example.png'});
+									await browser.close();
+								  })();
+								</code></pre>
+			</div>
+		</div>
+	</div>
 
 	<aside class="notes">
 		It is pretty easy to get started, but one of the core things you should have some understanding in beforehand in async/await.
 		TODO: brief explanation of async/await.
 	</aside>
-	<section>
+</section>
+<style>
+	.reveal .terminal_window {
+		margin: 0 auto;
+		min-width: 600px;
+		min-height: 400px;
+		text-align: left;
+		margin-top: 15px;
+		position: relative;
+		border-radius: 10px;
+		font-family: FiraCode
+	}
+
+	.terminal_window header {
+		background-color: #E0E8F0;
+		height: 30px;
+		border-radius: 8px 8px 0 0;
+		padding-left: 10px;
+		font-size: 12px;
+	}
+
+	.terminal_window .button {
+		width: 12px;
+		height: 12px;
+		margin: 10px 4px 0 0;
+		display: inline-block;
+		border-radius: 8px;
+	}
+
+	.red_btn {
+		background-color: #E75448;
+	}
+
+	.green_btn {
+		background-color: #3BB662;
+	}
+
+	.yellow_btn {
+		background-color: #E5C30F;
+	}
+
+	.terminal_window {
+		background-color: #0D1F2D;
+		color: #F4FAFF;
+		font-size: 11pt;
+	}
+
+	.terminal_text {
+		margin-left: 20px;
+		font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+	}
+
+	#typed-strings {
+		display: inline-block;
+		postiion: relative;
+	}
+
+	#typed {
+		font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+		margin-left: 15px;
+	}
+
+	.reveal .termterm,
+	pre.termterm {
+		background-color: transparent;
+		font-size: 42px;
+		width: 100%;
+		margin: 5px;
+		border: none;
+		outline: none;
+		box-shadow: none;
+	}
+</style>

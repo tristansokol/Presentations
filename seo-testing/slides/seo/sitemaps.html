@@ -1,0 +1,47 @@
+<section>
+	<h2>sitemaps</h2>
+	<pre><code data-trim style="max-height: 575px;">
+		<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+		  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+		  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+		  <url>
+			<loc>http://www.example.com/foo.html</loc>
+			<lastmod>2005-01-01</lastmod>
+			<changefreq>monthly</changefreq>
+			<priority>0.8</priority>
+			<xhtml:link
+			rel="alternate"
+			hreflang="de"
+			href="http://www.example.com/deutsch/page.html"/>
+			<image:image>
+			   <image:loc>http://example.com/image.jpg</image:loc>
+			   <image:caption>Dogs playing poker</image:caption>
+			</image:image>
+			<video:video>
+			  <video:content_loc>
+				http://www.example.com/video123.flv
+			  </video:content_loc>
+			  <video:player_loc allow_embed="yes" autoplay="ap=1">
+				http://www.example.com/videoplayer.swf?video=123
+			  </video:player_loc>
+			  <video:thumbnail_loc>
+				http://www.example.com/thumbs/123.jpg
+			  </video:thumbnail_loc>
+			  <video:title>Grilling steaks for summer</video:title>
+			  <video:description>
+				Cook the perfect steak every time.
+			  </video:description>
+			</video:video>
+		  </url>
+		</urlset>
+</code></pre>
+
+	<aside class="notes">
+		A Sitemap is an XML file that lists the URLs for a site. It allows webmasters to include additional information about each
+		URL: when it was last updated, how often it changes, and how important it is in relation to other URLs in the site. This
+		allows search engines to crawl the site more intelligently. Sitemaps are a URL inclusion protocol and complements robots.txt,
+		a URL exclusion protocol. regular sitemap & image sitemap
+		* link to sitemap in robots.txt file
+	</aside>
+	<section>

@@ -1,0 +1,20 @@
+<section>
+	<h2>Testing</h2>
+	<pre><code data-trim>
+			const puppeteer = require('puppeteer');
+
+			test('First Test', async () => {
+				let browser = await puppeteer.launch({
+					headless: false,
+				});
+				let page = await browser.newPage();
+				await page.goto('localhost:8080');
+				await page.waitForSelector('#main');
+				//some kind of assert here
+				browser.close();
+			}, 16000);
+</code></pre>
+	<aside class="notes">
+		Now that you have some of the SEO basics down, lets take a look at how you can turn them into a checkmark in a testing report.
+	</aside>
+	<section>

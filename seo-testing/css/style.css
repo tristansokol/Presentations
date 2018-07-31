@@ -1,0 +1,19 @@
+.reveal .quarter {
+    display: inline-block;
+    width: 48%;
+    height: 49%;
+    min-height: 200px;
+    max-height: 360px;
+    position: relative;
+    border: 1px solid red;
+}
+.reveal code{
+    font-family: FiraCode
+}
+
+@font-face {
+    font-family: 'FiraCode';
+    font-style: normal;
+    font-weight: 400;
+    src: local('FiraCode'), url(FiraCode-Regular.woff2) format('woff2');
+ }

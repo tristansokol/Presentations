@@ -1,0 +1,32 @@
+<section>
+	<h2>Keywords cont</h2>
+	<pre><code data-trim class="javascript">
+			test('find common words w/gramophone', async () => {
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				await page.waitForSelector('#article_shell');
+				let content = await page.$eval('*', el => el.innerText);
+				console.log(gramophone.extract(content))
+			})
+			// [ 'knot',
+			// 'tie',
+			// 'lace',
+			// 'shoes',
+			// 'helpful',
+			// 'laces',
+			// 'shoe',
+			// 'loop',
+			// 'shoelace',
+			// 'make',
+			// 'pull',
+			// 'loops',
+			// 'side',
+			// 'circle',
+			// 'tight',
+			// 'fingers',
+			// 'method',
+			// 'wikihow contributor',
+		</code></pre>
+	<aside class="notes">
+		ecosysytm to help us out. I found a tool called gramaphone for keyword/ngram extraction for a block of tests.
+	</aside>
+	<section>

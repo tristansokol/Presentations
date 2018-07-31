@@ -1,0 +1,23 @@
+<section>
+	<h2>Testing</h2>
+	<pre><code data-trim class="javascript">
+			const puppeteer = require('puppeteer');
+
+			beforeAll(async () => {
+				browser = await puppeteer.launch({
+					headless: true,
+					slowMo: 80,
+					//args: [`--window-size=width,height`]
+				});
+				page = await browser.newPage();
+				//await page.setViewport( width, height );
+			});
+
+			afterAll(() => {
+				browser.close();
+			});
+</code></pre>
+	<aside class="notes">
+		And to keep our slides a little cleaner, we will put most of the browser initialization into setup and teardown functions for jest, that way we don't have to repeat it in each of our tests.
+	</aside>
+	<section>

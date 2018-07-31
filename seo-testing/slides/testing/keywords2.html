@@ -1,0 +1,69 @@
+
+<section>
+		<h2>Keywords cont</h2>
+		<pre><code data-trim class="javascript">
+				test('find common words', async () => {
+					await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+					await page.waitForSelector('#article_shell');
+					let content = await page.$eval('*', el => el.innerText);
+					var wordCounts = {};
+					var words = content.split(/\b/);
+
+					for (var i = 0; i < words.length; i++)
+						wordCounts[words[i]] = (wordCounts[ words[i]] || 0) + 1;
+					var sortable = [];
+					for (var word in wordCounts) {
+						sortable.push([word, wordCounts[word]]);
+					}
+
+					sortable.sort(function (a, b) {
+						return b[1] - a[1];
+					});
+					console.log(sortable)
+				})
+				// [ [ ' ', 1823 ],
+				//   [ 'the', 180 ],
+				//   [ '\n', 90 ],
+				//   [ 'to', 65 ],
+				//   [ '. ', 63 ],
+				//   [ 'a', 58 ],
+				//   [ ', ', 56 ],
+				//   [ 'and', 50 ],
+				//   [ 'your', 48 ],
+				//   [ 'of', 48 ],
+				//   [ 'you', 45 ],
+				//   [ 'knot', 27 ],
+				//   [ 'other', 25 ],
+				//   [ '\n\n', 23 ],
+				//   [ 'should', 22 ],
+				//   [ 'lace', 21 ],
+				//   [ 'laces', 20 ],
+				//   [ '.[', 20 ],
+				//   [ 'Helpful', 20 ],
+				//   [ 'it', 19 ],
+				//   [ '.\n', 19 ],
+				//   [ 'shoe', 19 ],
+				//   [ 'loop', 18 ],
+				//   [ 'shoes', 18 ],
+				//   [ 'with', 18 ],
+				//   [ 'them', 18 ],
+				//   [ 'are', 17 ],
+				//   [ 'wikiHow', 17 ],
+				//   [ 'one', 16 ],
+				//   [ 'or', 16 ],
+				//   [ 'be', 16 ],
+				//   [ 'How', 15 ],
+				//   [ 'on', 15 ],
+				//   [ ' “', 15 ],
+				//   [ 'shoelace', 15 ],
+		</code></pre>
+		<aside class="notes">
+			The other way I think about testing keywords is trying to find the keywords that emerge from the site you have created.
+			* look for most common word usage
+			* find common n-grams, popular phrases for your post.
+			* see if these things match up with what you would expect, or want your page to look for.
+
+			This is a bit less than an automated test, but can be a good way to manually evaluate the blog posts, marketing pages, documentation that you are writing. This solution is pretty naive but we can also leverage the power of the node ecosysytm
+		</aside>
+	<section>
+

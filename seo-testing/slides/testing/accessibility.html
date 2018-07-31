@@ -1,0 +1,19 @@
+<section>
+	<h2>Accessibility</h2>
+	<pre><code data-trim>
+			const puppeteer = require('puppeteer');
+
+			test('First Test', async () => {
+				let browser = await puppeteer.launch({
+					headless: false,
+				});
+				let page = await browser.newPage();
+				await page.goto('localhost:8080');
+				await page.waitForSelector('#main');
+				TODO some kind of assert here
+				browser.close();
+			}, 16000);
+</code></pre>
+	<aside class="notes">
+	</aside>
+	<section>
