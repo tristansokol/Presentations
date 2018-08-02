@@ -1,18 +1,17 @@
 <section>
-	<h2>Meta-tags</h2>
-	<pre><code data-trim>
-			<!-- const puppeteer = require('puppeteer');
+	<h2>Structured Data</h2>
+	<pre><code data-trim class="javascript">
+			test('jsonLD', async () => {
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				await page.waitForSelector('#article_shell');
 
-			test('First Test', async () => {
-				let browser = await puppeteer.launch({
-					headless: false,
+				const structuredData = await page.evaluate(function () {
+					let jsonLD = document.querySelector('script[type="application/ld+json"]');
+					return JSON.parse(jsonLD.innerHTML);
 				});
-				let page = await browser.newPage();
-				await page.goto('localhost:8080');
-				await page.waitForSelector('#main');
-				TODO some kind of assert here
-				browser.close();
-			}, 16000); -->
+				expect(structuredData).not.toBeUndefined();
+				// expect(struturedData.author).toBeEqualTo(content.author)
+			}, 20000);
 </code></pre>
 	<aside class="notes">
 meta-tags	</aside>

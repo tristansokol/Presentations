@@ -1,18 +1,21 @@
 <section>
-	<h2>Sitemaps, robot.txt</h2>
+		<div style="position: relative">
+				<h2 style="display: inline">Robots.txt </h2>
+				<img src="img/lighthouse.svg" width="100" style="position:absolute;bottom:0" /></div>
 	<pre><code data-trim>
-			<!-- const puppeteer = require('puppeteer');
+			test('robots-txt', async () => {
+				const opts = {
+					chromeFlags: [ '--headless']
+				};
+				let url = 'https://www.wikihow.com/Tie-Your-Shoes';
+				await launchChromeAndRunLighthouse(url, opts).then(results => {
+					// AIf your robots.txt file is malformed, crawlers
+					// may not be able to understand how you want your
+					// website to be crawled or indexed.
 
-			test('First Test', async () => {
-				let browser = await puppeteer.launch({
-					headless: false,
+					expect(results.audits['robots-txt'].score).toEqual(1);
 				});
-				let page = await browser.newPage();
-				await page.goto('localhost:8080');
-				await page.waitForSelector('#main');
-				TODO some kind of assert here
-				browser.close();
-			}, 16000); -->
+			}, 20000);
 </code></pre>
 	<aside class="notes">
 	</aside>

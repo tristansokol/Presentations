@@ -1,18 +1,23 @@
 <section>
-	<h2>Accessibility</h2>
+		<div style="position: relative">
+				<h2 style="display: inline">accessibility </h2>
+				<img src="img/lighthouse.svg" width="100" style="position:absolute;bottom:0" /></div>
 	<pre><code data-trim>
-			const puppeteer = require('puppeteer');
-
-			test('First Test', async () => {
-				let browser = await puppeteer.launch({
-					headless: false,
+			test('Aria', async () => {
+				const opts = {
+					chromeFlags: ['--headless']
+				};
+				await launchChromeAndRunLighthouse('https://www.wikihow.com/Tie-Your-Shoes', opts).then(results => {
+					// ARIA roles must have valid values in order to perform their intended accessibility functions. [Learn more](https://dequeuniversity.com/rules/axe/2.2/aria-roles?application=lighthouse)
+					expect(results.audits['aria-roles'].score).toEqual(1);
+					expect(results.audits['aria-allowed-attr'].score).toEqual(1);
+					expect(results.audits['aria-required-attr'].score).toEqual(1);
+					expect(results.audits['aria-required-children'].score).toEqual(1);
+					expect(results.audits['aria-required-parent'].score).toEqual(1);
+					expect(results.audits['aria-valid-attr-value'].score).toEqual(1);
+					expect(results.audits['aria-valid-attr'].score).toEqual(1);
 				});
-				let page = await browser.newPage();
-				await page.goto('localhost:8080');
-				await page.waitForSelector('#main');
-				TODO some kind of assert here
-				browser.close();
-			}, 16000);
+			}, 20000);
 </code></pre>
 	<aside class="notes">
 	</aside>

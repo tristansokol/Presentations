@@ -1,0 +1,19 @@
+<section>
+	<h2>Performance</h2>
+	<pre><code data-trim class="javascript">
+			test('time to first paint', async () => {
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				const paints = await page.evaluate(_ => {
+					const result = {};
+					performance.getEntriesByType('paint').map(entry => {
+						result[entry.name] = entry.startTime;
+					});
+					return result;
+				});
+
+				expect(paints['first-contentful-paint']).toBeLessThan(100)
+			}, 5000);
+</code></pre>
+	<aside class="notes">
+Timing	</aside>
+	<section>

@@ -1,0 +1,20 @@
+<section>
+	<h2>Images cont</h2>
+	<pre><code data-trim class="javascript">
+			test('Served from CDN', async () => {
+
+				page.on('response', async (response) => {
+					const matches = /.*\.(jpg|png|svg|gif)$/.exec(response.url());
+					if (matches && (matches.length === 2)) {
+						expect(matches[0]).toMatch('cdn');
+					}
+				});
+
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				await page.waitForSelector('#article_shell');
+
+			}, 20000);
+</code></pre>
+	<aside class="notes">
+		images </aside>
+</section>

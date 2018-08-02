@@ -1,0 +1,28 @@
+<section>
+	<h2>Links Cont.</h2>
+	<pre><code data-trim class="javascript">
+			test('Nofollows for external pages', async () => {
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				await page.waitForSelector('#article_shell');
+
+				const links = await page.evaluate(function () {
+					let links = document.querySelectorAll('a');
+					items = [];
+					for (var value of links.values()) {
+						items.push({
+							href: value.href,
+							rel: value.rel,
+						})
+					}
+					return items
+				});
+				links.forEach(element => {
+					if(element.href.indexOf('wikihow')==-1){
+						expect(element.rel).toEqual('nofollow')
+					}
+
+				});
+</code></pre>
+	<aside class="notes">
+		Too many links nofollow title and text contains keyword succient anchor text </aside>
+	<section>

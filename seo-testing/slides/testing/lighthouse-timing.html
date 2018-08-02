@@ -1,0 +1,64 @@
+<section>
+	<div style="position: relative">
+	<h2 style="display: inline">Page Timing </h2>
+	<img src="img/lighthouse.svg" width="100" style="position:absolute;bottom:0" /></div>
+	<pre><code data-trim class="javascript">
+			test('Timing', async () => {
+				const opts = {
+					chromeFlags: ['--show-paint-rects', '--headless']
+				};
+				let site = 'https://www.wikihow.com/Tie-Your-Shoes'
+				await launchChromeAndRunLighthouse(site, opts).then(results => {
+					expect(results.audits['speed-index'].score * 100).toBeGreaterThan(80);
+				});
+			}, 20000);
+
+</code></pre>
+<pre class="fragment"><code data-trim class="javascript">
+		test('Timing', async () => {
+			const opts = {
+				chromeFlags: ['--show-paint-rects', '--headless']
+			};
+			let site = 'https://www.wikihow.com/Tie-Your-Shoes'
+			await launchChromeAndRunLighthouse(site, opts).then(results => {
+				console.log(results.audits['metrics'].details)
+				// { items:
+					//     [ { firstContentfulPaint: 1800,
+					//         firstContentfulPaintTs: undefined,
+					//         firstMeaningfulPaint: 1800,
+					//         firstMeaningfulPaintTs: undefined,
+					//         firstCPUIdle: 10463,
+					//         firstCPUIdleTs: undefined,
+					//         interactive: 12265,
+					//         interactiveTs: undefined,
+					//         speedIndex: 4243,
+					//         speedIndexTs: undefined,
+					//         estimatedInputLatency: 139,
+					//         estimatedInputLatencyTs: undefined,
+					//         observedNavigationStart: 0,
+					//         observedNavigationStartTs: 124512482839,
+					//         observedFirstPaint: 154,
+					//         observedFirstPaintTs: 124512637301,
+					//         observedFirstContentfulPaint: 154,
+					//         observedFirstContentfulPaintTs: 124512637304,
+					//         observedFirstMeaningfulPaint: 154,
+					//         observedFirstMeaningfulPaintTs: 124512637306,
+					//         observedTraceEnd: 3643,
+					//         observedTraceEndTs: 124516126107,
+					//         observedLoad: 1108,
+					//         observedLoadTs: 124513590937,
+					//         observedDomContentLoaded: 563,
+					//         observedDomContentLoadedTs: 124513045498,
+					//         observedFirstVisualChange: 5,
+					//         observedFirstVisualChangeTs: 124512487839,
+					//         observedLastVisualChange: 2627,
+					//         observedLastVisualChangeTs: 124515109839,
+					//         observedSpeedIndex: 823,
+					//         observedSpeedIndexTs: 124513305367 } ] }
+			});
+		}, 20000);
+
+</code></pre>
+	<aside class="notes">
+		Too many links nofollow title and text contains keyword succient anchor text </aside>
+	<section>
