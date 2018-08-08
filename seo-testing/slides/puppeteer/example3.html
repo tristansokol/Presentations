@@ -1,9 +1,42 @@
-
 <section>
-		A more complex example using automated interactions with a webpage.
+		Automated Midwest.js registration
+		<pre><code data-trim class="javascript" style="max-height: 550px">
+				const puppeteer = require('puppeteer');
 
-		<aside class="notes">
-				A more complex example using automated interactions with a webpage.
-		</aside>
-	<section>
+				browser = await puppeteer.launch({
+					headless: true,
+					slowMo: 80,
+				});
+				page = await browser.newPage();
+
+				await page.goto('http://midwestjs.com/#/main');
+
+				await page.waitForSelector('#tickets');
+
+				await page.hover('#tickets > div.container > div > div > div > h2:nth-child(5) > button > i')
+
+				await page.waitFor(2000); //make sure I really want to buy
+
+				await Promise.all([
+					page.waitForNavigation({}),
+					page.click('#tickets > div.container > div > div > div > h2:nth-child(5) > button > i', {
+						button: 'left',
+						delay: 200
+					})
+				]);
+
+				await page.click('#tito-tickets-form > div.tito-submit-wrapper > button')
+
+				await page.waitForSelector('#tito-iframe');
+
+				const frame = await page.frames().find(f => f.name() === 'tito-iframe');
+				await (await frame.$('#registration_name')).type('Taylor', { delay: 100 });
+				await (await frame.$('#registration_name')).type(' Swift', {});
+				await (await frame.$('#registration_email')).type('taytay@gmail.com')
+
+				browser.close();
+					</code></pre>
+	<aside class="notes">
+ But what really makes running headless chrome via puppeteer is the ease in which you can interact with pages.</aside>
+</section>
 

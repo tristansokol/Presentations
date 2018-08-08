@@ -1,0 +1,17 @@
+<section>
+	in-page evaluation
+	<pre class="fragment"><code data-trim class="javascript" style="max-height: 550px">
+		page.evaluate(function, ...args)
+	</code></pre>
+	<pre class="fragment"><code data-trim class="javascript" style="max-height: 550px">
+			const result = await page.evaluate(x => {
+				return Promise.resolve(8 * x);
+			}, 7);
+			console.log(result); //56
+							</code></pre>
+
+	<aside class="notes">
+		Pages are the representations for individual tabs or even the background pages that are used for chrome extensions. It is
+		also the object that you will be using the most when interacting with all of internet.
+	</aside>
+</section>

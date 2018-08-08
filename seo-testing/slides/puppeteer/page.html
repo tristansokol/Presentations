@@ -1,0 +1,23 @@
+<section>
+	page
+	<pre class="fragment"><code data-trim class="javascript" style="max-height: 550px">
+			const page = await browser.newPage();
+
+			page.reload();
+
+			page.setExtraHTTPHeaders({});
+			page.setRequestInterception(value)
+
+			page.setJavaScriptEnabled(enabled)
+			page.setOfflineMode(enabled)
+
+			page.setViewport(viewport)
+			page.setUserAgent(userAgent)
+			page.emulate(options)
+
+			page.close();
+						</code></pre>
+	<aside class="notes">
+		Pages are the representations for individual tabs or even the background pages that are used for chrome extensions. It is also the object that you will be using the most when interacting with all of internet.
+	</aside>
+</section>

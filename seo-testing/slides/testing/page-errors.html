@@ -1,18 +1,9 @@
 <section>
-	<h2>Page-errors</h2>
-	<pre><code data-trim>
-			<!-- const puppeteer = require('puppeteer');
-
-			test('First Test', async () => {
-				let browser = await puppeteer.launch({
-					headless: false,
-				});
-				let page = await browser.newPage();
-				await page.goto('localhost:8080');
-				await page.waitForSelector('#main');
-				TODO some kind of assert here
-				browser.close();
-			}, 16000); -->
+	Page Errors
+	<pre><code data-trim class="javascript">
+			page.on("error", function (err) {
+			// fail test
+			}
 </code></pre>
 	<aside class="notes">
 Links	</aside>
