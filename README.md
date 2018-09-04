@@ -18,7 +18,8 @@
   * [Square Developer Night October 26, 2017](https://tristansokol.github.io/Presentations/2017.10.26%20Developer%20Night/)
   * [Taking a Payment with Square](https://tristansokol.github.io/Presentations/Taking%20a%20Payment%20with%20Square/index.html)
   * [Square's Platform](https://tristansokol.github.io/Presentations/Square%20Platform%20Overview/index.html)
-  * [Square - Drupal](https://tristansokol.github.io/Presentations/Square-Drupal/index.html) _November 28th 2017, Boston Drupal Meetup_
+  * [Square - Drupal](https://tristansokol.github.io/Presentations/Square-Drupal/index.html) _November 28th 2017, Boston Drupal Meetup, SF Drupal meetup_
+  * [Square - Drupal](https://tristansokol.github.io/Presentations/Square-Drupal2/index.html) _September 13th 2018, Utah Drupal meetup_
   * [Square - WooCommerce](https://tristansokol.github.io/Presentations/Square-WooCommerce/index.html)
 
 * Intuit
