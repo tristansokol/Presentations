@@ -2,7 +2,7 @@ SpellChecker = require('spellchecker');
 const puppeteer = require('puppeteer');
 (async () => {
     browser = await puppeteer.launch({
-        headless: true,
+        headless: false,
         slowMo: 80,
     });
     console.log('Opening http://midwestjs.com/#/main');
