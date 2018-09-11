@@ -20,7 +20,7 @@ There is a [good video](http://docs.drupalvm.com/en/latest/getting-started/insta
 
 * Download [DrupalVM](https://www.drupalvm.com/)
 * Generate your self-signed certificate (if you do this from within your `geerlingguy-drupal-vm-...`) directory you can save yourself a copying step. `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout example.key -out example.crt`
-* `mv example.drupal.make.yml drupal.make.yml `
+* `mv example.drupal.make.yml drupal.make.yml`
 * `cp default.config.yml config.yml`
 * Its very important you add the  following lines to your `config.yml`:
 

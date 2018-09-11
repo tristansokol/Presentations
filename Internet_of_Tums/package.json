@@ -8,11 +8,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "live-server --port=5252 --host=localhost"
+    "dev": "live-server --port=5252 --host=localhost",
+    "dev-php": "php -S localhost:3949 && open localhost:3949"
   },
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
+    "googleapis": "^33.0.0",
     "reveal_external": "^1.3.0"
   }
 }

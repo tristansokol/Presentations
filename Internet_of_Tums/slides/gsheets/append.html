@@ -1,0 +1,15 @@
+<section>
+	<pre><code data-trim class="termterm javascript " style="max-height:500px;background-color: #222; font-size: 50px;line-height: 50px">
+				const { google } = require('googleapis');
+				const sheets = google.sheets({ version: 'v4', auth });
+				sheets.spreadsheets.values.append({
+				  spreadsheetId: '1dy9jSRMq0NpohZHuZa1W3yDLZBVofZEkO2oaCQqj1iY',
+				  range: 'Sheet1!A:A',
+				  valueInputOption: 'USER_ENTERED',
+				  resource: { values: [[new Date().toLocaleString()],] }
+				}, callback(error, result));
+							</code></pre>
+	<aside class="notes">
+
+	</aside>
+</section>
