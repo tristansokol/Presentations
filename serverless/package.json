@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "live-server --port=5252 --host=localhost"
+    "dev": "live-server --port=5252 --host=localhost",
+    "dev-php":"php -S localhost:3434"
   },
   "author": "",
   "license": "UNLICENSED",

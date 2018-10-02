@@ -4,7 +4,7 @@
 
 * **Ins n' Outs of Serverless Functions** _presented at the Little Rock Tech Fest, October 2018_ ([slides](http://blog.tristansokol.com/Presentations/serverless/index.html))
 
-* **Internet of Tums, A DIY IoT case study** _presented at UtahJS, September 2018_ ([slides](http://blog.tristansokol.com/Presentations/Internet_of_Tums/index.html))
+* **Internet of Tums, A DIY IoT case study** _presented at UtahJS, September 2018_ ([slides](http://blog.tristansokol.com/Presentations/Internet_of_Tums/index.html))([video](https://www.youtube.com/watch?v=LwQwtDm4YiM&list=PLuVqdWOQ-PNn_lDYUVgcA4e91qxJzipva&index=13&t=0s))
 
 * **Testing Your SEO with headless Chrome and puppeteer** _presented at MidwestJS, August 2018_ ([slides](http://blog.tristansokol.com/Presentations/seo-testing/index.html))
 

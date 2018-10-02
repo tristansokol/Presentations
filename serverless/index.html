@@ -1,62 +1,99 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>A Presentation by Tristan! </title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/Square.css">
-		<link rel="stylesheet" href="css/style.css" />
+	<title>A Presentation by Tristan! </title>
 
-		<!-- Square Market Font -->
-		<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/Square.css">
+	<link rel="stylesheet" href="css/style.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Square Market Font -->
+	<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-external="slides/intro.html"> </section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+<!--Abstract:  Serverless functions are a new tool for developers that can let even the smallest of entrepreneurs feel like they are at Google scale. They can be the backbone of a microservice architecture for your application/website or handle a pipeline of complicated back-end processing. I’ll give a quick high level conceptual overview of how serverless functions work, then dive into practical examples of common use cases such as webhook handling, front-end content delivery, and scaled asynchronous data processing using tools like Google Cloud Functions & Twilio Functions. We’ll also cover all bases with testing tips and development tools. The audience will walk away with practical examples of ways to incorporate hosted functions into their workflows, as well as a solid understanding of the benefits (extreme cost savings, improved scalability, architecture) and drawbacks (cold start times, complexity). -->
+
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-external="slides/intro.html" data-background-iframe="./backgrounds/stars.html">❌</section>
+			<section data-external="slides/bio.html">❌</section>
+			<section data-external="slides/overview.html">❌</section>
+			<section data-external="slides/history.html">✅</section>
+			<section data-external="slides/example.html">❌</section>
+			<!-- <section data-external="slides/providers.html">❌</section> -->
+			<section data-external="slides/checkout-form.html">❌</section>
+			<section data-external="slides/checkout.html">❌</section>
+			<section data-external="slides/example.html">❌</section>
+
+			<!-- <section data-external="slides/function-deploy.html">❌</section> -->
+			<section data-external="slides/checkout-function.html">❌</section>
+			<!-- Demo of deploying function on GCP-->
+			<section data-external="slides/benefits.html">❌</section>
+
+			<section data-external="slides/architecture.html">❌</section>
+			<section data-external="slides/pricing.html">❌</section>
+			<section data-external="slides/downsides.html">❌</section>
+			<section data-external="slides/downsides-lockin.html">❌</section>
+			<section data-external="slides/cold-start.html">❌</section>
+			<section data-external="slides/use-cases.html">❌</section>
+			<section data-external="slides/nordstroms.html">❌</section>
+			<section data-external="slides/outro.html">❌</section>
 		</div>
+	</div>
+	<!-- title -->
+	<!-- bio -->
+	<!-- intro to serverless -->
+	<!-- example with google cloud platform-->
+	<!-- benefits of serverless -->
+	<!-- scale, cost, architecture, -->
+	<!-- example of twilio functions for serverless (might be nice if the examples played well with each other) -->
+	<!-- Talk abou excellet webhook use cases -->
+	<!-- cover some of the dowesides about serverless (architecure, complexity, cold start) -->
+	<!-- outro -->
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
-
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
 
 
-			Reveal.initialize({
-				history: true,
-				width: 1280,
-				height: 720,
-				// loop:true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/external/external.js', condition: function() {  return !!document.querySelector( '[data-external],[data-external-replace]' ); } }
-				]
-			});
-			Reveal.configure({
-				defaultTiming: 1500 / Reveal.getTotalSlides()
-			});
-		</script>
-	</body>
+		Reveal.initialize({
+			history: true,
+			width: 1280,
+			height: 720,
+			loop:true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); } }
+			]
+		});
+		Reveal.configure({
+			defaultTiming: 1500 / Reveal.getTotalSlides()
+		});
+	</script>
+</body>
+
 </html>
