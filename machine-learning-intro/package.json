@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "start": " watch php -S localhost:8000"
+  }
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+	<style>
+		.robotfont {
+			font-family: 'Major Mono Display', monospace !important;
+		}
+
+		.reveal section img {
+			border: none;
+			box-shadow: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="img/bg1.png" data-background-size="contain">
+				<div class="robotfont" style="width:50%;margin-left:25%">A friendly introduction to Machine Learning</div>
+				<aside class="notes">
+					Hello everyone! In case we haven't met yet, I'm Tristan and today I'm going to give you a taste of machine
+					learning.
+				</aside>
+			</section>
+			<section><span class="robotfont">Disclaimers</span></section>
+			<section data-background-video="img/Jan-29-2019_18-50-51.mp4" data-background-video-loop data-background-video-muted>
+				<aside class="notes">
+					This will be as non-technical as I can make it, there won't be any code or math, but some of that stuff might slip
+					out of my mouth so please ask questions if you don't understand and I'll explain some more.
+				</aside>
+			</section>
+			<section><span class="robotfont">What is machine learning? </span><br>
+				<img src="/img/robot.png" style="height:400px" alt="">
+				<aside class="notes">
+				Machine learning, artificial intelligence, genetic algorthims are all part of the same group of systems. that is defined by their ability to learn or improve as they operate. 
+				</aside>
+			</section>
+			<section>
+					<img src="/img/robot.png" style="width:400px;float: left;" alt="">
+					<img src="/img/dosomething.png" style="width:500px" alt="" class="fragment"><br>
+					<img src="/img/feedback.png" style="width:500px" alt="" class="fragment">
+			</section>
+			<!-- definition -->
+			<!-- We'll be talking about supervised machine learning,  -->
+			<!-- Why is machine learning becoming a big thing now?  -->
+			<!-- markov chains with nathanial's emails -->
+			<!-- GAN examples  -->
+			<!-- scary warnings about privacy -->
+			<!-- sonic example to play games, other games -->
+			<!-- sonic exploits -->
+			<!-- deep fakes examples  -->
+			<!-- audio examples  -->
+			<!-- Good use cases for machine learning (try to get business ideas)-->
+			<!-- Fun tensorflow js demos -->
+
+			<!-- Part 2 for nerds.  -->
+			<!-- definition, formal -->
+			<!-- types of machine learning, supervised, unsupervised -->
+			<!-- explation through linear regression example -->
+
+			<!-- Sonic -->
+			<!-- Q-learning -->
+			<!-- JERK -->
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			history: true,
+			width: 1280,
+			height: 720,
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				},
+			]
+		});
+	</script>
+</body>
+
+</html>
