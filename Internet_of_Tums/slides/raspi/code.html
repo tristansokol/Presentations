@@ -1,0 +1,27 @@
+<section data-background="#FFF">
+
+
+  <div class="terminal_window ">
+    <header>
+      <div class="red_btn button"></div>
+      <div class="green_btn button"></div>
+      <div class="yellow_btn button"></div>
+    </header>
+    <div class="terminal_window">
+      <div id="typed-strings" class="terminal_text">
+        <pre class="termterm"><code data-trim class="termterm javascript">
+          const Gpio = require('onoff').Gpio;
+          const led = new Gpio(17, 'out');
+          const button = new Gpio(4, 'in', 'both');
+
+          button.watch((err, value) => led.writeSync(value));
+                                    </code></pre>
+
+      </div>
+    </div>
+
+  </div>
+  <aside class="notes">
+    These are speaker notes
+  </aside>
+</section>
