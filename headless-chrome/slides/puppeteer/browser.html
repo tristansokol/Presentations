@@ -1,0 +1,33 @@
+<section>
+	browser
+	<pre><code data-trim class="javascript" style="max-height: 550px">
+	const puppeteer = require('puppeteer');
+
+	puppeteer.launch().then(async browser => {
+	const page = await browser.newPage();
+		await page.goto('https://example.com');
+		await browser.close();
+	});
+				</code></pre>
+	<pre class="fragment"><code data-trim class="javascript" style="max-height: 550px">
+			puppeteer.launch({
+				headless: //Whether to run browser in headless mode
+				executablePath: //path to a specified version of chrome to run
+				slowMo: //slows down all actions
+				defaultViewport: {
+					width:
+					height:
+					deviceScaleFactor:
+					isMobile:
+					hasTouch:
+				}
+				args: //custom flags to run chrome with
+				userDataDir:
+				env: //environment variables, defaulting for process.env
+			})
+						</code></pre>
+
+	<aside class="notes">
+		The browser object is the basic representation of the chrome instance
+	</aside>
+</section>

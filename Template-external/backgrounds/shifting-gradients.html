@@ -1,0 +1,80 @@
+<style type="text/css">
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  position: absolute ;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.blue-purple {
+  background: linear-gradient(to right, #1D2B64, #F8CDDA);
+  animation:  25s ease;
+  animation-name: fadeInOut;
+
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+.green-blue {
+ background:linear-gradient( to right, #43cea2, #185a9d);
+ animation:  25s ease;
+ animation-name: fadeOutIn;
+ animation-fill-mode: forwards;
+ animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutIn  {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn  {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+</style>
+
+<div class="background blue-purple"></div>
+<div class="background green-blue"></div>
+

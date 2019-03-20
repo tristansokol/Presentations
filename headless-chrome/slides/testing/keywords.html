@@ -1,0 +1,35 @@
+<section>
+	<h2>Keywords</h2>
+	<pre><code data-trim class="javascript">
+			describe('Keyword Presence', async () => {
+				let keywords = ['shoes', 'tie your shoes']
+
+				test('keywords in title', async () => {
+					await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+					const pageTitle = await page.title();
+					keywords.forEach(keyword => {
+						expect(pageTitle.toLowerCase()).toMatch(keyword);
+					});
+				}, 20000);
+
+
+				test('keyword in meta', async () => {
+
+					await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+					const metaDescription = await page.evaluate(() => document.querySelector('meta[name="description"]').content);
+					keywords.forEach(keyword => {
+						expect(metaDescription.toLowerCase()).toMatch(keyword);
+					});
+
+				}, 20000);
+			});
+	</code></pre>
+	<aside class="notes">
+		Earlier we talked about how important keywords can be when determining your search presence. I think there are a couple different
+		ways that you can think about putting the tests for keywords into your site. If you are writing your content with the specific
+		intent to rank in certain keywords then you could do things like see how many times that keyword shows up on your page,
+		if it is used in the url, titile, description, links, ande everything that plays a part in the SEO of the site. You could
+		automate this by using front matter in your jekyll posts, or using the page title or url as a source of truth on the keyword
+		you are looking for.
+	</aside>
+</section>

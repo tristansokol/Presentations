@@ -1,0 +1,105 @@
+<section>
+	<h2>Image Diffing</h2>
+	<div class="terminal_window">
+		<header>
+			<div class="red_btn button"></div>
+			<div class="green_btn button"></div>
+			<div class="yellow_btn button"></div>
+		</header>
+		<div class="terminal_window">
+			<div id="typed-strings" class="terminal_text">
+				<pre class="termterm fragment"><code data-trim class="termterm shell">
+												$ chrome --headless --screenshot=file-fr.png \
+												--window-size=1280,1000 https://fr-fr.facebook.com/
+												</code></pre>
+				<pre class="termterm fragment"><code data-trim class="termterm shell">
+														$ chrome --headless --screenshot=file-es.png \
+														--window-size=1280,1000 https://es-la.facebook.com/
+														</code></pre>
+				<pre class="termterm fragment"><code data-trim class="termterm shell">
+																$ pixelmatch file-es.png file-fr.png output.png 0.1 	</code></pre>
+			</div>
+		</div>
+
+	</div>
+	<small><a href="https://github.com/mapbox/pixelmatch">https://github.com/mapbox/pixelmatch</a></small>
+	<aside class="notes">
+		Even with these limited command line features, some really interesting test situations come to mind. It would be fairly trivial
+		to build a test that makes sure that something like an app version number matches what is displayed on an about page just
+		by grepping the dom output. Or use a some easy image processing to see if you have made any customer facing or visible
+		changes to webpages. Here we will take two screenshots, one that is the french facebook login page, and another that is
+		the login page in spanish. Then we will use this tool from Mapbox opensource that
+	</aside>
+</section>
+<style>
+	.reveal .terminal_window {
+		margin: 0 auto;
+		min-width: 600px;
+		min-height: 400px;
+		text-align: left;
+		margin-top: 15px;
+		position: relative;
+		border-radius: 10px;
+		font-family: FiraCode
+	}
+
+	.terminal_window header {
+		background-color: #E0E8F0;
+		height: 30px;
+		border-radius: 8px 8px 0 0;
+		padding-left: 10px;
+		font-size: 12px;
+	}
+
+	.terminal_window .button {
+		width: 12px;
+		height: 12px;
+		margin: 10px 4px 0 0;
+		display: inline-block;
+		border-radius: 8px;
+	}
+
+	.red_btn {
+		background-color: #E75448;
+	}
+
+	.green_btn {
+		background-color: #3BB662;
+	}
+
+	.yellow_btn {
+		background-color: #E5C30F;
+	}
+
+	.terminal_window {
+		background-color: #0D1F2D;
+		color: #F4FAFF;
+		font-size: 11pt;
+	}
+
+	.terminal_text {
+		margin-left: 20px;
+		font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+	}
+
+	#typed-strings {
+		display: inline-block;
+		postiion: relative;
+	}
+
+	#typed {
+		font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+		margin-left: 15px;
+	}
+
+	.reveal .termterm,
+	pre.termterm {
+		background-color: transparent;
+		font-size: 36px;
+		width: 100%;
+		margin: 5px;
+		border: none;
+		outline: none;
+		box-shadow: none;
+	}
+</style>

@@ -1,0 +1,161 @@
+<section>
+	<h2>Testing with Lighthouse</h2>
+	<pre><code data-trim class="javascript" style="max-height: 700px">
+			const lighthouse = require('lighthouse');
+			const chromeLauncher = require('chrome-launcher');
+
+
+			describe('Lighthouse tests', async () => {
+
+				test('Timing', async () => {
+					function launchChromeAndRunLighthouse(url, opts, config = null) {
+					  return chromeLauncher.launch({chromeFlags: opts.chromeFlags}).then(chrome => {
+						opts.port = chrome.port;
+						return lighthouse(url, opts, config).then(results => {
+						  return chrome.kill().then(() => results.lhr)
+						});
+					  });
+					}
+
+					const opts = {
+					  chromeFlags: ['--show-paint-rects','--headless']
+					};
+
+					// Usage:
+					await launchChromeAndRunLighthouse('https://www.wikihow.com/Tie-Your-Shoes', opts).then(results => {
+						{
+							"userAgent",
+							"lighthouseVersion",
+							"fetchTime",
+							"requestedUrl",
+							"finalUrl",
+							"runWarnings",
+							"audits":{
+								"is-on-https",
+								"redirects-http",
+								"service-worker",
+								"works-offline",
+								"viewport",
+								"without-javascript",
+								"first-contentful-paint",
+								"first-meaningful-paint",
+								"load-fast-enough-for-pwa",
+								"speed-index",
+								"screenshot-thumbnails",
+								"estimated-input-latency",
+								"errors-in-console",
+								"time-to-first-byte",
+								"first-cpu-idle",
+								"interactive",
+								"user-timings",
+								"critical-request-chains",
+								"redirects",
+								"webapp-install-banner",
+								"splash-screen",
+								"themed-omnibox",
+								"manifest-short-name-length",
+								"content-width",
+								"image-aspect-ratio",
+								"deprecations",
+								"mainthread-work-breakdown",
+								"bootup-time",
+								"uses-rel-preload",
+								"uses-rel-preconnect",
+								"font-display",
+								"network-requests",
+								"metrics",
+								"pwa-cross-browser",
+								"pwa-page-transitions",
+								"pwa-each-page-has-url",
+								"accesskeys",
+								"aria-allowed-attr",
+								"aria-required-attr",
+								"aria-required-children",
+								"aria-required-parent",
+								"aria-roles",
+								"aria-valid-attr-value",
+								"aria-valid-attr",
+								"audio-caption",
+								"button-name",
+								"bypass",
+								"color-contrast",
+								"definition-list",
+								"dlitem",
+								"document-title",
+								"duplicate-id",
+								"frame-title",
+								"html-has-lang",
+								"html-lang-valid",
+								"image-alt",
+								"input-image-alt",
+								"label",
+								"layout-table",
+								"link-name",
+								"list",
+								"listitem",
+								"meta-refresh",
+								"meta-viewport",
+								"object-alt",
+								"tabindex",
+								"td-headers-attr",
+								"th-has-data-cells",
+								"valid-lang",
+								"video-caption",
+								"video-description",
+								"custom-controls-labels",
+								"custom-controls-roles",
+								"focus-traps",
+								"focusable-controls",
+								"heading-levels",
+								"logical-tab-order",
+								"managed-focus",
+								"offscreen-content-hidden",
+								"use-landmarks",
+								"visual-order-follows-dom",
+								"uses-long-cache-ttl",
+								"total-byte-weight",
+								"offscreen-images",
+								"render-blocking-resources",
+								"unminified-css",
+								"unminified-javascript",
+								"unused-css-rules",
+								"uses-webp-images",
+								"uses-optimized-images",
+								"uses-text-compression",
+								"uses-responsive-images",
+								"efficient-animated-content",
+								"appcache-manifest",
+								"doctype",
+								"dom-size",
+								"external-anchors-use-rel-noopener",
+								"geolocation-on-start",
+								"no-document-write",
+								"no-vulnerable-libraries",
+								"no-websql",
+								"notification-on-start",
+								"password-inputs-can-be-pasted-into",
+								"uses-http2",
+								"uses-passive-event-listeners",
+								"meta-description",
+								"http-status-code",
+								"font-size",
+								"link-text",
+								"is-crawlable",
+								"robots-txt",
+								"hreflang",
+								"plugins",
+								"canonical",
+								"mobile-friendly",
+								"structured-data"
+							},"configSettings",
+							"categories",
+							"categoryGroups",
+							"timing"
+						}
+					});
+				}, 20000);
+			});
+</code></pre>
+	<aside class="notes">
+		Too many links nofollow title and text contains keyword succient anchor text </aside>
+	<section>

@@ -1,0 +1,40 @@
+<section>
+	<h2>Performance</h2>
+	<pre><code data-trim class="javascript" style="max-height: 600px">
+			test('page timings', async () => {
+
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				const pageTiming = await page.evaluate(_ => {
+					return performance.toJSON();
+				});
+				for (const event in pageTiming.timing) {
+					if (pageTiming.timing.hasOwnProperty(event)) {
+						console.log(event, Math.round(pageTiming.timing[event] - pageTiming.timeOrigin), 'ms')
+					}
+				}
+				//     secureConnectionStart -1533139305283 ms
+				//     redirectStart -1533139305283 ms
+				//     redirectEnd -1533139305283 ms
+				//     navigationStart 0 ms
+				//     fetchStart 0 ms
+				//     domainLookupStart 0 ms
+				//     domainLookupEnd 0 ms
+				//     connectStart 0 ms
+				//     connectEnd 0 ms
+				//     requestStart 1 ms
+				//     responseStart 5 ms
+				//     responseEnd 10 ms
+				//     unloadEventStart 18 ms
+				//     unloadEventEnd 19 ms
+				//     domLoading 45 ms
+				//     domInteractive 327 ms
+				//     domContentLoadedEventStart 327 ms
+				//     domContentLoadedEventEnd 328 ms
+				//     domComplete 1181 ms
+				//     loadEventStart 1181 ms
+				//     loadEventEnd 1183 ms
+			}, 20000);
+</code></pre>
+	<aside class="notes">
+Timing	</aside>
+	<section>

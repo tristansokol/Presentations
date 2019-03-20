@@ -1,0 +1,21 @@
+<section>
+	<h2>Images cont</h2>
+	<pre><code data-trim class="javascript">
+			test('less than a megabyte', async () => {
+
+				page.on('response', async (response) => {
+					const matches = /.*\.(jpg|png|svg|gif)$/.exec(response.url());
+					if (matches && (matches.length === 2)) {
+						const buffer = await response.buffer();
+						expect(buffer.byteLength).toBeLessThan(1000000);
+					}
+				});
+
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				await page.waitForSelector('#article_shell');
+
+			}, 20000);
+</code></pre>
+	<aside class="notes">
+		images </aside>
+</section>

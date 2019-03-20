@@ -1,0 +1,72 @@
+<section class="center">
+	<div class="borx">
+		<img class="lang-logo" src="img/ruby.png" />
+		<br>
+		<span class="smaller-text">Square/connect-ruby-sdk </span>
+	</div>
+	<div class="borx">
+		<img class="lang-logo" src="img/Java-logo.png" />
+		<br>
+		<span class="smaller-text">Square/connect-Java-sdk </span>
+	</div>
+	<div class="borx">
+		<img class="lang-logo" src="img/new-php-logo.png" />
+		<br>
+		<span class="smaller-text">Square/connect-PHP-sdk </span>
+	</div>
+	<br>
+	<br>
+	<div class="borx">
+		<img class="lang-logo" src="img/csharp.png" />
+		<br>
+		<span class="smaller-text">Square/connect-C#-sdk </span>
+	</div>
+	<div class="borx">
+		<img class="lang-logo" src="img/Python-logo-notext.png" />
+		<br>
+		<span class="smaller-text">Square/connect-Python-sdk </span>
+	</div>
+	<div class="borx">
+		<img class="lang-logo" src="img/ho.png" />
+		<br>
+		<span class="smaller-text">Square/connect-Javascript-sdk </span>
+	</div>
+	<div id="overlay" class="fragment">
+		<img class="lang-logo" src="img/github.png" />
+		<div>Square/connect-api-specification</div>
+	</div>
+	<aside class="notes">
+And out pops our SDKs. We have six first party SDKs, each one gets its own repo on github, and we also have another repo that houses our specification, our templates, and all our configuration in a separate github repo. And this was a pretty happy state. We would have upstream teams make an API change or release a new feature, then we would regenerate our specification and then manually generate each of the SDKs.
+		</aside>
+	<style>
+		.borx {
+			width: 32%;
+			height: 50%;
+			display: inline-block;
+		}
+
+		.lang-logo {
+			height: 150px
+		}
+
+		.reveal .smaller-text {
+			font-size: 20px
+		}
+
+		#overlay {
+			position: absolute;
+			background-color: white;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			top: 25%;
+			width: 700px;
+			height: 50%;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			vertical-align: middle;
+		}
+	</style>
+</section>

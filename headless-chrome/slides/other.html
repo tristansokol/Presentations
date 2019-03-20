@@ -1,0 +1,23 @@
+<section>
+	<h2>Other Ideas</h2>
+	<ul>
+		<li class="fragment">
+			Log into a site with Headless Chrome, then make requests directly with your credentials
+		</li>
+		<li class="fragment">
+			Add a headless chrome task to update your jira tickets
+			<span class="fragment">or buy hard to get concert tickets</span>
+		</li>
+		<li class="fragment">
+			Run usability tests inside a chrome window with devtools protocol enabled to get super accurate page timings
+		</li>
+		<pre class="fragment"><code data-trim >
+					await page.tracing.start({path: 'trace.json'});
+					await page.goto('https://www.google.com');
+					await page.tracing.stop();
+			</code></pre>
+	</ul>
+	<aside class="notes">
+		These are speaker notes
+	</aside>
+</section>

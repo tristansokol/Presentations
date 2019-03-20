@@ -1,0 +1,77 @@
+.reveal ul {
+     list-style-image: url('../img/druplicon-small.png');
+}
+.color-change path{
+
+  animation: colorchange 5s;
+  /* animation-name followed by duration in seconds*/
+  /* you could also use milliseconds (ms) or something like 2.5s */
+  -webkit-animation: colorchange 5s;
+  /* Chrome and Safari */
+  animation-iteration-count:infinite;
+}
+
+@keyframes colorchange {
+  0% {
+    fill: red;
+  }
+  25% {
+    fill: purple;
+  }
+  50% {
+    fill: blue;
+  }
+  75% {
+    fill: green;
+  }
+  100% {
+    fill: red;
+  }
+}
+
+@-webkit-keyframes colorchange{
+  /* Safari and Chrome - necessary duplicate */
+  0% {
+    fill: red;
+  }
+  25% {
+    fill: purple;
+  }
+  50% {
+    fill: blue;
+  }
+  75% {
+    fill: green;
+  }
+  100% {
+    fill: red;
+  }
+}
+
+input, label {
+  display:block;
+}
+.compact-form label{
+  text-align: left;
+  font-size: 12px;
+  color:#272929;
+}
+div.compact-form{
+  background-color: #eff0f1;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.compact-form #sq-expiration-date-5, .compact-form #sq-postal-code-5,.compact-form #sq-cvv-5,.compact-form #sq-expiration-date-6, .compact-form #sq-postal-code-6,.compact-form #sq-cvv-6{
+  flex:1;
+}
+.compact-form >.minigroup{
+  display: inline-block
+}
+.flex-grid {
+  display: flex;
+}
+.flex-grid div.col {
+  flex: 1;
+}

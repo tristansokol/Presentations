@@ -1,0 +1,17 @@
+<section>
+	pages (events)
+	<pre class="fragment"><code data-trim class="javascript" style="max-height: 550px">
+			page.on('console', msg => {});
+			page.on('dialog', msg => {});
+			page.on('error', msg => {});
+			page.on('frameattached', msg => {});
+			page.on('framenavigated', msg => {});
+			page.on('load', msg => {}); //javascript load events
+			page.on('request', msg => {});
+			page.on('response', msg => {});
+			page.on('workercreated', msg => {});
+						</code></pre>
+	<aside class="notes">
+		Pages are the representations for individual tabs or even the background pages that are used for chrome extensions. It is also the object that you will be using the most when interacting with all of internet.
+	</aside>
+</section>

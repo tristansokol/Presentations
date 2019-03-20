@@ -1,0 +1,9 @@
+.reveal .title{
+    font-family: Roboto, sans-serif;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 400;
+}
+.reveal code{
+  padding: 1em;
+  display: block;
+}

@@ -1,0 +1,37 @@
+<section class="center">
+    Templates
+		<pre style="width:100%"><code data-trim data-noescape class="handlebars">
+ /**
+ * {{classname}} Class Doc Comment
+ *
+ * @category Class
+ * @package  {{invokerPackage}}
+ *
+ */
+{{#operations}}class {{classname}}
+{
+
+    /**
+     * API Client
+     * @var \{{invokerPackage}}\ApiClient instance of the ApiClient
+     */
+    protected $apiClient;
+
+    /**
+     * Constructor
+     * @param \{{invokerPackage}}\ApiClient|null $apiClient The api client to use
+     */
+    function __construct($apiClient = null)
+    {
+        if ($apiClient == null) {
+            $apiClient = new ApiClient();
+            $apiClient->getConfig()->setHost('{{basePath}}');
+        }
+
+        $this->apiClient = $apiClient;
+    }
+						</code></pre>
+	<aside class="notes">
+        The templating language is called mustache, and these templates are exactly like the generated files. Here you can see the template for part of a PHP client library.
+	</aside>
+</section>

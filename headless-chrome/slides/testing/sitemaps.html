@@ -1,0 +1,22 @@
+<section>
+		<div style="position: relative">
+				<h2 style="display: inline">Robots.txt </h2>
+				<img src="img/lighthouse.svg" width="100" style="position:absolute;bottom:0" /></div>
+	<pre><code data-trim>
+			test('robots-txt', async () => {
+				const opts = {
+					chromeFlags: [ '--headless']
+				};
+				let url = 'https://www.wikihow.com/Tie-Your-Shoes';
+				await launchChromeAndRunLighthouse(url, opts).then(results => {
+					// AIf your robots.txt file is malformed, crawlers
+					// may not be able to understand how you want your
+					// website to be crawled or indexed.
+
+					expect(results.audits['robots-txt'].score).toEqual(1);
+				});
+			}, 20000);
+</code></pre>
+	<aside class="notes">
+	</aside>
+	<section>

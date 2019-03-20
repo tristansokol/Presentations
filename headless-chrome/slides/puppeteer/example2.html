@@ -1,0 +1,28 @@
+<section>
+	Spellchecking
+	<pre><code data-trim class="javascript" style="max-height: 550px">
+			SpellChecker = require('spellchecker');
+			const puppeteer = require('puppeteer');
+
+			browser = await puppeteer.launch({
+				headless: true,
+				slowMo: 80,
+			});
+			page = await browser.newPage();
+
+			await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+			await page.waitForSelector('#article_shell');
+
+			const textsJoined = await page.evaluate(
+				() => [...document.querySelectorAll('p')].map(elem => elem.innerText).join('\n')
+			);
+			console.log(SpellChecker.checkSpelling(textsJoined))
+
+			browser.close();
+				</code></pre>
+
+	<aside class="notes">
+		Earlier we did an example of grepping the dom for content, but with nodejs we can do a bit better. For example we could pretty
+		easily start spellchecking our site.
+	</aside>
+</section>

@@ -1,0 +1,30 @@
+<section>
+	<h2>Images</h2>
+	<pre><code data-trim class="javascript">
+			test('alt tags for big images', async () => {
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				await page.waitForSelector('#article_shell');
+
+				const extractedElements = await page.evaluate(function () {
+					let x = document.querySelectorAll('img:not([alt])');
+					const items = [];
+					for (var value of x.values()) {
+
+						items.push({
+							alt: value.alt,
+							src: value.src,
+							width: value.width,
+							height: value.height
+						})
+					}
+					return items;
+				});
+				extractedElements.forEach(element => {
+					expect(element.height).toBeLessThan(200);
+					expect(element.width).toBeLessThan(200);
+				});
+			}, 20000);
+</code></pre>
+	<aside class="notes">
+		images </aside>
+</section>

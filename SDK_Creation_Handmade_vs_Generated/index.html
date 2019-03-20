@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>SDK Creation: Handmade vs Generated </title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/Square.css">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Square Market Font -->
+	<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+</head>
+<!--
+	CFP
+    SDK creation: Handmade vs generated
+
+	For people who make APIs, it is easy to focus on your API as your “product”, but in reality an end user’s experience is in fact defined by whatever they can pull down from their favorite language’s package manager. As a developer, writing your own library to use someone’s API is rarely desirable, especially if there is another API that you could use with the same functionality and a library in your language. But how is an API provider supposed to build these SDKs in a scalable way so that they aren’t crushed by the maintenance burden of future API developments? This talk will cover a few of the common strategies: * Building an open source community to help with your SDKs * Scaling the team in proportion to your SDK desires * Using tools to generate your client libraries from a specification and dive deeper into the last one.
+ -->
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-state="intro" data-background-color="#dbb0fb" data-external="slides/intro.html"> </section>
+			<script>
+				Reveal.addEventListener('intro', function () {
+					new Vivus('layer1', { duration: 800, type: 'delayed' }, function (myVivus) {
+						myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
+					});
+				}, false);
+			</script>
+			<section data-external="slides/bio.html"> </section>
+
+			<section data-state="a1" data-external="slides/a1.html" data-background-color="#dbb0fb"> </section>
+			<script>
+				Reveal.addEventListener('a1', function () {
+					new Vivus('sdk-svg', { duration: 500 }, function (myVivus) {
+						var doc = document.getElementById('sdk-svg').getSVGDocument();
+						var hand = doc.getElementById("path4191");
+						TweenMax.to(hand, 3, { fill: '#FFF', 'fill-opacity':1 });
+					});
+				}, false);
+			</script>
+			<section data-state="many-teams" data-external="slides/a.html"> </section>
+			<script>
+				Reveal.addEventListener('many-teams', function () {
+					TweenMax.to("#star1", 3, { x: -330, repeat: -1, ease: Power0.easeNone, yoyo:true });
+					TweenMax.to("#star2", 4.9, { x: -330, repeat: -1, ease: Power0.easeNone, yoyo:true });
+					TweenMax.to("#star3", 2, { x: -330, repeat: -1, ease: Power0.easeNone, yoyo:true });
+					TweenMax.to("#star4", 7, { x: -330, repeat: -1, ease: Power0.easeNone, yoyo:true });
+					TweenMax.to("#star5", 4.6, { x: -330, repeat: -1, ease: Power0.easeNone, yoyo:true });
+					TweenMax.to("#gear", 3, { rotation: 180, repeat: -1, transformOrigin: "50% 50%", ease: Power0.easeNone });
+					// TweenMax.to("#json", 5, {bezier:{type:"soft", values:[{x:0, y:0}, {x:100, y:50}, {x:150, y:300}], autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut,repeat:-1});
+
+					// TweenMax.to("#box", 2, {opacity:000,repeat:-1});
+				}, false);
+			</script>
+			<section data-state="people" data-external="slides/b.html" data-background-color="#b0fbcb"> </section>
+			<script>
+				Reveal.addEventListener("people", function () {
+					var can = document.getElementById('canvas1')
+					var ctx = can.getContext('2d');
+					var img = new Image();
+					img.src = "img/person.svg";
+					var clicks = 0
+					can.onclick = function () {
+						for (let j = 0; j < clicks; j++) {
+							ctx.drawImage(img, Math.random() * (can.width - 150), Math.random() * (can.height - 150), 100, 100);
+						}
+						clicks++;
+					};
+				})</script>
+			<section data-external="slides/c.html"> </section>
+			<section data-state="generator" data-external="slides/d.html" data-background-color="#fbb0b0"> </section>
+			<script>
+				Reveal.addEventListener('generator', function () {
+
+					TweenMax.to("#gear-small", 5, { rotation: 180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+					TweenMax.to("#gear-big", 5, { rotation: -180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+
+					TweenMax.to("#light11", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light12", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light13", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light21", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light22", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light23", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light31", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light32", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light33", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light41", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light42", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+					TweenMax.to("#light43", Math.random() * 5, { fill: "#" + ((1 << 24) * Math.random() | 0).toString(16), repeat: -1, yoyo: true });
+				}, false);</script>
+			<section data-external="slides/generation-overview.html" data-background-color="#b0b7fb" data-transition="none-out"> </section>
+			<section data-external="slides/generation-overview-specification.html" data-background-color="#b0b7fb" data-transition="none-in"> </section>
+
+			<section data-external="slides/specification-overview.html" data-background-color="#ffd4f9"> </section>
+			<section data-external="slides/specification-overview2.html"data-background-color="#f8d4ff"> </section>
+			<section data-external="slides/specification-overview3.html"data-background-color="#e4d4ff"> </section>
+			<section data-state="specification-generation" data-external="slides/specification-generation.html" > </section>
+			<script>
+				Reveal.addEventListener('specification-generation', function () {
+					TweenMax.to("#one0", 5, { bezier: { type: "soft", values: [{ x: 200, y: 50 }, { x: 350, y: 220 }] }, ease: Power0.easeNone, repeat: -1 });
+					TweenMax.to("#zero0", 7, { bezier: { type: "soft", values: [{ x: 200, y: 50 }, { x: 350, y: 220 }] }, ease: Power1.easeInOut, repeat: -1 });
+					TweenMax.to("#one1", 8, { bezier: { type: "soft", values: [{ x: 200, y: -30 }, { x: 350, y: 80 }] }, ease: Power0.easeNone, repeat: -1 });
+					TweenMax.to("#zero1", 4, { bezier: { type: "soft", values: [{ x: 200, y: -30 }, { x: 350, y: 80 }] }, ease: Power1.easeInOut, repeat: -1 });
+					TweenMax.to("#one2", 8, { bezier: { type: "soft", values: [{ x: 20, y: -50 }, { x: 200, y: -300 }, { x: 350, y: -120 }] }, ease: Power0.easeNone, repeat: -1 });
+					TweenMax.to("#zero2", 6, { bezier: { type: "soft", values: [{ x: 00, y: -0 }, { x: 20, y: -50 }, { x: 200, y: -300 }, { x: 350, y: -120 }] }, ease: Power1.easeInOut, repeat: -1 });
+					TweenMax.to("#json", 12, { y: 800, repeat: -1, ease: Power0.easeNone });
+					TweenMax.to("#gear", 5, { rotation: 180, repeat: -1, transformOrigin: "50% 50%", ease: Power0.easeNone });
+					// TweenMax.to("#json", 5, {bezier:{type:"soft", values:[{x:0, y:0}, {x:100, y:50}, {x:150, y:300}], autoRotate:["x","y","rotation",45,false]}, ease:Power1.easeInOut,repeat:-1});
+
+					// TweenMax.to("#box", 2, {opacity:000,repeat:-1});
+				}, false);
+			</script>
+			<section data-state="specification-generation" data-external="slides/specification-generation-red.html"> </section>
+			<section data-state="generator2" data-external="slides/generation-overview-templates.html" data-background-color="#d4ffda"> </section>
+			<script>
+				Reveal.addEventListener('generator2', function () {
+
+					TweenMax.to("#gear-small", 5, { rotation: 180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+					TweenMax.to("#gear-big", 5, { rotation: -180, repeat: -1, transformOrigin: "10px 10px", ease: Power0.easeNone });
+				}, false);</script>
+			<section data-external="slides/templates.html" data-background-color="#d4dfff"> </section>
+			<section data-external="slides/generation-overview-configuration.html" data-background-color="#ffd389"> </section>
+			<section data-external="slides/configuration-overview.html" data-background-color="#fbe2bc"> </section>
+			<section data-external="slides/configuration-overview-1.html" data-background-color="#d4ffda"> </section>
+			<section data-external="slides/generation-overview.html" data-background-color="#b0fbcb"> </section>
+			<section data-external="slides/sdks-list.html" data-background-color="#b9b0fb">
+				SDKs in every language
+			</section>
+			<section style="text-align: center">
+				<img src="img/commits.png">
+				<small> https://github.com/swagger-api/swagger-codegen/graphs/contributors</small>
+				<aside class="notes">There was only one problem. Swagger codegen is a super active project. The issue was that swagger would break all the time, and it was a super big pain to see if a change in or spec made a change,
+				or if it was the new template, or if it was swagger codegen.</aside>
+			</section>
+			<section data-background-color="#c241fe">
+					<img src="img/travis.gif">
+					<aside class="notes">So we spiced up our life with some travis ci</aside>
+
+			</section>
+			<section data-external="slides/sdks-with-travis.html" data-background-color="#7bffd3"></section>
+			<section data-external="slides/travis-build.html" data-background-color="#a4ffff" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-1.html" data-background-color="#d4ffff" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-2.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-3.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-4.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-5.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-6.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-7.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-8.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/travis-build-9.html" data-background-color="#e7ffd4" data-transition-speed="fast" data-transition="none"></section>
+			<section data-external="slides/f.html" data-background-color="#f8d4ff"> </section>
+			<!-- final thoughts -->
+			<section data-external="slides/further-reading.html" data-background-color="#d4d7ff"> </section>
+			<section data-background-image="img/open-api-generator.png">
+					<aside class="notes">
+
+					</aside>
+			</section>
+			<section data-external="slides/outro.html" data-background-color="#e5d4ff"> </section>
+		</div>
+	</div>
+
+
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+
+
+		Reveal.initialize({
+			history: true,
+			width: 1280,
+			height: 720,
+			loop: true,
+			//none/fade/slide/convex/concave/zoom
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{
+					src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+						hljs.configure({ tabReplace: '  ' })
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); },
+				//  async:true
+				  }
+			],
+		});
+		Reveal.addEventListener('ready', function (event) {
+			Reveal.configure({
+				defaultTiming: 1200 / Reveal.getTotalSlides()
+			});
+		});
+
+	</script>
+</body>
+
+</html>

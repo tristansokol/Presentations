@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>A Presentation by Tristan! </title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/Square.css">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Square Market Font -->
+	<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-external="slides/intro.html">❌✅</section>
+			<section data-external="slides/bio.html"> </section>
+			<section data-external="slides/heartburn.html" data-background-image="img/fire.gif">I had heartburn</section>
+			<section data-external="slides/doctor.html" data-background-image="img/doctor.jpg">I went to the doctor he asked
+				how much heartburn did I have. Some? Occasional?
+				What is the difference between chronic? How am I supposed to know? So I found out.</section>
+			<section>
+				<div style="font-size: 200px; display: inline;">📝 <span class="fragment">😧</span><br><span class="fragment">
+						💻 </span><span class="fragment">😍</span><br></div><br>
+			</section>
+			<section data-external="slides/overview.html"> </section>
+			<section data-external="slides/intro.html">❌✅</section>
+			<!-- section 1 Iot w/ TESSEL
+			* into to tessel✅
+			* you program it with javascript
+			* simple LED blink example
+			* Diagram of my setup with button, battery
+			* overview of code
+			* example of pushing the button and doing something.
+
+			-->
+			<section data-external="slides/tessel/google.html">✅</section>
+			<section data-external="slides/tessel/overview.html" data-background-image="img/tessel-site.png"></section>
+			<section data-external="slides/tessel/features.html">✅</section>
+			<section data-external="slides/tessel/purchase.html" data-background-image="img/purchase.png">✅</section>
+			<section data-external="slides/tessel/setup.html">❌</section>
+			<section data-external="slides/tessel/blink.html">❌</section>
+			<section data-external="slides/tessel/blink2.html">❌</section>
+
+			<!-- section 3 google sheets?
+			* Google sheets API overview
+			* Authentication
+			* API Request to update the sheet I want
+			* some end to end examples
+
+				* esperino
+			* https://learn.sparkfun.com/tutorials/logging-data-to-google-sheets-with-the-tessel-2
+		-->
+			<section data-external="slides/gsheets/how.html">❌</section>
+			<!-- Google sheets has an API slide -->
+			<section data-background-image="img/googleapis.png" data-background-position="top"></section>
+
+			<section data-external="slides/gsheets/auth.html" d>❌</section>
+			<section data-external="slides/gsheets/auth2.html">❌</section>
+			<section data-external="slides/gsheets/append.html">❌</section>
+			<section data-external="slides/tessel/button.html">❌</section>
+			<section data-external="slides/tessel/assembly.html">❌</section>
+			<section data-external="slides/gsheets/final-sheet.html">❌</section>
+			<section>
+				<img src="http://www.picpedia.org/highway-signs/images/success.jpg" />
+			</section>
+			<section>
+				<div style="font-size: 60px; display: inline;">Helpful Tips</div>
+			</section>
+			<section data-external="slides/tessel/pushing.html">❌</section>
+			<section>
+				<div style="font-size: 60px; display: inline;">Other Platforms</div>
+			</section>
+			<section>
+				<img src="img/espruino.png" />
+			</section>
+			<section>
+				<img src="img/particle.png" />
+			</section>
+			<section data-external="slides/arduino/arduino.html"></section>
+			<section data-external="slides/arduino/original.html"></section>
+			<section data-external="slides/arduino/currentmodels.html"></section>
+			<section data-external="slides/arduino/blink.html"></section>
+			<section data-external="slides/raspi/raspi.html"></section>
+			<section data-external="slides/raspi/schematic.html"></section>
+			<section data-external="slides/raspi/packages.html"></section>
+			<section data-external="slides/raspi/code.html"></section>
+			<section data-external="slides/beagle/beagle.html"></section>
+			<section data-external="slides/esp8266/esp8266.html"></section>
+			<section data-external="slides/further-reading.html"></section>
+			<!-- <section data-external="slides/outro.html">❌</section> -->
+			<section data-external="slides/bio2.html"> </section>
+			<!-- Pleas lord sign up on the form.  -->
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+
+
+		Reveal.initialize({
+			history: true,
+			width: 2160,
+			height: 1080,
+			loop: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); } }
+			]
+		});
+		Reveal.configure({
+			defaultTiming: 1500 / Reveal.getTotalSlides()
+		});
+	</script>
+</body>
+
+</html>

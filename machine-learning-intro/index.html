@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+	<style>
+		.robotfont {
+			font-family: 'Major Mono Display', monospace !important;
+		}
+
+		.reveal section img {
+			border: none;
+			box-shadow: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-background-image="img/bg1.png" data-background-size="contain">
+				<div class="robotfont" style="width:50%;margin-left:25%">A friendly introduction to Machine Learning</div>
+				<aside class="notes">
+					Hello everyone! In case we haven't met yet, I'm Tristan and today I'm going to give you a taste of machine
+					learning.
+				</aside>
+			</section>
+			<section><span class="robotfont">Disclaimers</span></section>
+			<section data-background-video="img/Jan-29-2019_18-50-51.mp4" data-background-video-loop
+				data-background-video-muted>
+				<aside class="notes">
+					This will be as non-technical as I can make it, there won't be any code or math, but some of that stuff might
+					slip
+					out of my mouth so please ask questions if you don't understand and I'll explain some more.
+				</aside>
+			</section>
+			<section><span class="robotfont">What is machine learning? </span><br>
+				<img src="/img/robot.png" style="height:400px" alt="">
+				<aside class="notes">
+					Machine learning, artificial intelligence, genetic algorthims are all part of the same group of systems. that
+					is
+					defined by their ability to learn or improve as they operate.
+				</aside>
+			</section>
+
+			<section>
+				A machine is said to learn from experience E with respect to some class of tasks T and performance measure P if
+				its
+				performance at tasks in T, as measured by P, improves with experience E
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="/img/robot.png" style="width:400px;float: left;" alt="">
+				<img src="/img/dosomething.png" style="width:500px" alt="" class="fragment"><br>
+				<img src="/img/feedback.png" style="width:500px" alt="" class="fragment">
+				<aside class="notes">
+					And this is a very broad definition, because it can be applied to all sorts of things. For most of the
+					examples
+					I'll be talking about, we will be showing instances of supervised machine learning which
+				</aside>
+			</section>
+			<section style="font-size:125px">
+				💻
+				<span class="fragment">🔢</span>
+				<aside class="notes">
+					And you are hearing about it more and more today because of a lot a micro and macro trends, but some of the
+					macro
+					level events happening that make machine learning more accessible. The first of which is computers, constantly
+					getting faster and more performant. If you think back to state of the art technology a decade ago, ther is
+					stuff
+					tens of times more powerful.
+				</aside>
+			</section>
+			<section>
+				<img src="img/stateloop.png"><br>
+
+				<small style="font-size:12px">Source: CS 294 Deep Reinforcement Learning (UC Berkeley)</small>
+				<aside class="notes">
+				</aside>
+			</section>
+
+			<section>
+				<img src="img/linear-regression.png" style="width:70%">
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/agent.png" style="width:70%">
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/environment.png" style="width:70%">
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/linearRegression.png" style="width:70%">
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<p class="codepen" data-height="800" data-theme-id="0" data-default-tab="result" data-user="tristansokol"
+					data-slug-hash="XYoQKB"
+					style="height: 566px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;"
+					data-pen-title="trainable model">
+					<span>See the Pen <a href="https://codepen.io/tristansokol/pen/XYoQKB/">
+							trainable model</a> by Tristan Sokol (<a href="https://codepen.io/tristansokol">@tristansokol</a>)
+						on <a href="https://codepen.io">CodePen</a>.</span>
+				</p>
+				<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/sar.png" style="width:70%">
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/sonic-sar.png" style="width:70%">
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/sonic-reward.png" style="width:70%">
+
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<h2>Training methods</h2>
+				<li class="fragment">Button mashing</li>
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<h2>Demo!</h2>
+				<li>random-agent-sonic.py</li>
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<h2>Training methods</h2>
+				<li class="fragment">Random Repetition</li>
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/standing.gif">
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				Do a random action <br><br>
+
+				A B ⬆ ⬅ ➡ ⬇
+				<aside class="notes">
+				</aside>
+			</section>
+
+			<section>
+				See if the reward is better
+				<img src="img/sonic-reward.png" style="width:70%">
+
+				<aside class="notes">
+					doesn't even bother looking at the screen.
+				</aside>
+			</section>
+			<section>
+					<h2>Demo!</h2>
+					<li>jerk-agent-sonic.py</li>
+					<aside class="notes">
+					</aside>
+				</section>
+			<section>
+				<h2>Training methods</h2>
+				<li class="fragment">Q Learning</li>
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<img src="img/qtable.png">
+				<aside class="notes">
+				</aside>
+			</section>
+			<section>
+				<iframe width="900" height="500" src="https://www.youtube.com/embed/03yqHZjsgcA" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</section>
+			<section>
+				<video width="640" height="480" controls>
+					<source src="https://contest.openai.com/2018-1/videos/116.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+
+			</section>
+			<section>
+				<video width="640" height="480" controls>
+					<source src="https://contest.openai.com/2018-1/videos/427.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</section>
+			<section
+				data-background-image="https://asset.barrons.com/public/resources/images/ON-CW374_021802_NS_20190215170548.gif">
+				<h1 style="color:white">DATA!</h1>
+				<br><br><br><br><br><br><br><br><br><br><br><br><small style="color:white;font-size:12px">Image: Barron's/Thomas
+					Hedger </small>
+			</section>
+			<section>
+				<img
+					src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/Smart-compose_Taco_Tuesday.gif"
+					alt="">
+				<br><br><br><br><br><br><br><br><br><br><br><br><small
+					style="color:white;font-size:12px">https://www.blog.google/products/gmail/subject-write-emails-faster-smart-compose-gmail/</small>
+			</section>
+			<section>
+				<img src="https://cdn-images-1.medium.com/max/1600/1*4oqZHrOOZRDzMsJA_eqW1g.png">
+			</section>
+			<section>
+				<img src="https://junyanz.github.io/CycleGAN/images/teaser_high_res.jpg">
+			</section>
+			<section>
+				<img src="img/horse2zebra.gif" style="width:50%">
+			</section>
+
+			<section>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/cQ54GDm1eL0" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</section>
+			<section>
+				<a href="https://storage.googleapis.com/tfjs-examples/webcam-transfer-learning/dist/index.html">pacman</a><br>
+				<a href="https://quickdraw.withgoogle.com/#">Quickdraw</a><br>
+				<a href="http://www.whichfaceisreal.com">Which face is real?</a>
+			</section>
+
+			<section>
+				<span class="robotfont">What does this have to do with me? </span>
+			</section>
+
+			<section>
+				<img src="https://cdn-images-1.medium.com/max/2400/1*XdCMCaHPt-pqtEibUfAnNw.png" alt="">
+			</section>
+			<section>
+				<img src="img/identification.png" alt="">
+			</section>
+			<section>
+				<img src="img/brownfield.png" alt="">
+			</section>
+			<section>
+				<img src="img/data2money.png" alt="">
+			</section>
+			<section>
+				<img
+					src="https://mail.google.com/mail/u/0?ui=2&ik=32902aec1e&attid=0.4&permmsgid=msg-a:r6491963858346621301&th=168f1c318f00673f&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ_zL88WtKPW87lBoMrSd_lCAgEVKQ4qr9Bhi_Y8vs3QnOXRhc3CVih1Q8FlNgjn8QWNYdH_-tzawq5eJ7K9yEUXA4MRCsj5fjYC9X905LfKQdF1xKZuopgyNfs&disp=emb&realattid=ii_js65vaur3">
+				<aside class="notes">
+					Or maybe you have a self storage facility and you want know how many people are going to be there this
+					weekend, or
+					how long we should expect it to take to be fully leased.
+				</aside>
+			</section>
+			<section>
+				<span class="robotfont">Thank You!</span>
+			</section>
+			<!-- definition -->
+			<!-- We'll be talking about supervised machine learning,  -->
+			<!-- Why is machine learning becoming a big thing now?  -->
+			<!-- markov chains with nathanial's emails -->
+			<!-- GAN examples  -->
+			<!-- scary warnings about privacy -->
+			<!-- sonic example to play games, other games -->
+			<!-- sonic exploits -->
+			<!-- deep fakes examples  -->
+			<!-- audio examples  -->
+			<!-- Good use cases for machine learning (try to get business ideas)-->
+			<!-- Fun tensorflow js demos -->
+
+			<!-- Part 2 for nerds.  -->
+			<!-- definition, formal -->
+			<!-- types of machine learning, supervised, unsupervised -->
+			<!-- explation through linear regression example -->
+
+			<!-- Sonic -->
+			<!-- Q-learning -->
+			<!-- JERK -->
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			history: true,
+			width: 1280,
+			height: 720,
+			loop: true,
+			dependencies: [{
+				src: 'plugin/markdown/marked.js'
+			},
+			{
+				src: 'plugin/markdown/markdown.js'
+			},
+			{
+				src: 'plugin/notes/notes.js',
+				async: true
+			},
+			{
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				callback: function () {
+					hljs.initHighlightingOnLoad();
+				}
+			},
+			]
+		});
+	</script>
+</body>
+
+</html>

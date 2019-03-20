@@ -1,0 +1,17 @@
+<section>
+	<h2>Links</h2>
+	<pre><code data-trim class="javascript">
+			test('Less than 150 links on a page', async () => {
+				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
+				await page.waitForSelector('#article_shell');
+
+				const numLinks = await page.evaluate(function () {
+					let links = document.querySelectorAll('a');
+					return links.length
+				});
+				expect(numLinks).toBeLessThan(125);
+			}, 20000);
+</code></pre>
+	<aside class="notes">
+		Too many links nofollow title and text contains keyword succient anchor text </aside>
+	<section>

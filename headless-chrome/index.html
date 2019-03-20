@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>A Presentation by Tristan! </title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/Square.css">
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Square Market Font -->
+	<link rel="stylesheet" href="https://d1g145x70srn7h.cloudfront.net/fonts/sqmarket/sq-market.css" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/vivus@latest/dist/vivus.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
+</head>
+
+<body>
+	<!--
+		Title: E2E testing your SEO with headless chrome and puppeteer.
+
+		abstract: There are a plethora of different tags you can add to your site to help search engines and social media sites find your content. Do you have a massive pile of <meta> boilerplate that you paste into every site? What happens if accidentally forget a tag? I was working on a few small sites, and would only find out when I saw a tweet or a share on facebook that I had messed up a tag on the page. After investing in the testing, it is has been much better. In this talk I'll cover how to use headless Chrome and Puppeteer to build a suite of automated tests that you can include with your projects to make sure that your sites are following some basic best practices. Specifically we will dig into various media tag presence, checking title and page descriptions, broken links and page timing. The audience should walk away with a good understanding of getting started with puppeteer, how you can leverage headless Chrome in Node and inspiration for testing things they might not have thought about testing before. -->
+	<div class="reveal">
+		<div class="slides">
+			<section data-state="intro" data-external="slides/intro.html"> ✅</section>
+			<script>
+				Reveal.addEventListener('intro', function () {
+					new Vivus('intro-svg', { duration: 800, type: 'delayed' }, function (myVivus) {
+						myVivus.play(myVivus.getStatus() === 'end' ? -1 : 1);
+						var doc = document.getElementById('intro-svg').getSVGDocument();
+						var hand = doc.getElementById("introLetters");
+
+						console.log(hand.children)
+						for (var i = 0; i < hand.children.length; i++) {
+							TweenMax.to(hand.children[i], 3, { fill: 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')', 'fill-opacity': 1 });
+						}
+					});
+				}, false);
+			</script>
+			<section data-external="slides/bio.html"> ✅</section>
+			<!-- <section data-external="slides/overview.html"> overview</section> -->
+			<!-- Headless Chrome -->
+			<section data-external="slides/hc/intro.html" data-background-image="img/headless.jpg">✅</section>
+			<!-- <section data-external="slides/hc/overview.html"> </section> -->
+			<section data-external="slides/hc/getting-started.html" data-transition="fade-in fade-out">✅</section>
+
+
+			<section data-external="slides/hc/getting-started4.html" data-transition="fade-in fade-out">✅</section>
+			<section data-external="slides/hc/getting-started5.html" data-transition="fade-in fade-out">✅</section>
+			<section data-external="slides/hc/getting-started6.html" data-transition="fade-in fade-out">✅</section>
+			<section data-external="slides/hc/getting-started2.html" data-transition="fade-in fade-out">✅</section>
+			<section data-external="slides/hc/getting-started3.html" data-transition="fade-in fade-out">Remote debugging</section>
+			<section data-external="slides/hc/getting-started-screenshots.html" data-transition="fade-in fade-out">✅</section>
+
+			<section data-external="slides/hc/aside-screenshots.html"> ✅</section>
+			<section data-external="slides/hc/aside2.html">✅</section>
+			<section data-external="slides/hc/limitations.html"> ✅</section>
+			<!-- puppeteer -->
+
+			<section data-external="slides/puppeteer/intro.html"> ✅</section>
+			<section data-external="slides/puppeteer/getting-started.html"> ✅</section>
+			<section data-external="slides/puppeteer/example1.html"> ✅</section>
+			<section data-external="slides/puppeteer/example2.html"> ✅</section>
+			<section data-external="slides/puppeteer/example-pdf.html"> ✅</section>
+			<section data-external="slides/puppeteer/example3.html"> ✅</section>
+			<section data-external="slides/puppeteer/browser.html"> ✅</section>
+			<section data-external="slides/puppeteer/browser2.html"> ✅</section>
+			<section data-external="slides/puppeteer/page.html"> ✅</section>
+			<section data-external="slides/puppeteer/page-events.html"> ✅</section>
+			<section data-external="slides/puppeteer/clicking.html">✅</section>
+			<section data-external="slides/puppeteer/mouse.html">✅</section>
+			<section data-external="slides/puppeteer/typing.html">✅</section>
+			<section data-external="slides/puppeteer/eval.html">✅</section>
+			<!-- Testing frameworks -->
+			<section data-external="slides/testing.html"> ✅</section>
+			<!-- SEO -->
+			<section data-external="slides/seo/intro.html" data-background-image="img/seo-articles-transparent.gif">✅</section>
+			<section data-external="slides/seo/meta.html">✅</section>
+			<section data-external="slides/seo/keywords.html">✅</section>
+			<section data-external="slides/seo/page-structure.html">✅</section>
+			<section data-external="slides/seo/page-speed.html">✅</section>
+			<section data-external="slides/seo/links.html">✅</section>
+			<section data-external="slides/seo/meta2.html">✅</section>
+			<!-- <section data-external="slides/seo/analytics.html">🛑</section> -->
+			<section data-external="slides/seo/urls.html">✅</section>
+			<section data-external="slides/seo/images.html">✅</section>
+			<section data-external="slides/seo/sitemaps.html">✅</section>
+			<!-- <section data-external="slides/seo/site-attributes.html">🛑</section> -->
+			<!-- Tests -->
+			<section data-external="slides/testing/intro.html">✅</section>
+			<section data-external="slides/testing/setup-teardown.html">✅</section>
+			<section data-external="slides/testing/keywords.html"> ✅</section>
+			<section data-external="slides/testing/keywords2.html"> ✅</section>
+			<section data-external="slides/testing/keywords3.html"> ✅</section>
+			<section data-external="slides/testing/images.html"> ✅</section>
+			<section data-external="slides/testing/images2.html">✅ </section>
+			<section data-external="slides/testing/images3.html"> ✅</section>
+			<section data-external="slides/testing/images4.html"> ✅</section>
+			<section data-external="slides/testing/timing.html">✅</section>
+			<section data-external="slides/testing/timing2.html">✅</section>
+			<section data-external="slides/testing/timing3.html">✅</section>
+			<section data-external="slides/testing/meta.html"> ✅</section>
+			<section data-external="slides/testing/links.html">✅ </section>
+			<section data-external="slides/testing/links2.html">✅</section>
+			<section data-external="slides/lighthouse.html"> ✅</section>
+			<section data-external="slides/testing/lighthouse-testing.html">✅</section>
+			<section data-external="slides/testing/lighthouse-timing.html">✅</section>
+			<section data-external="slides/testing/accessibility.html"> ✅</section>
+			<section data-external="slides/testing/sitemaps.html"> ✅</section>
+			<!-- <section data-external="slides/testing/analytics.html"> 🛑analytics</section> -->
+			<section data-external="slides/testing/page-errors.html"> ✅</section>
+			<!-- Future -->
+			<section data-external="slides/other.html"> ✅</section>
+
+			<!-- <section> 🛑TODO: watch HTML5 Meetup video</section> -->
+			<section data-external="slides/outro.html">🛑 Please lord sign up for this link! </section>
+
+
+
+
+		</div>
+	</div>
+
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+
+
+		Reveal.initialize({
+			history: true,
+			width: 1280,
+			height: 720,
+			loop:true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{
+					src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+						hljs.configure({ tabReplace: '    ' })
+						hljs.initHighlightingOnLoad();
+					}
+				},
+				{ src: 'plugin/external/external.js', condition: function () { return !!document.querySelector('[data-external],[data-external-replace]'); } }
+			]
+		});
+		Reveal.configure({
+			defaultTiming: (45 * 60) / Reveal.getTotalSlides()
+		});
+	</script>
+</body>
+
+</html>

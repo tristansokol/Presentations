@@ -1,0 +1,27 @@
+<section>
+	Typing
+	<pre class="fragment"><code data-trim class="javascript" style="max-height: 550px">
+		page.type('#name','Sammy',{
+			delay: //how long to wait between keystrokes
+		})
+	</code></pre>
+	<pre class="fragment"><code data-trim class="javascript" style="max-height: 550px">
+			await page.keyboard.type('Hello World!');
+			await page.keyboard.press('ArrowLeft');
+
+			await page.keyboard.down('Shift');
+			for (let i = 0; i < ' World'.length; i++)
+			  await page.keyboard.press('ArrowLeft');
+			await page.keyboard.up('Shift');
+
+			await page.keyboard.press('Backspace');
+			await page.keyboard.down('Shift');
+			await page.keyboard.press('KeyZ');
+			await page.keyboard.up('Shift');
+			// HelloZ
+							</code></pre>
+
+	<aside class="notes">
+		Pages are the representations for individual tabs or even the background pages that are used for chrome extensions. It is also the object that you will be using the most when interacting with all of internet.
+	</aside>
+</section>

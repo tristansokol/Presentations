@@ -1,0 +1,693 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>How to Win Stack Overflow</title>
+  <link rel="stylesheet" href="css/reveal.css">
+
+  <link rel="stylesheet" href="css/theme/StackOverflow.css">
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <!-- Printing and PDF exports -->
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>How to Win at</h1>
+        <img src="img/so-logo.png">
+        <aside class="notes">
+          Hi everyone! I"m going to tell you all about Stack Overflow, some cool things that I've figured out to do on it, how I use it professionally to add to our developer experience, and of course how you could do things much better to build a great developer
+          experience. These slides are already online
+        </aside>
+      </section>
+      <section>
+        <img src="img/overview.png" width="500px">
+        <ul class="fancy-so">
+          <li>
+            The Basics
+          </li>
+          <li>
+            Awesome things you can measure
+          </li>
+          <li>
+            Neat things that I haven't done much of but could be great for you.
+          </li>
+        </ul>
+      </section>
+      <section data-background-image="img/SOprofile.png" data-background-position="top" databackground-size="contain">
+        <aside class="notes">
+          So, who am I to lead you on this journey? I work on the developer relations team at Square, where we help developer build apps that help our merchants make sales and run their business in the US, Canada, Australia, Japan and most recently the United Kingdom.
+        </aside>
+      </section>
+      <section>
+        <img src="img/numbers.png">
+        <br>
+        <br>
+        <small>Source: <a href="https://stackoverflow.com/company">stackoverflow.com/company</a></small>
+        <aside class="notes">
+          Stack overflow was started in 2008, and since then has become an itegral aspect of modern software development. It is one of the largest developer communities in existance and so well known that if I talk about what it is any more, you'll walk out of
+          the room. If you have a developer facing product, tool or service, your users are asking questions about it on Stack Overflow.
+        </aside>
+      </section>
+      <section>
+        <p>Tagging </p>
+        <a href="#" class="post-tag">square-connect</a>
+        <a href="#" class="post-tag">wpf</a>
+        <a href="#" class="post-tag">swift</a>
+        <a href="#" class="post-tag">sql-server</a>
+        <a href="#" class="post-tag">wordpress</a>
+        <a href="#" class="post-tag">html5</a>
+        <a href="#" class="post-tag">git</a>
+        <a href="#" class="post-tag">bash</a>
+        <a href="#" class="post-tag">facebook</a>
+        <a href="#" class="post-tag">osx</a>
+        <a href="#" class="post-tag">hibernate</a>
+        <a href="#" class="post-tag">qt</a>
+        <a href="#" class="post-tag">linq</a>
+        <a href="#" class="post-tag">reactjs</a>
+        <a href="#" class="post-tag">shell</a>
+        <a href="#" class="post-tag">sqlite</a>
+        <a href="#" class="post-tag">pandas</a>
+        <a href="#" class="post-tag">sorting</a>
+        <a href="#" class="post-tag">date</a>
+        <a href="#" class="post-tag">xaml</a>
+        <a href="#" class="post-tag">android-layout</a>
+        <a href="#" class="post-tag">jsp</a>
+        <a href="#" class="post-tag">http</a>
+        <a href="#" class="post-tag">email</a>
+        <a href="#" class="post-tag">oop</a>
+        <a href="#" class="post-tag">security</a>
+        <a href="#" class="post-tag">templates</a>
+        <a href="#" class="post-tag">firebase</a>
+        <a href="#" class="post-tag">express</a>
+        <a href="#" class="post-tag">cocoa</a>
+        <a href="#" class="post-tag">firefox</a>
+        <a href="#" class="post-tag">doker</a>
+        <a href="#" class="post-tag">elasticsearch</a>
+        <a href="#" class="post-tag">cakephp</a>
+        <a href="#" class="post-tag">gcc</a>
+        <a href="#" class="post-tag">d3.js</a>
+        <a href="#" class="post-tag">asp.net-web-api</a>
+        <a href="#" class="post-tag">meteor</a>
+        <a href="#" class="post-tag">svg</a>
+        <a href="#" class="post-tag">go</a>
+        <a href="#" class="post-tag">assembly</a>
+        <a href="#" class="post-tag">intellij-idea</a>
+        <br>
+        <br>
+        <small><a href="https://stackoverflow.com/help/tagging">What are tags, and how should I use them?</a></small>
+        <aside class="notes">
+          Tagging is one of the most basic essential peices of metadata for a question. It will fuel much of the data stuff I'll talk about in a bit, but the moral of the story is that anytime you talk about Stack Overflow, you should be talking about your tag.
+          You want the developers to be tagging questions correctly so that you can find them, and luckily developers are incentivized to tag correctly since it helps gets answers faster. It is totally fine to create a tag for your company, and in fact,
+          the reccommended approach would be to create a tag for each proeduct, and you can see that in for things like google maps, gmail, google cloud vision, each of those have their own tag and community around it. Personally, we are bit too small
+          for something like that so we have one tag that we push users of all of our products to. How do you create a tag? It is easy, you just need enough points. It can also get tricky with managing open source products too.
+        </aside>
+      </section>
+      <section data-state="points">
+        <p>Points
+        </p>
+        <img class="fragment fade-out" src="http://quotespill.com/wp-content/uploads/2017/06/e87701cb1d3dabcdad75948dcbeec70d5dac36e90ba069f02418f91c50ce4d84-min.jpg">
+        <br>
+        <small><a href="https://stackoverflow.com/help/whats-reputation">What is reputation? How do I earn (and lose) it?</a></small>
+        <div class="overlay-image">
+          <img class="fragment" src="img/gain.png">
+          <img class="fragment" src="img/lose.png">
+        </div>
+        <small class="fragment"><a href="https://meta.stackexchange.com/questions/17204/six-simple-tips-to-get-stack-overflow-reputation-fast">Six simple tips to get Stack Overflow reputation fast</a></small>
+        <aside class="notes">
+          Everyone loves INTERNET points. Stack Overflow has a special type of internet point called reputation. There is a whole page telling you all the ways to get points, but in essence asking good questions and answering well give you points, and doing things
+          the community doesn't like takes your points away.
+        </aside>
+      </section>
+      <section>
+        <div id="privilege-table">
+          <div class="privilege-table-row fragment grow highlight-black" data-fragment-index="6">
+            <div class="rep-level ">25,000</div>
+            <div class="short-description">
+              <i class="icon icon-milestone" title="Milestone"></i>access to site analytics
+            </div>
+            <div class="long-description">Access to internal and Google site analytics</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">20,000</div>
+            <div class="short-description">
+              <i class="icon icon-milestone" title="Milestone"></i>trusted user
+            </div>
+            <div class="long-description">Expanded editing, deletion and undeletion privileges</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">15,000</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>protect questions
+            </div>
+            <div class="long-description">Mark questions as protected</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">10,000</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>access to moderator tools
+            </div>
+            <div class="long-description">Access reports, delete questions, review reviews</div>
+          </div>
+          <div class="privilege-table-row">
+            <div class="rep-level">5,000</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>approve tag wiki edits
+            </div>
+            <div class="long-description">Approve edits to tag wikis made by regular users</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">3,000</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>cast close and reopen votes
+            </div>
+            <div class="long-description">Help decide whether posts are off-topic or duplicates</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">2,500</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>create tag synonyms
+            </div>
+            <div class="long-description">Decide which tags have the same meaning as others</div>
+          </div>
+          <div class="privilege-table-row fragment grow highlight-black" data-fragment-index="5">
+            <div class="rep-level">2,000</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>edit questions and answers
+            </div>
+            <div class="long-description">Edits to any question or answer are applied immediately</div>
+          </div>
+          <div class="privilege-table-row fragment grow highlight-black" data-fragment-index="4">
+            <div class="rep-level">1,500</div>
+            <div class="short-description">
+              <i class="icon icon-creation" title="Creation"></i>create tags
+            </div>
+            <div class="long-description">Add new tags to the site</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">1,000</div>
+            <div class="short-description">
+              <i class="icon icon-milestone" title="Milestone"></i>established user
+            </div>
+            <div class="long-description">You've been around for a while; see vote counts</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">1,000</div>
+            <div class="short-description">
+              <i class="icon icon-communication" title="Communication"></i>create gallery chat rooms
+            </div>
+            <div class="long-description">Create chat rooms where only specific users may talk</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">500</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>access review queues
+            </div>
+            <div class="long-description">Access first posts and late answers review queues</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">250</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>view close votes
+            </div>
+            <div class="long-description">View and cast close/reopen votes on your own questions</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">200</div>
+            <div class="short-description">
+              <i class="icon icon-milestone" title="Milestone"></i>reduce ads
+            </div>
+            <div class="long-description">Some ads are now automatically disabled</div>
+          </div>
+          <div class="privilege-table-row fragment grow highlight-black" data-fragment-index="3">
+            <div class="rep-level">125</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>vote down
+            </div>
+            <div class="long-description">Indicate when questions and answers are not useful</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">100</div>
+            <div class="short-description">
+              <i class="icon icon-creation" title="Creation"></i>edit community wiki
+            </div>
+            <div class="long-description">Collaborate on the editing and improvement of wiki posts</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">100</div>
+            <div class="short-description">
+              <i class="icon icon-communication" title="Communication"></i>create chat rooms
+            </div>
+            <div class="long-description">Create new chat rooms</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">100</div>
+            <div class="short-description">
+              <i class="icon icon-documentation" title="Documentation"></i>documentation review
+            </div>
+            <div class="long-description">Approve and reject proposed changes</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">75</div>
+            <div class="short-description">
+              <i class="icon icon-creation" title="Creation"></i>set bounties
+            </div>
+            <div class="long-description">Offer some of your reputation as bounty on a question</div>
+          </div>
+          <div class="privilege-table-row fragment grow highlight-black" data-fragment-index="2">
+            <div class="rep-level">50</div>
+            <div class="short-description">
+              <i class="icon icon-communication" title="Communication"></i>comment everywhere
+            </div>
+            <div class="long-description">Leave comments on other people's posts</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">50</div>
+            <div class="short-description">
+              <i class="icon icon-documentation" title="Documentation"></i>documentation comments
+            </div>
+            <div class="long-description">Comment on proposed changes and topic requests</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">20</div>
+            <div class="short-description">
+              <i class="icon icon-communication" title="Communication"></i>talk in chat
+            </div>
+            <div class="long-description">Participate in this site's chat rooms</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">15</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>flag posts
+            </div>
+            <div class="long-description">Bring content to the attention of the community via flags</div>
+          </div>
+          <div class="privilege-table-row fragment grow highlight-black" data-fragment-index="1">
+            <div class="rep-level">15</div>
+            <div class="short-description">
+              <i class="icon icon-moderation" title="Moderation"></i>vote up
+            </div>
+            <div class="long-description">Indicate when questions and answers are useful</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">15</div>
+            <div class="short-description">
+              <i class="icon icon-documentation" title="Documentation"></i>documentation votes
+            </div>
+            <div class="long-description">Vote on documentation content</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">10</div>
+            <div class="short-description">
+              <i class="icon icon-milestone" title="Milestone"></i>remove new user restrictions
+            </div>
+            <div class="long-description">Post more links, answer protected questions</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">10</div>
+            <div class="short-description">
+              <i class="icon icon-creation" title="Creation"></i>create wiki posts
+            </div>
+            <div class="long-description">Create answers that can be easily edited by most users</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">5</div>
+            <div class="short-description">
+              <i class="icon icon-communication" title="Communication"></i>participate in meta
+            </div>
+            <div class="long-description">Discuss the site itself: bugs, feedback, and governance</div>
+          </div>
+          <div class="privilege-table-row ">
+            <div class="rep-level">1</div>
+            <div class="short-description">
+              <i class="icon icon-creation" title="Creation"></i>create posts
+            </div>
+            <div class="long-description">Ask a question or contribute an answer</div>
+          </div>
+        </div>
+        <br>
+        <small><a href="https://stackoverflow.com/help/privileges">Help Center > Privileges</a></small>
+        <aside class="notes">
+          Now points wouldn't be very useful except that it gives you all sorts of PRIVILEGES. There are lots of privildges, but I want to call out a few here because they can make your life supporting developers on Stack Overflow much easier. For example when
+          we have a couple people from our support team move into a new role where the specialized on developer support they started at ground zero, and becaue of that they couldn't event comment on posts asking developers for clarification. Other important
+          levels include 2000 edit questions and answers, 2500 create tag synonyms. and vote up vote down. 2500 site anlyatics.
+        </aside>
+      </section>
+      <section>
+        <img class="fragment" src="img/downvoted.png">
+        <small><a href="https://meta.stackexchange.com/questions/3966/is-it-okay-to-use-stack-overflow-as-the-support-forum-for-a-product-or-project">Is it okay to use Stack Overflow as the support forum for a product or project?</a></small>
+        <aside class="notes">
+          One of the things I want to highlight through out the presentation is that developer product support on Stack Overflow is sometimes walking a fine line along what is acceptable with the broader Stack Overflow community.
+        </aside>
+      </section>
+      <section>
+        <img data-src="img/so-ques.png" height="500px" style="margin-top:-100px">
+        <aside class="notes">
+          Now you know all about Stack Overflow as a place where developers ask questions about your thing. How can you help them?
+        </aside>
+      </section>
+      <section>
+        <section>
+          <p>Telling your users about your tags</p>
+          <aside class="notes">
+            overview of user flow for support directing them to Stack Overflow. Warning about what kind of Questions are good for stack overflow.
+          </aside>
+        </section>
+        <section>
+          <img src="img/footer.png">
+        </section>
+        <section>
+          <img src="img/so-flow.gif">
+          <aside class="notes">
+            overview of user flow for support directing them to Stack Overflow. Warning about what kind of Questions are good for stack overflow.
+          </aside>
+        </section>
+        <section>
+          <img src="img/troubleshooting.png">
+          <aside class="notes">
+            It is very important to let users know which type of questions are acceptable where.
+          </aside>
+        </section>
+      </section>
+      <section>
+        <h3>Question Maintenance
+                </h3>
+        <ul>
+          <li class="fragment">updating old questions with new information</li>
+          <li class="fragment">product renaming</li>
+          <li class="fragment">broken links, new content</li>
+        </ul>
+        <p class="fragment">
+          <a href="https://stackoverflow.com/questions/31805667/is-there-any-sandbox-test-account-for-squareup">
+                	Is there any sandbox test account for SquareUp?
+                </a>
+        </p>
+        <aside class="notes">
+          This one I think is best shown with an example.
+        </aside>
+      </section>
+      <section>
+        <h3>Retagging</h3>
+        <p class="fragment"><a href="https://stackoverflow.com/search?q=square">square</a></p>
+        <p class="fragment"><a href="https://stackoverflow.com/search?q=square+api">square api</a></p>
+        <p class="fragment"><a href="https://stackoverflow.com/questions/tagged/square-connect">[square-connect]</a></p>
+        <small class="fragment"><p><a href="https://www.google.com/alerts">Google Alerts</a></p></small>
+        <aside class="notes">
+          One of the easiest ways to help foster community development on Stack Overflow is just making sure that the questions people are asking about your things are correctly tagged so that other people searching for them can find them more easily.
+        </aside>
+      </section>
+      <section>
+        <section>
+          <h3>Editing</h3>
+          <ul class="normal">
+            <li class="fragment">SEO</li>
+            <li class="fragment">Spelling & grammar</li>
+            <li class="fragment">Code formatting, snippets</li>
+            <li class="fragment">Focused Questions</li>
+          </ul>
+          <aside class="notes">
+            Editing for SEO I, like many of you support developers in a wide variety of languages, so I'm always looking up super simple things like does PHP have a length or count operator, and when your developers are searching
+          </aside>
+        </section>
+        <section>
+          <img src="img/preedits.png">
+          <aside class="notes">
+          </aside>
+        </section>
+        <section>
+          <img src="img/postedits.png">
+          <aside class="notes">
+          </aside>
+        </section>
+      </section>
+      <section>Actually answering your questions
+        <aside class="notes">
+          You don't have to do it, but somebody should. It can help reduce the amount of hate that your users have as well. Stack overflow is a community, if your developers aren't getting any support, they will move to a channel where they can, even if that involves
+          publicly tweeting at you.
+        </aside>
+      </section>
+      <section>
+        <img height="300" src="img/tools-hammer-screwdriver.svg" />
+
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>
+        <h3>Built-in email notifications</h3>
+        <p><img src="img/emails.png"></p>
+        <small><a href="http://stackexchange.com/tagsets">Stack Exchange tag sets</a></small>
+        <small><a href="https://meta.stackexchange.com/questions/25224/email-notifications-for-new-questions-matching-specific-tags">Email notifications for new questions matching specific tags</a></small>
+        <aside class="notes">
+          Stack exchange has existing functionality for defining a set of tags in different Stack Exchange networks and getting email digests about their activity on different time scales. Depending on your notification preferences and question volume, this might
+          be the best integration for you. I use this in combination with some Google alerts and feel like I at least see all the questions that come up on our APIs that would be worth answering.
+        </aside>
+      </section>
+      <section>
+        <h3>RSS feeds</h3>
+        <img class="fragment" src="img/slack.png">
+        <aside class="notes">
+          This is actually what we use to get alerts in our office chat.
+        </aside>
+      </section>
+      <section data-background-image="img/api.png" data-background-position="top" databackground-size="contain">
+        <br><br><br><br><br><br><br><br><br>
+        <!-- There is probably a better way to do this, but oh well.. -->
+        <small><a href="https://api.stackexchange.com/">https://api.stackexchange.com/</a></small>
+        <aside class="notes">
+          Stack Exchange has an API, so of course as any of you who work on APIs would know, there are just ENDLESS OPPORTUNITIES TO CONNECT!
+        </aside>
+      </section>
+      <section>
+        <h3>A better slack integration</h3>
+        <img src="https://cdn-images-1.medium.com/max/1600/1*gWayFFnCGTPnj8YgfqQlJA.png">
+        <small><a href="https://medium.freecodecamp.org/monitor-stack-overflow-activity-directly-into-slack-dc778913490f">How to Monitor Stack Overflow Activity in Slack</a></small>
+        <aside class="notes">
+          Thanks Nicolas!
+        </aside>
+      </section>
+      <section data-background-image="img/appStore.png">
+        <aside class="notes">
+          There is a mobile app.
+        </aside>
+      </section>
+      <section data-background-image="img/taginfo.png" data-background-position="top" data-background-size="100%">
+        <aside class="notes">
+          https://stackoverflow.com/tags/square-connect/topusers
+        </aside>
+      </section>
+      <section>Data Science Time!!!
+        <img class="fragment" src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAnjAAAAJDUwNGZlODU5LWFiYTctNDJmMy05YzQxLWM1OTVlNDhlODFhNQ.png">
+        <aside class="notes">
+          Do you ever look for memes for your presentation and then just get so cracked up by one that you can't go on with your search? Well you all are getting stuck with that one. From here on out I'm going to be diving into the hard data that can get from Stack
+          Overflow with a little know-how, and probably care about as someone who supports developer experiences.
+        </aside>
+      </section>
+      <section data-background-image="img/sede.png">
+        <aside class="notes">
+          We are going to focus on Stack Exchange Data Explorer, if you aren't familiar it is essentially a GUI for a SQL console for all stack exchange networks. Another handy thing is that there are gazillions of queries already out there that people have created,
+          unfortunately most of the queries seem to focus on users, and searching for queries is nigh impossible. You could probably do all this and more with the APIs, but I just haven't, because the Stack Exchange Data Explorer site
+        </aside>
+      </section>
+      <!-- <section>
+        <img width="600px" class="fragment" src="img/table.png" />
+        <img width="600px" class="fragment" src="img/graph.png" />
+        <aside class="notes">
+        </aside>
+      </section> -->
+      <section>
+        <h3>Number of Questions</h3>
+        <div class="quarter">
+          <img src="img/listQuestions.png" />
+          <a href="https://data.stackexchange.com/stackoverflow/query/538490/list-of-questions-for-a-tag-with-score-and-closed-date?Tag=square-connect"><small>listing all your questions</small></a>
+        </div>
+        <div class="quarter">
+          <img src="img/numberOfQuestions.png" />
+          <a href="https://data.stackexchange.com/stackoverflow/query/538497/number-of-questions-for-a-given-tag?tagname=square-connect"><small>Number of Questions for all time for a given tag</small></a>
+        </div>
+        <div class="quarter">
+          <img src="img/numberAskedByMonth.png" />
+          <a href="https://data.stackexchange.com/stackoverflow/query/765415/questions-asked-per-month-for-a-given-tag?Tag=square-connect"><small>Number of questions asked per month for a given tag</small></a>
+        </div>
+        <div class="quarter">
+          <img src="img/numberOfQuestionsByWeek.png" />
+          <a href="https://data.stackexchange.com/stackoverflow/query/542258/questions-for-a-given-tag-by-week?Tag=square-connect#graph"><small>Number of questions asked per week for a given tag</small></a>
+        </div>
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>
+        <section>
+          <h3>Response Time</h3>
+        </section>
+        <section>
+          <img src="img/MonthlyTimeToAnswer.png" />
+          <a href="https://data.stackexchange.com/stackoverflow/query/538487/median-time-to-first-answer-by-month-for-a-given-tag#graph"><small>Median time to first answer by month & tag</small></a>
+        </section>
+        <section>
+          <img src="img/responseTimeWeek.png" />
+          <a href="https://data.stackexchange.com/stackoverflow/query/538484/median-time-to-first-answer-by-tag?tag=square-connect#graph"><small>Median time to first answer by tag/week</small></a>
+          <a href="https://data.stackexchange.com/stackoverflow/query/617413/time-to-first-action-for-each-question?tag=square-connect#resultSets"><small>Time to first Action for each question/tag/week</small></a>
+        </section>
+        <section>
+          <img src="img/TTAjavascript.png" />
+          <br />
+          <a href="https://data.stackexchange.com/stackoverflow/query/538486?tag=square-connect"><small>Median Time to First Answer for a tag/all time</small></a>
+        </section>
+
+      </section>
+      <section>
+
+        <section>
+          <h3>Question Views</h3>
+          <div class="quarter">
+            <img src="img/views.png" />
+            <a href="https://data.stackexchange.com/stackoverflow/query/538469"><small>List all questions for a tag by views</small></a>
+          </div>
+
+          <div class="quarter">
+            <img src="img/TotalViews.png" /><br />
+            <a href="https://data.stackexchange.com/stackoverflow/query/538472/total-number-of-views-for-a-given-tag?tagname=square-connect"><small>Total number of views for a given tag</small></a>
+          </div>
+          <div class="quarter">
+            <img src="img/viewsByMonth.png" />
+            <a href="https://data.stackexchange.com/stackoverflow/query/538466/question-views-by-month-and-year-for-a-given-tag?Tag=square-connect#graph"><small>Question views by month and year for a given tag</small></a>
+          </div>
+
+        </section>
+        <section>
+          [javascript]
+          <img src="img/javascriptWeeklyViews.png" />
+        </section>
+
+      </section>
+      <section>
+        <h3>Most common words in your questions</h3>
+        <img height="400px"src="img/popularwords.png" />
+        <br />
+        <a href="https://data.stackexchange.com/stackoverflow/query/766585/most-popular-words-in-posts-with-a-specific-tag"><small>Most popular words in posts for a specific tag</small></a>
+      </section>
+      <section>
+
+        <ul class="fancy-so">
+          <li>
+            Compare question volume to related tags.
+          </li>
+          <li>
+            Competitive analysis
+          </li>
+        </ul>
+
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>Advanced Topics
+        <aside class="notes">
+        </aside>
+      </section>
+      <section data-background-image="img/teratail.png" data-background-position="top"> <a href="https://teratail.com/"><small>https://teratail.com/</small></a>
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>
+        <h3>Seeding your own questions/answers</h3>
+        <img src="img/seeded.png">
+        <small><a href="https://meta.stackoverflow.com/questions/290897/is-seeding-broad-questions-and-self-answering-with-a-form-answer-to-create-a-faq">Is seeding broad questions and self-answering with a form answer to create a FAQ acceptable?</a></small>
+        <aside class="notes">
+          This isn't something that I've done much of personally, but I think has lots of potential if you can walk the line correctly, preempting questions around new products that come out or really well worded SEO minded FAQs could serve you well.
+        </aside>
+      </section>
+      <section data-background-image="img/ads.png" data-background-position="top">
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>
+        <section data-background-image="img/area51.png" data-background-position="top">
+          <aside class="notes">
+            Hosting your own network on Stack Exchange
+          </aside>
+        </section>
+        <section data-background-image="img/magento.png" data-background-position="top">
+          <aside class="notes">
+            Hosting your own network on Stack Exchange
+          </aside>
+        </section>
+      </section>
+      <section>
+        <h3>Bounties</h3>
+        <img height="100" src="img/card-star.svg" />
+        <aside class="notes">
+        </aside>
+      </section>
+      <section>
+        <h3>Thank you!</h3>
+        <ul class="fancy-so">
+          <li>
+            <a class="fragment" href="https://twitter.com/tristansokol">twitter: @tristansokol</a>
+          </li>
+          <li>
+            <a class="fragment" href="https://medium.com/@tristansokol">medium: @tristansokol</a>
+          </li>
+          <li>
+            <a class="fragment" href="https://github.com/tristansokol">github: tristansokol</a>
+          </li>
+          <li>
+            <a class="fragment" href="http://tristansokol.github.io/Presentations/">tristansokol.github.io/Presentations</a>
+          </li>
+          <li>
+            <a class="fragment" href="https://www.meetup.com/DeveloperAdvocates/">SF Developer Advocates</a>
+          </li>
+        </ul>
+        <aside class="notes">
+        </aside>
+      </section>
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      history: true,
+      loop: true,
+      dependencies: [{
+          src: 'plugin/markdown/marked.js'
+        },
+        {
+          src: 'plugin/markdown/markdown.js'
+        },
+        {
+          src: 'plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: 'plugin/highlight/highlight.js',
+          async: true,
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        }
+      ]
+    });
+    //set the pacing to the total number of slides/
+    Reveal.configure({
+      defaultTiming: 1500 / Reveal.getTotalSlides()
+    });
+  </script>
+  <script src="js/so.js"></script>
+</body>
+
+</html>

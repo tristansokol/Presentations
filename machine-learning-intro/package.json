@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": " watch php -S localhost:8000"
+  },
+  "name": "machine-learning-intro",
+  "description": "A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://revealjs.com/).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "",
+  "license": "ISC"
+}
