@@ -8,7 +8,7 @@
 
 * **Internet of Tums, A DIY IoT case study** _presented at UtahJS, September 2018 & ConFoo, March 2019_ ([slides](http://blog.tristansokol.com/Presentations/Internet_of_Tums/index.html))([video](https://www.youtube.com/watch?v=LwQwtDm4YiM&list=PLuVqdWOQ-PNn_lDYUVgcA4e91qxJzipva&index=13&t=0s))
 
-* **Testing Your SEO with headless Chrome and puppeteer** _presented at MidwestJS, August 2018 & ConFoo, March 2019_ ([slides](http://blog.tristansokol.com/Presentations/seo-testing/index.html))
+* **Testing Your SEO with headless Chrome and puppeteer** _presented at MidwestJS, August 2018 & ConFoo, March 2019_ ([slides](http://blog.tristansokol.com/Presentations/headless-chrome/index.html))
 
 * **SDK Creation: Handmade vs Generated** _presented at the Nordic APIs Austin API Summit, June 2018_ ([slides](http://blog.tristansokol.com/Presentations/SDK_Creation_Handmade_vs_Generated/index.html))
 
