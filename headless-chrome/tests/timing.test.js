@@ -13,10 +13,10 @@ afterAll(() => {
 });
 
 
-describe('Page performance', async () => {
+describe('Page performance', () => {
 
 
-    test('page metrics', async () => {
+    test.skip('page metrics', async () => {
 
         await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
         console.log(await page.metrics());
@@ -47,7 +47,7 @@ describe('Page performance', async () => {
 
         expect(paints['first-contentful-paint']).toBeLessThan(100)
     }, 20000);
-    test('time to first paint', async () => {
+    test.skip('time to first paint', async () => {
 
         await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
         const pageTiming = await page.evaluate(_ => {

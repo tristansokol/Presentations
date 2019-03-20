@@ -1,6 +1,7 @@
 <section>
 	<h2>Performance</h2>
 	<pre><code data-trim class="javascript">
+			// jest tests/timing.test.js
 			test('time to first paint', async () => {
 				await page.goto('https://www.wikihow.com/Tie-Your-Shoes');
 				const paints = await page.evaluate(_ => {

@@ -13,7 +13,11 @@ const puppeteer = require('puppeteer');
     const textsJoined = await page.evaluate(
         () => [...document.querySelectorAll('p')].map(elem => elem.innerText).join('\n')
     );
-    console.log(SpellChecker.checkSpelling(textsJoined))
+
+    SpellChecker.checkSpelling(textsJoined).forEach(element => {
+        console.log(textsJoined.slice(element.start,element.end))
+    });
+    // console.log();
 
     browser.close();
 })();

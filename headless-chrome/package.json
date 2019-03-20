@@ -15,8 +15,8 @@
   "license": "UNLICENSED",
   "dependencies": {
     "gramophone": "0.0.3",
-    "jest": "^23.4.1",
-    "jest-cli": "^23.4.1",
+    "jest": "^24.5.0",
+    "jest-cli": "^24.5.0",
     "lighthouse": "^3.0.3",
     "pixelmatch": "^4.0.2",
     "pngjs": "^3.3.3",

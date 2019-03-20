@@ -2,9 +2,9 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 
 
-describe('Lighthouse tests', async () => {
+describe('Lighthouse tests', () => {
 
-    test('overview', async () => {
+    test.skip('overview', async () => {
         function launchChromeAndRunLighthouse(url, opts, config = null) {
             return chromeLauncher.launch({ chromeFlags: opts.chromeFlags }).then(chrome => {
                 opts.port = chrome.port;

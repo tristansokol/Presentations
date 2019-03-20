@@ -2,11 +2,13 @@
 
 [![Build Status](https://travis-ci.org/tristansokol/Presentations.svg?branch=master)](https://travis-ci.org/tristansokol/Presentations)
 
+* **Introduction to Machine Learning** _presented at NorthPoint Lunch n' Learn, March 2019_ ([slides](https://blog.tristansokol.com/Presentations/machine-learning-intro/index.html))
+
 * **Ins n' Outs of Serverless Functions** _presented at the Little Rock Tech Fest, October 2018_ ([slides](http://blog.tristansokol.com/Presentations/serverless/index.html))
 
-* **Internet of Tums, A DIY IoT case study** _presented at UtahJS, September 2018_ ([slides](http://blog.tristansokol.com/Presentations/Internet_of_Tums/index.html))([video](https://www.youtube.com/watch?v=LwQwtDm4YiM&list=PLuVqdWOQ-PNn_lDYUVgcA4e91qxJzipva&index=13&t=0s))
+* **Internet of Tums, A DIY IoT case study** _presented at UtahJS, September 2018 & ConFoo, March 2019_ ([slides](http://blog.tristansokol.com/Presentations/Internet_of_Tums/index.html))([video](https://www.youtube.com/watch?v=LwQwtDm4YiM&list=PLuVqdWOQ-PNn_lDYUVgcA4e91qxJzipva&index=13&t=0s))
 
-* **Testing Your SEO with headless Chrome and puppeteer** _presented at MidwestJS, August 2018_ ([slides](http://blog.tristansokol.com/Presentations/seo-testing/index.html))
+* **Testing Your SEO with headless Chrome and puppeteer** _presented at MidwestJS, August 2018 & ConFoo, March 2019_ ([slides](http://blog.tristansokol.com/Presentations/seo-testing/index.html))
 
 * **SDK Creation: Handmade vs Generated** _presented at the Nordic APIs Austin API Summit, June 2018_ ([slides](http://blog.tristansokol.com/Presentations/SDK_Creation_Handmade_vs_Generated/index.html))
 
